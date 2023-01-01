@@ -5,11 +5,11 @@ import java.util.ArrayList;
 public class BookDAO {
 	ArrayList<BookVO> bvo = new ArrayList<BookVO>();
 	
-	public void setBvo(BookVO bvo) {
-		this.bvo.add(bvo);
+	public void insert(BookVO vo) {
+		this.bvo.add(vo);
 	}
 	
-	public ArrayList<BookVO> getBvo() {
+	public ArrayList<BookVO> select() {
 		return this.bvo;
 	}
 }

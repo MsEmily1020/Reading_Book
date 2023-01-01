@@ -1,48 +1,39 @@
 package book.vo;
 
 public class BookVO {
-	int isbn;
-	String bookName;
-	String publish;
-	String author;
-	int price;
-	String category;
+	private int isbn;
+	private String name;
+	private String publish;
+	private String author;
+	private int price;
+	private String category;
 	
-	public BookVO() {};
-	
-	public BookVO(int isbn, String bookName, String publish, String author, int price, String category) {
-		this.isbn = isbn;
-		this.bookName = bookName;
-		this.publish = publish;
-		this.author = author;
-		this.price = price;
-		this.category = category;
-	}
-	
+	public BookVO() {}
+
 	public int getIsbn() {
 		return isbn;
 	}
-	
+
 	public void setIsbn(int isbn) {
 		this.isbn = isbn;
 	}
-	
-	public String getBookName() {
-		return bookName;
+
+	public String getName() {
+		return name;
 	}
-	
-	public void setBookName(String bookName) {
-		this.bookName = bookName;
+
+	public void setName(String name) {
+		this.name = name;
 	}
-	
+
 	public String getPublish() {
 		return publish;
 	}
-	
+
 	public void setPublish(String publish) {
 		this.publish = publish;
 	}
-	
+
 	public String getAuthor() {
 		return author;
 	}
@@ -54,22 +45,16 @@ public class BookVO {
 	public int getPrice() {
 		return price;
 	}
-	
+
 	public void setPrice(int price) {
 		this.price = price;
 	}
-	
+
 	public String getCategory() {
 		return category;
 	}
-	
+
 	public void setCategory(String category) {
 		this.category = category;
-	}
-
-	@Override
-	public String toString() {
-		return "BookVO [isbn=" + isbn + ", bookName=" + bookName + ", publish=" + publish + ", price=" + price
-				+ ", category=" + category + "]";
-	}
+	};
 }
