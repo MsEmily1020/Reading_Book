@@ -11,7 +11,7 @@ import book.vo.BookVO;
 
 public class BookController2 extends JFrame {
 	BookDAO dao = new BookDAO();
-	ArrayList<BookVO> bookVOList = dao.getBvo();
+	ArrayList<BookVO> bookVOList = dao.select();
 	BookView2 view = new BookView2();
 	
 	public BookController2() {
@@ -22,8 +22,8 @@ public class BookController2 extends JFrame {
 			//neededInsertData() : panS에 있는 JTextField에 입력된 값들과 JCombobox의 값
 			//BookVO 필드값들을 초기화하여 BookVO 객체 참조값을 반환하는 메소드
 			BookVO vo = view.neededInsertData();
-			dao.setBvo(vo);
-			bookVOList = dao.getBvo();
+			dao.insert(vo);
+			bookVOList = dao.select();
 			view.setBookVoList(bookVOList);
 			view.putResult();
 			view.initInsertData();

@@ -69,7 +69,7 @@ public class BookView2 extends JPanel {
 			vo = bookVoList.get(i);
 			
 			model.setValueAt(vo.getIsbn(), i, 0);
-			model.setValueAt(vo.getBookName(), i, 1);
+			model.setValueAt(vo.getName(), i, 1);
 			model.setValueAt(vo.getPublish(), i, 2);
 			model.setValueAt(vo.getAuthor(), i, 3);
 			model.setValueAt(vo.getPrice(), i, 4);
@@ -89,7 +89,7 @@ public class BookView2 extends JPanel {
 	public BookVO neededInsertData() {
 		BookVO vo = new BookVO();
 		vo.setIsbn(Integer.parseInt(tf[0].getText()));
-		vo.setBookName(tf[1].getText());
+		vo.setName(tf[1].getText());
 		vo.setPublish(tf[2].getText());
 		vo.setAuthor(tf[3].getText());
 		vo.setPrice(Integer.parseInt(tf[4].getText()));
