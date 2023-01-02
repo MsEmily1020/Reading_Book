@@ -36,7 +36,7 @@ public class ProductView extends JPanel {
 			JLabel lb = new JLabel();
 			
 			lb.setIcon(icon);
-			lb.setText(Integer.toString(vo.getPrice()));
+			lb.setText(Integer.toString(vo.getPrice()) + "원");
 			lb.setHorizontalTextPosition(JLabel.CENTER);
 			lb.setVerticalTextPosition(JLabel.BOTTOM);
 			lb.setHorizontalAlignment(JLabel.CENTER);
@@ -72,7 +72,12 @@ public class ProductView extends JPanel {
 				
 				//이전 값 초기화
 				for(int j = 0; j < lbList.size(); j++) lbList.get(i).setBackground(Color.white); 
-				lbResult.setIcon(null);
+				lbResult.addMouseListener(new MouseAdapter() {
+					@Override
+					public void mouseClicked(MouseEvent e) {
+						lbResult.setIcon(null);
+					};
+				});
 				
 				if(eLbl == lbList.get(i)) {
 					eLbl.setBackground(Color.red);
@@ -96,7 +101,6 @@ public class ProductView extends JPanel {
 				JOptionPane.showMessageDialog(null, vo.getPrice() - money + "원이 부족합니다.");
 			eLbl.setBackground(Color.white);
 			insertTf.setText("");
-			
 		}
 	};
 }
