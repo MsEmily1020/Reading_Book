@@ -10,8 +10,6 @@ import product.vo.ProductDAO;
 import product.vo.ProductVO;
 
 public class ProductController extends JFrame {
-	public static final int STOP = 0;
-
 	ArrayList<ProductVO> pvo;
 	
 	public ProductController() {
