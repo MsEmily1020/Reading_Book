@@ -1,5 +1,6 @@
 package product.view;
 
+import java.awt.Color;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -22,6 +23,7 @@ public class ProductView extends JPanel {
 	ArrayList<JLabel> lbList = new ArrayList<JLabel>();
 	JTextField insertTf = new JTextField(10);
 	JLabel lbResult = new JLabel("제품이 나오는 부분");
+	JLabel eLbl;
 	ProductVO vo = null;
 	JFrame frame;
 	
@@ -31,6 +33,8 @@ public class ProductView extends JPanel {
 		for (ProductVO vo : pvo) {
 			ImageIcon icon = new ImageIcon("images/" + vo.getImageName() + ".jpg");
 			JLabel lb = new JLabel(icon);
+			lb.setOpaque(true);
+			lb.setBackground(Color.white);
 			lb.addMouseListener(lbMouseAdater);
 			lbList.add(lb);
 			gnPn.add(lb);
@@ -55,10 +59,16 @@ public class ProductView extends JPanel {
 	MouseAdapter lbMouseAdater = new MouseAdapter() {
 		@Override
 		public void mouseClicked(MouseEvent e) {
-			for(int i = 0; i < lbList.size(); i++)
-				if(lbList.get(i) == e.getSource()) vo = pvo.get(i);
+			for(int i = 0; i < lbList.size(); i++) {
+				eLbl = (JLabel)e.getSource();
+				//이전 값 초기화
+				for(int j = 0; j < lbList.size(); j++) lbList.get(i).setBackground(Color.white); 
+				if(eLbl == lbList.get(i)) {
+					eLbl.setBackground(Color.red);
+					vo = pvo.get(i);
+				}
+			}
 			JOptionPane.showMessageDialog(frame, "제품명 : " + vo.getName() + "\n제품 가격 : " + vo.getPrice());
-			
 		}
 	};
 	
@@ -66,10 +76,16 @@ public class ProductView extends JPanel {
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			int money = Integer.parseInt(insertTf.getText());
-			if(vo.getPrice() <= money)
-				lbResult.setText(vo.getName() + " 제품이 나왔습니다. 거스름돈 : " + (money - vo.getPrice()));
+			if(vo.getPrice() <= money) {
+				JOptionPane.showMessageDialog(null, "거스름돈 : " + (money - vo.getPrice()));
+				lbResult.setText("");
+				lbResult.setIcon(new ImageIcon("images/" + vo.getImageName() + ".jpg"));
+			}
 			else
-				lbResult.setText(vo.getPrice() - money + "원이 부족합니다.");
+				JOptionPane.showMessageDialog(null, vo.getPrice() - money + "원이 부족합니다.");
+			eLbl.setBackground(Color.white);
+			insertTf.setText("");
+			
 		}
 	};
 }

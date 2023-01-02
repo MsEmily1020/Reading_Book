@@ -24,7 +24,7 @@ public class ProductController extends JFrame {
 		add(panC, "Center");
 		add(panS, "South");
 		setTitle("음료수자판기");
-		setSize(500, 600);
+		setSize(600, 700);
 		setLocationRelativeTo(null);
 		setDefaultCloseOperation(2);
 		setResizable(false);
