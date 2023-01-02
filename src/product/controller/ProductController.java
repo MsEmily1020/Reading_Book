@@ -18,9 +18,11 @@ public class ProductController extends JFrame {
 		ProductView view = new ProductView();
 		fullProduct();
 		view.setProductList(pvo);
-		JPanel panC = view.displayProducts();
+		JPanel panC = view.displayProducts(this);
+		JPanel panS = view.inputPurchase();
 		
 		add(panC, "Center");
+		add(panS, "South");
 		setTitle("음료수자판기");
 		setSize(500, 600);
 		setLocationRelativeTo(null);
