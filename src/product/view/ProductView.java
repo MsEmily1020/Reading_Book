@@ -32,7 +32,15 @@ public class ProductView extends JPanel {
 		JPanel gnPn = new JPanel(new GridLayout(3, 3));
 		for (ProductVO vo : pvo) {
 			ImageIcon icon = new ImageIcon("images/" + vo.getImageName() + ".jpg");
-			JLabel lb = new JLabel(icon);
+			
+			JLabel lb = new JLabel();
+			
+			lb.setIcon(icon);
+			lb.setText(Integer.toString(vo.getPrice()));
+			lb.setHorizontalTextPosition(JLabel.CENTER);
+			lb.setVerticalTextPosition(JLabel.BOTTOM);
+			lb.setHorizontalAlignment(JLabel.CENTER);
+			
 			lb.setOpaque(true);
 			lb.setBackground(Color.white);
 			lb.addMouseListener(lbMouseAdater);
@@ -61,8 +69,11 @@ public class ProductView extends JPanel {
 		public void mouseClicked(MouseEvent e) {
 			for(int i = 0; i < lbList.size(); i++) {
 				eLbl = (JLabel)e.getSource();
+				
 				//이전 값 초기화
 				for(int j = 0; j < lbList.size(); j++) lbList.get(i).setBackground(Color.white); 
+				lbResult.setIcon(null);
+				
 				if(eLbl == lbList.get(i)) {
 					eLbl.setBackground(Color.red);
 					vo = pvo.get(i);
