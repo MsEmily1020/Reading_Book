@@ -3,6 +3,7 @@ package racehores;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 import java.util.Random;
 
 import javax.swing.ImageIcon;
@@ -12,6 +13,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.JTextField;
 
 public class RaceHorse extends JFrame {
 	JLabel[] horses = new JLabel[3];
@@ -20,8 +22,10 @@ public class RaceHorse extends JFrame {
 	int index;
 	String[] comboStr = "1번: horse,2번: human,3번: bird".split(",");
 	JComboBox<String> combo = new JComboBox<String>(comboStr);
+	ArrayList<BettingPerson> btList = new ArrayList<BettingPerson>();
+	JTextField tf = new JTextField(10);
 	int betingIndex;
-	
+
 	public RaceHorse() {		
 		JPanel pan = new JPanel(null);
 		pan.setBackground(Color.white);
@@ -39,6 +43,7 @@ public class RaceHorse extends JFrame {
 		JButton btnStart = new JButton("게임시작");
 		btnBeting.addActionListener(btnL);
 		btnStart.addActionListener(btnL);
+		panN.add(tf);
 		panN.add(combo);
 		panN.add(btnBeting);
 		panN.add(btnStart);
@@ -69,15 +74,12 @@ public class RaceHorse extends JFrame {
 			
 			switch (e.getActionCommand()) {
 			case "게임배팅":
-				betingIndex = combo.getSelectedIndex();
+				BettingPerson btPs = new BettingPerson();
+				btPs.setName(tf.getText());
+				btPs.setBetting(combo.getSelectedIndex());
+				btList.add(btPs);
 				break;
 			case "게임시작":
-				//이전값과 다르게 선택했지만 게임배팅을 클릭 하지 않은 경우
-				if(combo.getSelectedIndex() != betingIndex) {
-					JOptionPane.showMessageDialog(null, "게임 배팅 값이 선택되지 않았습니다.");
-					return;
-				}
-
 				for (int i = 0; i < horses.length; i++) {
 					HorseThread t = new HorseThread(horses[i], i);
 					t.start();
@@ -105,13 +107,18 @@ public class RaceHorse extends JFrame {
 					winnerIndex[index++] = horseIndex;
 					if(index == horses.length-1) {
 						JOptionPane.showMessageDialog(RaceHorse.this, (winnerIndex[0]+1)+"말이 우승!!!");
-						if(winnerIndex[0]==betingIndex)
-							JOptionPane.showMessageDialog(RaceHorse.this, "축하합니다. 배팅에 성공하였습니다.");
-						else
-							JOptionPane.showMessageDialog(RaceHorse.this, "다음에 다시 배팅 부탁드려요~. 배팅에 실패하였습니다.");
+						if(winnerIndex[0]==btList.get(0).getBetting() && winnerIndex[0] != btList.get(1).getBetting())
+							JOptionPane.showMessageDialog(RaceHorse.this, "축하합니다. " + btList.get(0).getName() + "님이 배팅에 성공하였습니다.");
+						else if(winnerIndex[0] == btList.get(0).getBetting())
+							JOptionPane.showMessageDialog(RaceHorse.this, "두 분다 배팅에 성공하셨군요.");
+						else if(winnerIndex[0] == btList.get(1).getBetting() && winnerIndex[0] != btList.get(0).getBetting())
+							JOptionPane.showMessageDialog(RaceHorse.this, "축하합니다. " + btList.get(1).getName() + "님이 배팅에 성공하였습니다.");
+						else	
+							JOptionPane.showMessageDialog(RaceHorse.this, "두 분다 배팅에 성공 못하셨어요 ㅠㅠ");
 						index = 0;
 						for (int i = 0; i < horses.length; i++)
 							horses[i].setLocation(0, horses[i].getY());
+						btList = new ArrayList<BettingPerson>();
 					}
 					break;
 				}
