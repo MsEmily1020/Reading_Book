@@ -1,11 +1,10 @@
 package notepad;
 
+import java.awt.Color;
 import java.awt.FileDialog;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.KeyAdapter;
-import java.awt.event.KeyEvent;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
@@ -22,10 +21,12 @@ import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 
 public class Notepad extends JFrame implements ActionListener {
-	JMenuItem[] item = new JMenuItem[7];
+	String[] menuName = "새로만들기,열기,저장,나가기".split(",");
+	String[] formatName = "글꼴모양,글꼴크기,글꼴색".split(",");
+	String[] font = "맑은고딕,굴림,돋움,10px,15px,20px,빨강,파랑,검정".split(",");
+	JMenuItem[] item = new JMenuItem[menuName.length + font.length];
 	JTextArea area = new JTextArea();
 
-	String[] itemName = "새로만들기,열기,저장,나가기,글꼴모양,글꼴크기,글꼴색".split(",");
 	public Notepad() {
 		makeMenu();
 		JScrollPane scroll = new JScrollPane(area);
@@ -41,17 +42,46 @@ public class Notepad extends JFrame implements ActionListener {
 		JMenuBar bar = new JMenuBar();
 		JMenu menu = new JMenu("File ▼");
 		JMenu format = new JMenu("Format ▼");
+		
+		JMenu[] formatOp = new JMenu[3]; //Format - 글꼴모양, 글꼴크기, 글꼴색
 
-		//File menu
-		for (int i = 0; i < item.length; i++) {
-			item[i] = new JMenuItem(itemName[i]);
+		//File
+		for (int i = 0; i < menuName.length; i++) {
+			item[i] = new JMenuItem(menuName[i]);
 			item[i].addActionListener(this);
-			if(i < 4) menu.add(item[i]);
-			else format.add(item[i]);
+			menu.add(item[i]);
+		}
+		
+		//Format
+		for (int i = 0; i < 3; i++) {
+			formatOp[i] = new JMenu(formatName[i]);
+			format.add(formatOp[i]);
+		}
+		
+		//Format - shape
+		for (int i = menuName.length; i < menuName.length + 3; i++) {
+			item[i] = new JMenuItem(font[i - menuName.length]);
+			item[i].addActionListener(this);
+			formatOp[0].add(item[i]);
+		}
+		
+		//Format - size
+		for (int i = menuName.length + 3; i < menuName.length + 6; i++) {
+			item[i] = new JMenuItem(font[i - menuName.length]);
+			item[i].addActionListener(this);
+			formatOp[1].add(item[i]);
+		}
+		
+		//Format - color
+		for (int i = menuName.length + 6; i < menuName.length + 9; i++) {
+			item[i] = new JMenuItem(font[i - menuName.length]);
+			item[i].addActionListener(this);
+			formatOp[2].add(item[i]);
 		}
 		
 		bar.add(menu);
 		bar.add(format);
+		
 		
 		setJMenuBar(bar);
 	}
@@ -80,17 +110,41 @@ public class Notepad extends JFrame implements ActionListener {
 				else if(i == 3){
 					System.exit(0);
 				}
-				//글꼴모양
+				//글꼴모양 - 맑은 고딕
 				else if(i == 4) {
-					setFontShape();
+					area.setFont(new Font("맑은 고딕", Font.PLAIN, area.getFont().getSize()));
 				}
-				//글꼴크기
+				//글꼴모양 - 굴림
 				else if(i == 5) {
-					setFontSize();
+					area.setFont(new Font("굴림", Font.PLAIN, area.getFont().getSize()));
 				}
-				//글꼴색
+				//글꼴모양 - 돋움
 				else if(i == 6) {
-					setFontColor();
+					area.setFont(new Font("돋움", Font.PLAIN, area.getFont().getSize()));
+				}
+				//글꼴크기 - 10px
+				else if(i == 7) {
+					area.setFont(new Font(area.getFont().getFamily(), Font.PLAIN, 10));
+				}
+				//글꼴크기 - 15px
+				else if(i == 8) {
+					area.setFont(new Font(area.getFont().getFamily(), Font.PLAIN, 15));
+				}
+				//글꼴크기 - 20px
+				else if(i == 9) {
+					area.setFont(new Font(area.getFont().getFamily(), Font.PLAIN, 20));
+				}
+				//글꼴색 - 빨강
+				else if(i == 10) {
+					area.setForeground(Color.red);
+				}
+				//글꼴색 - 파랑
+				else if(i == 11) {
+					area.setForeground(Color.blue);
+				}
+				//글꼴색 - 검정
+				else if(i == 12) {
+					area.setForeground(Color.black);
 				}
 			}
 		}
@@ -126,18 +180,4 @@ public class Notepad extends JFrame implements ActionListener {
 		}
 	}
 	
-	//글꼴모양
-	public void setFontShape() {
-		
-	}
-	
-	//글꼴크기
-	public void setFontSize() {
-		
-	}
-	
-	//글꼴색
-	public void setFontColor() {
-		
-	}
 }
