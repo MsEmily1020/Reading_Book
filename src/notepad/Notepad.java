@@ -13,12 +13,15 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
+import javax.swing.JToolBar;
 
 public class Notepad extends JFrame implements ActionListener {
 	String[] menuName = "새로만들기,열기,저장,나가기".split(",");
@@ -26,8 +29,10 @@ public class Notepad extends JFrame implements ActionListener {
 	String[] font = "맑은고딕,굴림,돋움,10px,15px,20px,빨강,파랑,검정".split(",");
 	JMenuItem[] item = new JMenuItem[menuName.length + font.length];
 	JTextArea area = new JTextArea();
-
+	JButton[] bt = new JButton[3];
+	
 	public Notepad() {
+		makeToolbar();
 		makeMenu();
 		JScrollPane scroll = new JScrollPane(area);
 		add(scroll);
@@ -38,13 +43,45 @@ public class Notepad extends JFrame implements ActionListener {
 		setLocationRelativeTo(null);
 	}
 
+	public void makeToolbar() {
+		JToolBar toolBar = new JToolBar();
+		for (int i = 0; i < bt.length; i++) {
+			bt[i] = new JButton(new ImageIcon("image/" + menuName[i] + ".jpg"));
+			bt[i].addActionListener(btnL);
+			toolBar.add(bt[i]);
+		}
+		add(toolBar, "North");
+	}
+	
+	ActionListener btnL = new ActionListener() {
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			for (int i = 0; i < bt.length; i++) {
+				if(e.getSource() == bt[i]) {
+					//새로만들기
+					if(i == 0) {
+						area.setText("");
+					}
+					//열기
+					else if(i == 1) {
+						readFile();
+					}
+					//저장
+					else {
+						saveFile();
+					}
+				}
+			}
+		}
+	};
+	
 	public void makeMenu() {
 		JMenuBar bar = new JMenuBar();
 		JMenu menu = new JMenu("File ▼");
 		JMenu format = new JMenu("Format ▼");
 		
 		JMenu[] formatOp = new JMenu[3]; //Format - 글꼴모양, 글꼴크기, 글꼴색
-
+		
 		//File
 		for (int i = 0; i < menuName.length; i++) {
 			item[i] = new JMenuItem(menuName[i]);
@@ -179,5 +216,4 @@ public class Notepad extends JFrame implements ActionListener {
 			e.printStackTrace();
 		}
 	}
-	
 }
