@@ -38,7 +38,7 @@ public class Notepad extends JFrame implements ActionListener {
 		add(scroll);
 		
 		setTitle("메모장");
-		setSize(800, 800);
+		setSize(600, 600);
 		setDefaultCloseOperation(2);
 		setLocationRelativeTo(null);
 	}
