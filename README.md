@@ -2,7 +2,7 @@
  - 기본 프로그램 메모장 구현
 
 ## ⌚ Project execution period
-  - 2022.01.06
+  - 2023.01.06
 
 ## 🛠 Development Environment
 - GUI
