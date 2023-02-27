@@ -41,7 +41,7 @@
   ...
   ```
   
-  -열기, 저장 기능 구현
+  - 열기, 저장 기능 구현
   ```java
   //열기
 		FileDialog dialog = new FileDialog(this, "File Open" ,FileDialog.LOAD);
