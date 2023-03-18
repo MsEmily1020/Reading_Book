@@ -2,7 +2,7 @@
 - 말에 배팅 후 경주 시합해서 배팅 성공 및 실패하는 프로그램
 
 ## ⌚ Project execution period
-  - 2022.01.04
+  - 2023.01.04
 
 ## 🛠 Development Environment
 - MVC (모델-뷰-컨트롤러, model–view–controller) 이용
