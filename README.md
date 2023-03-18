@@ -27,5 +27,5 @@
   
     - 결과는 일회용이므로 따로 DAO는 생략
 
-- BMI 계산기
+## 🎞 BMI 계산기
 ![BMI](https://user-images.githubusercontent.com/121646949/226095859-157814fc-ce75-48cf-9327-aa48e2555e45.gif)
