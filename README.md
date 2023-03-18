@@ -40,3 +40,7 @@
 	else
 		JOptionPane.showMessageDialog(null, vo.getPrice() - money + "원이 부족합니다.");
   ```
+  
+  
+## 🎞 음료 자판기
+![음료-자판기](https://user-images.githubusercontent.com/121646949/226096513-e7411840-9b3e-4ad6-8a84-44419a5b740c.gif)
