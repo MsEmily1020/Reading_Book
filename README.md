@@ -32,7 +32,7 @@
   ```
 - 거스름돈
   ```java
-    int money = Integer.parseInt(insertTf.getText()); //입렦값(투입한 돈)
+    int money = Integer.parseInt(insertTf.getText()); //입력값(투입한 돈)
 	if(vo.getPrice() <= money) {
 		JOptionPane.showMessageDialog(null, "거스름돈 : " + (money - vo.getPrice()));
 		lbResult.setIcon(new ImageIcon("images/" + vo.getImageName() + ".jpg")); //해당 이미지 출력
