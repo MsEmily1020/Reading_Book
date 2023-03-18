@@ -18,6 +18,7 @@
   ```java
   class PanelAbove extends JPanel
   ```
+  
 - 결과 나오는 JPanel : PanelBelow 내부 클래스
   ```java
   class PanelBelow extends JPanel
@@ -27,5 +28,5 @@
   
     - 결과는 일회용이므로 따로 DAO는 생략
 
-## 🎞 BMI 계산기
+## 🎞 BMI 계산기 (2배속)
 ![BMI](https://user-images.githubusercontent.com/121646949/226095859-157814fc-ce75-48cf-9327-aa48e2555e45.gif)
