@@ -1,23 +1,31 @@
 package racehores;
 
 public class BettingPerson {
-	String name;
-	int betting;
-	
+	private int orderNum;
+	private String name;
+	private int betingIndex;
+
+	public int getBetingIndex() {
+		return betingIndex;
+	}
+
+	public void setBetingIndex(int betingIndex) {
+		this.betingIndex = betingIndex;
+	}
+
+	public int getOrderNum() {
+		return orderNum;
+	}
+
+	public void setOrderNum(int orderNum) {
+		this.orderNum = orderNum;
+	}
+
 	public String getName() {
 		return name;
 	}
-	
+
 	public void setName(String name) {
 		this.name = name;
 	}
-	
-	public int getBetting() {
-		return betting;
-	}
-	
-	public void setBetting(int betting) {
-		this.betting = betting;
-	}
-	
 }
