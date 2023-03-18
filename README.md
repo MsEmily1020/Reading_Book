@@ -14,6 +14,7 @@
 
 ## 📃 Main Composition
 - GridLayout 설정
+
 - 제품 선택 화면(클릭 시 해당 제품 배경화면 색 변경)
   ```java
     lb.setIcon(icon); //아이콘 설정
@@ -30,6 +31,7 @@
     if((JLabel)e.getSource == lbList.get(i))
       e.getSource.setBackground(Color.red); //선택 시 해당 라벨 배경색은 빨강
   ```
+  
 - 거스름돈
   ```java
     int money = Integer.parseInt(insertTf.getText()); //입력값(투입한 돈)
@@ -42,5 +44,5 @@
   ```
   
   
-## 🎞 음료 자판기
+## 🎞 음료 자판기 (2배속)
 ![음료-자판기](https://user-images.githubusercontent.com/121646949/226096513-e7411840-9b3e-4ad6-8a84-44419a5b740c.gif)
