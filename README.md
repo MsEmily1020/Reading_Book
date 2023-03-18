@@ -5,7 +5,6 @@
   - 2023.01.04
 
 ## 🛠 Development Environment
-- MVC (모델-뷰-컨트롤러, model–view–controller) 이용
 - GUI
   
   - Language : `Java 8` 
@@ -14,43 +13,49 @@
 
 ## 📃 Main Composition
 - Thread 설정
+
+- 개선 내용 : 2명애서 배팅하여 대결, 말이 멈췄을 때와 달릴 때의 이미지 차이, 말의 갯수 2 -> 5
+
 - 각 객체(말) 당 쓰레드 만들기
   ```java
-   for (int i = 0; i < horses.length; i++) {
-		HorseThread t = new HorseThread(horses[i], i);
-		t.start();
-    }
-
-	public class HorseThread extends Thread{
-		JLabel lblHorse;
-		int randomValue;
-		int horseIndex;
-		
-		public HorseThread(JLabel lblHorse, int horseIndex) {
+    for (int i = 0; i < horses.length; i++) {
+			HorseThread t = new HorseThread(horses[i], "stop_horse" + (i + 1), i);
+			t.start();
+	}
+				
+   public HorseThread(JLabel lblHorse, String stopImageName, int horseIndex) {
 			this.lblHorse = lblHorse;
+			this.stopImageName = stopImageName;
 			this.horseIndex = horseIndex;
-	      }
+	}
   ```
 - 각 객체의 움직이는 애니메이션 쓰레드
   ```java
     while (true) {
-				lblHorse.setLocation(lblHorse.getX()+5, lblHorse.getY()); //오른쪽으로 이동
-				if(lblHorse.getX()>=540) { //도착지점
+				lblHorse.setLocation(lblHorse.getX() + 5, lblHorse.getY());
+				if (lblHorse.getX() == 540) {
+					lblHorse.setIcon(new ImageIcon("images/" + stopImageName + ".gif"));
 					winnerIndex[index++] = horseIndex;
-					if(index == horses.length-1) { //마지막 말인지
+					if (index == horses.length - 1) {
+						[배팅... 성공했는지 여부]
 						index = 0;
-						for (int i = 0; i < horses.length; i++)
-							horses[i].setLocation(0, horses[i].getY()); //출발지점으로 다시 이동
-						btList = new ArrayList<BettingPerson>(); //새로운 배팅 사람 다시 입력 받기 위해서
+						for (int i = 0; i < horses.length; i++) {
+							System.out.println(winnerIndex[i]);
+							horses[i].setLocation(0, horses[i].getY());
+							horses[i].setIcon(new ImageIcon("imgs/horse" + (i + 1) + ".gif"));
+						}
 					}
 					break;
 				}
-				
 				try {
 					Random random = new Random();
-					sleep(10 * random.nextInt(10)); //이동하는 애니메이션(랜덤 빠르기)
+					randomValue = random.nextInt(10); // 0~9 사이의 값
+					sleep(10 * randomValue);
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 				}
 			}
   ```
+
+## 🎞 경주시합
+![경주시합](https://user-images.githubusercontent.com/121646949/226097838-77a6fe85-88a0-43c5-a89e-db6f57dff3c8.gif)
