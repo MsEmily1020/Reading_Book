@@ -34,3 +34,12 @@
       }
     }
   ```
+  
+ - 성적 관리 프로그램
+![성적처리](https://user-images.githubusercontent.com/121646949/226095523-9835c336-f292-4390-a941-f1ba0e247d83.gif)
+
+
+- 도서 관리 프로그램
+![도서관리](https://user-images.githubusercontent.com/121646949/226095719-77570409-453d-4c14-96a2-e3c1a745cea0.gif)
+
+
