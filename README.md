@@ -69,3 +69,7 @@
 			e.printStackTrace();
 		}
   ```
+  
+  - 메모장
+  ![메모장](https://user-images.githubusercontent.com/121646949/226096322-5da98a49-6e81-4e68-9678-b5f97dc3e338.gif)
+
