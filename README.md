@@ -2,7 +2,7 @@
 - 해당 음료수 클릭 후 금액 투입하여 거스름돈 및 음료 받기
 
 ## ⌚ Project execution period
-  - 2022.01.02
+  - 2023.01.02
 
 ## 🛠 Development Environment
 - MVC (모델-뷰-컨트롤러, model–view–controller) 이용
