@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang = "ko">
+    <head>
+        <meta charset = "UTF-8">
+        <meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
+        <title>season</title>
+        <link rel = "stylesheet" href = "css/switch.css">
+    </head>
+
+    <body>
+        <script>
+            var month = prompt("월을 선택해주세요 : ");
+
+            switch(month) {
+                case "12" : case "1": case "2": document.write("<p><strong>겨울</strong>입니다.</p>"); break;
+                case "3" : case "4": case "5": document.write("<p><strong>봄</strong>입니다.</p>"); break;
+                case "6": case "7": case "8": document.write("<p><strong>여름</strong>입니다.</p>"); break;
+                case "9" : case "10": case "11": document.write("<p><strong>가을</strong>입니다.</p>"); break;
+                default : alert("잘못 입력했습니다.");
+            }
+
+        </script>
+    </body>
+</html>

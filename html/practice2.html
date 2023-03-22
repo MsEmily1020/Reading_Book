@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>프론트엔드 개발자 지원서</title>
+    </head>
+
+    <body>
+        <table>
+        <h2>프론트엔드 개발자 지원서</h2> <!--제목-->
+        <h4>HTML, CSS, JavaScript에 대한 기술적 이해와 경험이 있는 분을 찾습니다.</h4> <!--세부 내용-->
+        <hr> <!--줄-->
+        
+        <h3>개인정보</h3> <!--첫번째 요소-->
+
+        <form> 
+            <table> 
+                <tr> 
+                    <td><label for = "username">이름</label></td> <!--이름 라벨 생성-->
+                    <td><input id = "username" type = "text" name = "username" placeholder = "공백없이 입력하세요"></td> <!--placeholder : 글자가 보이지만 영향 없음-->
+                </tr>
+                <tr>
+                    <td><label for = "phonenumber">연락처</label></td> <!--연락처 라벨 생성-->
+                    <td><input id = "phonenumber" type = "text" name = "phonenumber" ></td>
+                </tr>
+            </table>
+
+        <h3>지원분야</h3> <!--두번째 요소-->
+
+        <div> <!--자동으로 줄바꿈-->
+            <input type="radio" id="contactChoice1" name="jobobjective" value="web publishing"
+                   checked> <!--체크 창 만들기, 서버로 보낼때 요소들-->
+            <label for="contactChoice1">웹 퍼블리싱</label> <!--뒤에 웹 퍼블리싱이라고 라벨 붙이기-->
+        </div>
+        <div>
+            <input type="radio" id="contactChoice2" name="jobobjective" value="web application"
+                   checked>
+            <label for="contactChoice2">웹 애플리케이션</label> <!--뒤에 웹 애플리케이션이라고 라벨 붙이기-->
+        </div>
+        <div>
+            <input type="radio" id="contactChoice3" name="jobobjective" value="improvement of development environment"
+                   checked>
+            <label for="contactChoice3">개발 환경 개선</label> <!--뒤에 개발 환경 개선이라고 라벨 붙이기-->
+        </div>
+
+        <h3>지원동기</h3> <!--세번째 요소-->
+
+        <p><textarea cols = "50" rows = "10" placeholder="본사 지원 동기를 간략히 써 주세요"></textarea></p>
+        <!--col : 가로 크기 row : 세로 크기, placeholder : 글자가 보이지만 영향 없음-->
+        <input type="button" value="접수하기"> <!--접수하기 클릭 버튼-->
+        <button type="submit">다시쓰기</button> <!--다시쓰기 클릭 버튼-->
+        
+        </form>
+        </table>
+    </body>
+</html>
