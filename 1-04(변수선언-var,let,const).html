@@ -1,0 +1,56 @@
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <script>
+      //1. var
+      var x = 20;
+      var y = 3;
+      var z = x + y;
+      document.write(z);
+
+      console.log("x = " + x);
+      console.log("y = " + y);
+      console.log("z = " + z);
+
+      //재선언이 가능함.
+      var x = 21;
+      var y = 4;
+      z = x + y; //z에는 새로운 값이 할당
+
+      console.log("x = " + x);
+      console.log("y = " + y);
+      console.log("z = " + z);
+
+      var name = "최치열";
+      var age = 30;
+
+      //에러 x
+      var name = "이순신";
+      var age = 500;
+
+      //2. let -- ES6 버전부터 추가됨
+      //에러 : var와 달리 재선언 불가능
+      let x1 = 5;
+      let y1 = 7;
+      let z1 = x1 + y1;
+
+      console.log("z1 = " + z1);
+
+      //let x1 = 12; 에러 : 같은 이름의 변수 재선언
+      //x1 = 8;     정상 : 재선언x
+
+      //3. const : 상수 -- ES6 버전부터 추가됨
+      const PI = 3.14;
+
+      // PI = 3.141592; : 실행 시 에러
+      // const PI = 3.141592 : 변수명 재선언 시 에러
+
+      // var x2;           : 초기화 안해도 괜찮음
+      // const x3; x3 = 5; : 에러 선언과 동시에 초기화 해야 됨
+
+      console.log("PI = " + PI);
+    </script>
+  </body>
+</html>
