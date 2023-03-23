@@ -139,6 +139,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\..\..\..\..\2105김혜승\CPP_Class\2023-CPP-201\grammar\참조풀기.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\..\2105김혜승\CPP_Class\2023-CPP-201\grammar\함수오버로딩.cpp" />
     <ClCompile Include="grammar\CPP기본.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
