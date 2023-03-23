@@ -15,13 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="grammar\CPP기본.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\..\..\..\2105김혜승\CPP_Class\2023-CPP-201\grammar\참조풀기.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\..\..\..\..\2105김혜승\CPP_Class\2023-CPP-201\grammar\함수오버로딩.cpp">
+    <ClCompile Include="grammar\문자열복사.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
