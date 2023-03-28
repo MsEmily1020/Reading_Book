@@ -43,6 +43,20 @@ class MyClass(var x: Int) {
     }
 }
 
+// 생성자가 없는, class 키워드를 쓰지 않고 object 키워드를 써서 클래스 정의
+object SingletonClass {
+    // 생성자를 아예 못 씀
+    // 자바와 같이 중괄호 안에다가 필드 만듦
+    var x = 100
+    fun increaseX() {
+        x++
+    }
+
+    fun printX() {
+        println(x)
+    }
+}
+
 fun main(args: Array<String>) {
     var inner = Outer.Inner(100)
 
@@ -53,4 +67,10 @@ fun main(args: Array<String>) {
     println(MyClass.classVar)
     println(MyClass.CONSTANT)
     MyClass.classMethod()
+
+    println(SingletonClass.x)
+    SingletonClass.increaseX()
+    SingletonClass.printX()
+
+
 }
