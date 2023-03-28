@@ -1,3 +1,5 @@
+import java.io.File
+
 // 내부 클래스, 내부 인터페이스
 class Outer(var x: Int) {
     fun outerMethod() {}
@@ -71,6 +73,23 @@ fun main(args: Array<String>) {
     println(SingletonClass.x)
     SingletonClass.increaseX()
     SingletonClass.printX()
+
+    // var toInt = "Hello".toInt() 에러
+    // var inputStream = File("nonono.txt").inputStream() 에러 : FileNotFoundException
+
+    var cnt = 0
+    while(true) {
+        try {
+            print("(잘못한 횟수 : ${cnt}) 숫자 입력 : ")
+            var input = readLine()
+            var toNum = input?.toInt()
+            println(toNum)
+            break
+        } catch (e: Exception) {
+            cnt++
+            println("오류가 났습니다." + e.message)
+        }
+    }
 
 
 }
