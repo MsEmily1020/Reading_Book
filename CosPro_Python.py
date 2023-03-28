@@ -78,3 +78,13 @@ print(min_list1([3, 28, 4, 34, 2023]))
 print(min([3, 28, 4, 34, 2023]))
 
 #make_list
+
+def make_list(n):
+    empty_list = []
+    for i in range(n):
+        empty_list.append(0)
+    return empty_list
+
+print(make_list(6))
+zero_list = [0 for i in range(6)]
+print(zero_list)
