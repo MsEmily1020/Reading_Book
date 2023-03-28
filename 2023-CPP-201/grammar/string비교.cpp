@@ -7,19 +7,17 @@
 using namespace std;
 
 int main() {
-	char str1[50] = "Hello";
-	char str2[50] = "World";
+	string str1 = "Hello";
+	string str2 = "World";
 
-	// 함수 인자 위치와 결과값(-1, 1) 헷갈림
-	int result = strcmp(str1, str2);
-	if (result == -1) {
-		printf("str2 > str1");
+	if (str2 > str1) {
+		cout << "str2 > str1" << endl;
 	}
-	else if (result == 1) {
-		printf("str2 < str1");
+	else if (str1 > str2) {
+		cout << "str1 > str2" << endl;
 	}
-	else if (result == 0) {
-		printf("str1 == str2");
+	else {
+		cout << "str1 == str2" << endl;
 	}
 	return 0;
 }
