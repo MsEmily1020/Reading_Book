@@ -31,6 +31,18 @@ interface Hello {
     }
 }
 
+// companion object를 이용한 클래스 변수, 상수, 메서드 정의
+class MyClass(var x: Int) {
+    fun myMethod() {}
+
+    // static 과 비슷 ex) MyClass.classVar 로 접근
+    companion object {
+        var classVar = 100
+        val CONSTANT = 200
+        fun classMethod() {}
+    }
+}
+
 fun main(args: Array<String>) {
     var inner = Outer.Inner(100)
 
@@ -38,4 +50,7 @@ fun main(args: Array<String>) {
     var inner21 = outer2.Inner2(200)
     var inner22 = outer2.Inner2(300)
 
+    println(MyClass.classVar)
+    println(MyClass.CONSTANT)
+    MyClass.classMethod()
 }
