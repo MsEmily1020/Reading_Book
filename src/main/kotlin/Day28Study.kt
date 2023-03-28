@@ -91,5 +91,25 @@ fun main(args: Array<String>) {
         }
     }
 
+    val a = Animal("Sam", 5)
+    // getter 호출
+    println(a.age)
+    println(a.name)
 
+    // setter 호출
+    a.age = 10
+    a.name = "Jack"
+    println(a.age)
+    println(a.name)
+
+    val s = Student("KimHyeseung", 2)
+    println(s.name)
+    println(s.grade)
+
+    s.name = "Kim"
+    s.grade = 3
+    println(s.name)
+    println(s.grade)
+
+    a.helloWorld
 }
