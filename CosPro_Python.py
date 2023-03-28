@@ -51,8 +51,30 @@ def count_list3(scores):
 
 print(count_list3([3, 28, 4, 34, 2023]))
 print(len([3, 28, 4, 34, 2023]))
+
+
 #max
 
+def max_list1(scores):
+    max_ = scores[0]
+    for score in scores:
+        if score > max_ :
+            max_ = score
+    return max_
+
+print(max_list1([3, 28, 4, 34, 2023]))
+print(max([3, 28, 4, 34, 2023]))
+
 #min
+
+def min_list1(scores):
+    min_ = scores[0]
+    for score in scores:
+        if min_ > score :
+            min_ = score
+    return min_
+
+print(min_list1([3, 28, 4, 34, 2023]))
+print(min([3, 28, 4, 34, 2023]))
 
 #make_list
