@@ -114,3 +114,19 @@ def solution2(price, money):
     return answer
 
 print(solution2([2100, 3200, 2100, 800], 10000))
+
+
+# 2차원 리스트 -> 1차원 리스트
+# 정렬 [0]: 제일 작은 수, [맨끝수]: 제일 큰 수
+# [인덱스]
+
+def solution3(arr, k):
+    answer = 0
+    list_ = []
+    for line in arr:                # [5, 12, 4, 31]...[24, 13, 11, 2]...
+        for n in line:              # 5...12...4...31
+            list_.append(n)
+    list_.sort()                    # 오름차순 정렬
+    return list_[k - 1]
+
+print(solution3([[5,12,4,31],[24,13,11,2],[43,44,19,26],[33,65,20,21]], 4))
