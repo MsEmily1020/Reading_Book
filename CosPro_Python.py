@@ -100,3 +100,17 @@ def solution(s):
     return "".join(s_lst)           #리스트 -> 문자열로 바꿈
 
 print(solution("abz"))
+
+
+def solution2(price, money):
+    answer = 0
+    sum_ = sum(price)
+
+    # 구매 금액보다 지불 금액이 작은 경우에는 -1을 return 해주세요.
+    if sum_ > money:
+        answer = -1
+    else :
+        answer = money - sum_
+    return answer
+
+print(solution2([2100, 3200, 2100, 800], 10000))
