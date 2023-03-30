@@ -43,5 +43,32 @@ fun main(args: Array<String>) {
     myPrint<Int>("myprefix", 1234)
     myPrint("myprefix", "hello")
 
+    var list1 = mutableListOf<String>()
+    list1.add("aaa")
+    list1.add("bbb")
+    list1.remove("aaa")
+    list1.removeAt(0)
+    println(list1)
+    list1.add("a"); list1.add("b"); list1.add("c")
+    var a = list1.get(0)
+    var b = list1[1]
+    println(list1.contains("c"))
+    println(list1.size)
+    var sum = list1 + listOf("e", "f")
+    println(sum)
+
+    for(item in list1) {
+        println(item)
+    }
+
+    var map = mutableMapOf<String, Int>()
+    map.put("hello", 1234)
+    map["world"] = 5678
+    println(map.get("hello"))
+    println(map["hello"])
+    map.remove("world")
+    println(map.size)
+    map.clear()
+    println(map)
 
 }
