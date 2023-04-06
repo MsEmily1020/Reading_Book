@@ -3,11 +3,6 @@
 
 using namespace std;
 
-struct Actor {
-	string name;
-	string dialog;
-};
-
 // 여러 data들을 하나의 의미있는 구조체로 묶어서 관리
 
 // 성능때문에 id, sex 문자열x -> 문자열은 정수데이터보다 상대적으로 많은 메모리 공간 요구
@@ -28,12 +23,10 @@ public:
 
 	// this : 객체 자기자신을 가리키는 포인터
 	// 매개변수명과 멤버면수명이 같아도 구분가능
-	Student(string name, int id, int age, int sex, string department) {
-		this->name = name;
-		this->id = id;
-		this->age = age;
-		this->sex = sex;
-		this->department = department;
+	// 멤버변수를 초기화 하면 const 멤버변수도 초기화 가능
+	Student(string _name, int _id, int _age, int _sex, string _department) 
+		: name(_name), id(_id), age(_age), sex(_sex), department(_department)
+	{
 	}
 	
 	// class 멤버변수를 가질 수 있다
@@ -69,16 +62,6 @@ int main() {
 	Student stu2 = Student("에밀리", 1206, 17, 1, "소프트웨어과");
 	stu2.print();
 	cout << endl;
-
-	struct Actor JangNara;
-	JangNara.name = "장나라";
-	JangNara.dialog = "팬입니다.";
-
-	struct Actor* jnr = &JangNara;
-
-	//JangNara.name = (*jnr).name
-	cout << "이름 : " << (*jnr).name << endl;
-	cout << "대사 : " << (*jnr).dialog << endl;
 
 	return 0;
 }
