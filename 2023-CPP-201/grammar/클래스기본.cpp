@@ -59,9 +59,15 @@ int main() {
 	stu1.print();
 	cout << endl;
 
+	// 정적할당
 	Student stu2 = Student("에밀리", 1206, 17, 1, "소프트웨어과");
 	stu2.print();
 	cout << endl;
+
+	//동적할당
+	// TODO : 동적할당 해제하기
+	Student* stu3 = new Student("MsEmily1020", 2105, 18, 1, "뉴미디어소프트웨어과");
+	stu3->print();
 
 	return 0;
 }
