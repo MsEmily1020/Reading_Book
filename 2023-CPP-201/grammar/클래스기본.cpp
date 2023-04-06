@@ -69,5 +69,7 @@ int main() {
 	Student* stu3 = new Student("MsEmily1020", 2105, 18, 1, "뉴미디어소프트웨어과");
 	stu3->print();
 
+	delete stu3;
+
 	return 0;
 }
