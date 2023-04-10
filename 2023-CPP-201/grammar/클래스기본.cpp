@@ -59,12 +59,12 @@ int main() {
 	stu1.print();
 	cout << endl;
 
-	// 정적할당
+	// 정적할당 : 메모리의 크기가 컴파일할 때 결정됨.
 	Student stu2 = Student("에밀리", 1206, 17, 1, "소프트웨어과");
 	stu2.print();
 	cout << endl;
 
-	//동적할당
+	//동적할당 : 메모리의 크기가 실행할 때(runtime) 결정됨. heap영역
 	// TODO : 동적할당 해제하기
 	Student* stu3 = new Student("MsEmily1020", 2105, 18, 1, "뉴미디어소프트웨어과");
 	stu3->print();
