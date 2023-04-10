@@ -1,0 +1,159 @@
+<html>
+
+<head>
+    <title>String내장함수</title>
+</head>
+
+<body>
+    <script>
+        var txt = "ABCDEFGHIJKLMN";
+        console.log("txt length : " + txt.length);
+
+        // 1. indexOf
+        // 해당 값이 여러개일 경우 앞에서 제일 첫번째 값 위치 출력
+        // 해당 값이 없을 경우 -1 출력
+        // 스페이스바도 인덱스에 포함
+        var str = "Pleace locate where 'locate'";
+        console.log("str indexOf(locate) : " + str.indexOf("locate"));      // 7
+        console.log("str indexOf(Choi) : " + str.indexOf("Choi"));          // -1
+
+        if (str.indexOf("locate") > -1) {
+            console.log("locate 문자 발견")
+        }
+
+        // 2. lastIndexOf
+        // 해당 값이 여러개일 경우 뒤에서 제일 첫번째 값 위치 출력
+        console.log("str lastIndexOf(locate) : " + str.lastIndexOf("locate")); //21
+
+        // 3. search
+        var str1 = "Please locate where 'locate'";
+        console.log("str1 search(locate) : " + str.search("locate"))
+
+        // 4. slice
+
+        // 1) (index1, index2)
+        // index1 : 이상
+        // index2 : 미만
+
+        // 2) (index)
+        // index부터 끝까지
+
+        // 3) (-index1, -index2)
+        // 뒤에서부터 -index2(미만) ~ -index1(이상)
+
+        var str2 = "Apple, Banana, Kiwi";
+        console.log("str2 slice (7,13) : " + str2.slice(7, 13));    // Banana
+        console.log("str2 slice (7) : " + str2.slice(7));           // Banana, Kiwi
+        console.log("str2 slice (-12, -6) : " + str2.slice(-12, -6)) // Banana
+
+        // 5. substring
+
+        // 1) (index1, index2)
+        // index1 : 이상
+        // index2 : 미만
+
+        var str3 = "Apple, Banana, Kiwi";
+        console.log("str3 substring(7, 13) : " + str3.substring(7, 13));     // Banana
+
+        // 6. substr
+
+        // (index1 ,index2)
+        // index1 : 이상
+        // index2 : index1부터 글자 수 길이 미만
+        console.log("str3 substr(7, 6) : " + str3.substr(7, 6));            // Banana
+
+        var hyeseung = "061020";
+        console.log("hyeseung substr (0, 2) : " + hyeseung.substr(0, 2));
+        console.log("hyeseung substr (2, 2) : " + hyeseung.substr(2, 2));
+        console.log("hyeseung substr (4, 2) : " + hyeseung.substr(4, 2));
+
+        var hyeseung2 = "2006-10-20";
+        console.log("hyeseung2 substring(0, hyeseung2.indexOf(-)) : " + hyeseung2.substring(0, hyeseung2.indexOf("-")));
+
+        // 7. replace
+        // (String1, String2)
+        // String1을 String2로 바꾸기
+
+        var str4 = "Please visit here";
+        var str5 = str4.replace("here", "there");
+        console.log("here -> there : " + str5);
+
+        // 여러개일 경우 앞에 첫번째만 바꿈
+        var str6 = "Please visit here here here";
+        var str7 = str6.replace("here", "there");
+        console.log("첫번째만 바꿈 here -> there : " + str7);
+
+        // 다 바꾸는 방법 : 정규표현식(g)
+        var str8 = "Please visit here here here";
+        var str9 = str8.replace(/here/g, "there");
+        console.log("모두 바꿈 here -> there : " + str9);
+
+        // 문자열 대소문자 구분함
+        var str10 = "Please visit HERE Here HeRe";
+        var str11 = str10.replace("here", "there");
+        console.log("대소문자 구분 here -> there : " + str11);
+
+        // 문자열 대소문자 구분안함 : 정규표현식 (ig)
+        var str12 = "Please visit HERE Here HeRe";
+        var str13 = str12.replace(/here/ig, "there");
+        console.log("대소문자 구분x here -> there : " + str13);
+
+        // 8. toUpperCase : 모두 대문자로
+        var str14 = "Please visit HERE Here HeRe";
+        console.log("toUpperCase : " + str14.toUpperCase())
+
+        // 9. toLowerCase : 모두 소문자로
+        var str15 = "Please visit HERE Here HeRe";
+        console.log("toLowerCase : " + str15.toLowerCase())
+
+        var txt1 = "Hello";
+        var txt2 = "World";
+        var txt3 = txt1 + txt2; //문자연결
+        console.log("Hello + World : " + txt3);      // Hello World
+
+        // 10. concat : 문자 연결(여러개의 파라미터 가능)
+        console.log("concat : " + txt1.concat(" ", "Choi", " ", txt2)); // Hello World
+
+        var str16 = "             Hello            World            ";
+        console.log("공백도 문자 : " + str16);
+
+        // 11. trim : 앞과 뒤의 공백 제거 (중간은 제외)
+        console.log("trim : " + str16.trim());
+
+        // 12. padStart : 특정한 자릿수 맞춤
+        // (index1 ,index2)
+        // index1 : 몇자리로 맞출건지
+        // index2 : 남은 자리는 무엇으로 채울지 ((앞을 채움)
+
+        var str17 = "15";
+        console.log("padStrat (8, 0) : " + str17.padStart(8, 0));
+
+        // ex) 날짜를 두자릿수로 통일
+        var str18 = "3";
+        console.log("padStart (2, 0) : " + str18.padStart(2, 0));
+
+        // 13. padEnd : padStart와 동일하지만 뒤부터 채움
+        var str19 = "15";
+        console.log("padEnd (4, 0) : " + str19.padEnd(4, 0));
+
+        // 14. charAt(index) : 해당 인덱스의 특정 값 가져옴
+        var str20 = "Hello World";
+        console.log(str20.charAt(0)); // H
+
+        // 주민번호의 성별 확인 가능
+        var str21 = "123456-1234567";
+        console.log(str21.charAt(7)); // 1
+
+        // 15. split(String) : 해당 String을 기준으로 문자열 분리
+        var tags = "키보드,기계식,블루투스";
+        var arr1 = tags.split(",");
+        console.log(arr1);                  // arr1[0] = 키보드, arr1[1] = 기계식, arr1[2] = 블루투스
+
+        var birthday = "2006-10-20";
+        var arr2 = birthday.split("-");
+        console.log(arr2);
+
+    </script>
+</body>
+
+</html>
