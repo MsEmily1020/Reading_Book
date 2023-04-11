@@ -27,5 +27,11 @@
     <ClCompile Include="HanoiTower.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="HanoiTowerTest.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="PointerAndArray.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
