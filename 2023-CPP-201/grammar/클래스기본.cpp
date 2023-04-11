@@ -13,13 +13,7 @@ public:
 
 	// 생성자 (constructor) : 객체 생성될 때 호출하는 함수
 	// 생성자를 정의x -> default로 매개변수로 없는 생성자 정의
-	Student() {
-		name = "김혜승";
-		id = 2105;
-		age = 18;
-		sex = 1;
-		department = "뉴미디어소프트웨어과";
-	}
+	Student() {}
 
 	// this : 객체 자기자신을 가리키는 포인터
 	// 매개변수명과 멤버면수명이 같아도 구분가능
@@ -37,6 +31,12 @@ public:
 		cout << "성별(0 : 남자, 1 : 여자) : " << sex << endl;
 		cout << "학과 : " << department << endl;
 	}
+
+	void set_name(string _name) { this->name = _name; }
+	void set_id(int _id) { this->id = _id; }
+	void set_age(int _age) { this->age = _age; }
+	void set_sex(int _sex) { this->sex = _sex; }
+	void set_department(string _department) { this->department = _department; }
 
 private:
 	string name;
@@ -87,6 +87,24 @@ int main() {
 	}
 
 	delete[] stu5;
+
+	Student* stu6 = new Student[2];
+	stu6[0].set_age(18);
+	stu6[0].set_name("지수");
+	stu6[0].set_id(2112);
+	stu6[0].set_sex(1);
+	stu6[0].set_department("뉴미디어소프트웨어과");
+
+	stu6[1].set_age(18);
+	stu6[1].set_name("혁수");
+	stu6[1].set_id(2118);
+	stu6[1].set_sex(0);
+	stu6[1].set_department("뉴미디어소프트웨어");
+
+	for (int i = 0; i < 2; i++) {
+		stu6[i].print();
+		cout << endl;
+	}
 
 	return 0;
 }
