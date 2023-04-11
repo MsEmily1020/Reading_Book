@@ -65,11 +65,28 @@ int main() {
 	cout << endl;
 
 	//동적할당 : 메모리의 크기가 실행할 때(runtime) 결정됨. heap영역
+	// C++의 동적할당은 반드시 delete로 해제해야 메모리 누수를 막을 수 있음
 	// TODO : 동적할당 해제하기
 	Student* stu3 = new Student("MsEmily1020", 2105, 18, 1, "뉴미디어소프트웨어과");
-	stu3->print();
+	stu3->print();	// 단일 객체는 멤버를 ->로 접근
 
 	delete stu3;
+
+	cout << endl;
+
+	Student stu4[2];
+	for (int i = 0; i < sizeof(stu4) / sizeof(stu4[0]); i++) {
+		stu4[i].print();
+		cout << endl;
+	}
+
+	Student* stu5 = new Student[2];
+	for (int i = 0; i < 2; i++) {
+		stu5[i].print();	// 배열의 요소에 해당하는 객체는 멤버를 .으로 접근
+		cout << endl;
+	}
+
+	delete[] stu5;
 
 	return 0;
 }
