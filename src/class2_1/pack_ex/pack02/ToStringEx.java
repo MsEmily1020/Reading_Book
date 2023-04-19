@@ -1,4 +1,4 @@
-package class2_1.pack02;
+package class2_1.pack_ex.pack02;
 
 public class ToStringEx {
 	public static void main(String[] args) {

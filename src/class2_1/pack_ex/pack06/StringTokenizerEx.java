@@ -1,4 +1,4 @@
-package class2_1.pack06;
+package class2_1.pack_ex.pack06;
 
 import java.util.StringTokenizer;
 

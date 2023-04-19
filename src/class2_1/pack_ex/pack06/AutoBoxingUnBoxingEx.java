@@ -1,4 +1,4 @@
-package class2_1.pack06;
+package class2_1.pack_ex.pack06;
 
 public class AutoBoxingUnBoxingEx {
 	public static void main(String[] args) {

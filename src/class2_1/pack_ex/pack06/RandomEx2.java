@@ -10,7 +10,7 @@
  * 6 : 3000원 
  */
 
-package class2_1.pack06;
+package class2_1.pack_ex.pack06;
 
 public class RandomEx2 {
 	public static void main(String[] args) {

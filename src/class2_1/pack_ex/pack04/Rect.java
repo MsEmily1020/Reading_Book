@@ -1,4 +1,4 @@
-package class2_1.pack04;
+package class2_1.pack_ex.pack04;
 
 class Rect {
 	private int width;

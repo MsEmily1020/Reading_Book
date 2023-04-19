@@ -1,4 +1,4 @@
-package class2_1.pack05;
+package class2_1.pack_ex.pack05;
 
 public class WrapperEx {
 

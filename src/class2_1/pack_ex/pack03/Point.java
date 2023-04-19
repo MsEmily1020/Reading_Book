@@ -1,4 +1,4 @@
-package class2_1.pack03;
+package class2_1.pack_ex.pack03;
 
 public class Point {
 	private int x, y;
