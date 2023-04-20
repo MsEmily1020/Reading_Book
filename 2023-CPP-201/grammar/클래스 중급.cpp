@@ -1,4 +1,6 @@
 #include <iostream>
+#include <string>
+#include <string.h>
 
 using namespace std;
 
@@ -24,7 +26,10 @@ private:
 
 int main(void)
 {
-	MString str = MString("yakitori tabetai");
-	cout << str.c_str() << endl;
+	const int len = 1000000;
+	MString* str = new MString("Aitai 2-1");
+	
+	cout << str->c_str() << endl;
+	delete str;
 	return 0;
 }
