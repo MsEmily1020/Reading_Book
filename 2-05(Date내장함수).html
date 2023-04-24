@@ -1,0 +1,71 @@
+<html>
+
+<head>
+    <title>Date 내장함수</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+</head>
+
+<body>
+    <script>
+        var d1 = new Date();
+        console.log(d1);
+
+        // 특정 날짜 및 시간 직접 지정
+        // month : 0부터 시작
+        // day : 1부터 시작
+        var d2 = new Date(2023, 11, 25, 13, 30);
+        console.log(d2);
+        console.log(d2.getMonth());
+
+        var d3 = new Date();
+        console.log(d3);
+
+        var year = d3.getFullYear();
+        console.log("year : " + year);
+
+        var month = d3.getMonth() + 1;
+        console.log("month : " + month);
+
+        var date = d3.getDate();
+        console.log("date : " + date);
+
+        // 0.일  1.월  2.화  3.수  4.목  5.금  6.토
+        var day = d3.getDay();
+        console.log("day : " + day);
+
+        var hour = d3.getHours();
+        var minute = d3.getMinutes();
+        var second = d3.getSeconds();
+
+        console.log(hour, minute, second);
+
+        // 글로벌 서비스일 경우 접속한 국가의 타임존 고려
+        var d4 = new Date();
+        console.log("timezone : " + d4.getTimezoneOffset()); // 출력값(분단위) : -540 : 영국과 9시간 차이
+
+        // 특정 날짜와 시간 직접 지정
+        var d5 = new Date();
+        d5.setFullYear(2007);
+        d5.setMonth(7);
+        d5.setDate(28);
+
+        console.log(d5);
+
+        // 실무에서는 moment.js 사용
+        var d6 = new Date();
+        console.log(moment().format("YYYY-MM-DD"));
+        console.log(moment().format("MMM DD, YYYY"));
+
+        // 오늘을 기준으로 일주일전 검색
+        console.log(moment().subtract(7, "days").format("MMM DD, YYYY"));
+
+        // 오늘을 기준으로 일주일후 검색
+        console.log(moment().add(7, "days").format("YYYY-MM-DD"));
+
+        // 오늘을 기준으로 4시간후 검색
+        console.log(moment().add(4, "hours").format("YYYY-MM-DD HH"));
+
+    </script>
+</body>
+
+</html>
