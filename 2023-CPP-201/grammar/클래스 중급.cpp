@@ -15,6 +15,13 @@ public:
 		strcpy(c_str_, str);
 	}
 
+	// 소멸자(dextructor)
+	~MString()
+	{
+		// 생성자에서 동적할당한 공간 해제
+		delete[] c_str_;
+	}
+
 	// getter
 	unsigned int size() { return size_; }
 	char* c_str() { return c_str_; }
