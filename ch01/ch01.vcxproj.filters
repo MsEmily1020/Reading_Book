@@ -42,5 +42,8 @@
     <ClCompile Include="LinkedList2.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="StackArray.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
