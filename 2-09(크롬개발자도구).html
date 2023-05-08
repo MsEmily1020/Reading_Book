@@ -1,0 +1,43 @@
+<html>
+
+<head>
+    <title>크롬 개발자도구</title>
+</head>
+
+<body>
+    <script>
+        console.log("Hello World");     // 출력
+        console.info("Hello World");    // 정보
+        console.warn("Hello World");    // 경고
+        console.error("Hello World");   // 에러
+
+        var userList = [
+            { firstName: "재석", lastName: "유", email: "yu@gmail.com" },
+            { firstName: "종국", lastName: "김", email: "kim@gmail.com" },
+            { firstName: "세찬", lastName: "양", email: "yang@gmail.com" },
+            { firstName: "석진", lastName: "지", email: "ji@gmail.com" },
+        ];
+
+        console.log(userList);
+        console.table(userList);
+
+        console.time();
+
+        //for (let x = 1; x <= 100000; x++) {
+        //    console.log(x);
+        // }
+        console.timeEnd();
+
+        function test() {
+            console.time();
+            //code
+            console.timeEnd();
+        }
+
+        // 출력값에 style을 직접 지정할 수 있음.
+        console.log("This is %cstyle message", "color:yellow; background-color:blue; padding:4px;");
+
+    </script>
+</body>
+
+</html>
