@@ -6,15 +6,22 @@ using namespace std;
 
 class MString {
 public:
+	// 일반적인 생성자
 	// 생성자(constructor) : 객체가 생성(메모리에 할당될 때)될 때 호출되는 함수
 	// 클래스이름과 같다, 반환형이 없다
 	MString(const char* str)
 	{
-		size_ = strlen(str);
+		unsigned int str_length = strlen(str);
 		// 필요한 길이만큼 문자열 동적할당
-		c_str_ = new char[size_ + 1];	// + 1 : null 공간
+		c_str_ = new char[str_length + 1];	// + 1 : null 공간
 		strcpy(c_str_, str);
 		cout << "MString 생성자 호출 완료" << endl;
+	}
+
+	// 복사생성자(별도로 정의하지 않으면 컴파일러가 아래와 같은 복사생성자를 만들어 냄)
+	MString(const MString& rhs) 
+		: size_(rhs.size_), c_str_(rhs.c_str_)
+	{
 	}
 
 	// 소멸자(dextructor) : 객체가 소멸(메모리에 해제될 때)될 때 호출되는 함수
@@ -37,8 +44,11 @@ private:
 
 int main(void)
 {
+	// 일반적인 생성자 호출
 	MString str1 = MString("Aitai");
-	cout << str1.c_str() << endl;
+
+	// 복사생성자 호출
+	MString str2 = str1;
 
 	return 0;
 }
