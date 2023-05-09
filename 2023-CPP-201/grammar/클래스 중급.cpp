@@ -19,9 +19,11 @@ public:
 	}
 
 	// 복사생성자(별도로 정의하지 않으면 컴파일러가 아래와 같은 복사생성자를 만들어 냄)
+	// TODO : 복사된 객체가 소멸될 때 발생하는 에러를 해결하기
 	MString(const MString& rhs) 
 		: size_(rhs.size_), c_str_(rhs.c_str_)
 	{
+		cout << "복사생성자 호출" << endl;
 	}
 
 	// 소멸자(dextructor) : 객체가 소멸(메모리에 해제될 때)될 때 호출되는 함수
