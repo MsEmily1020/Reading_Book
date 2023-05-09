@@ -37,13 +37,8 @@ private:
 
 int main(void)
 {
-	// new로 동적할당한 공간은 반드시 delete로 해제 (안하면 메모리 누수)
-	MString* str = new MString("Aitai 2-1");
+	MString str1 = MString("Aitai");
+	cout << str1.c_str() << endl;
 
-	cout << str->c_str() << endl;
-
-	// str은 delete됨, str->c_str_은 delete 진행x
-	// TODO : 이름 delete 해주는 소멸(destructor) 구현
-	delete str;
 	return 0;
 }
