@@ -51,5 +51,22 @@
     <ClCompile Include="mazeSearch.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="MultiMazeCreateAllSearch.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="MazeRecursiveSearch.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="MazeAllAsc.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="recursiveBacktracking.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="RandomMazeCreateSearch.c">
+      <Filter>소스 파일</Filter>
+    </None>
   </ItemGroup>
 </Project>
