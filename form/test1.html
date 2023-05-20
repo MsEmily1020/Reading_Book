@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>input 태그</h1>
+    <form method="post" action="#">
+        Id: <input type="text" name="user_name" maxlength="12" size="20" value="123">
+        <br>
+        Password: <input type="password" name="user_pass" value="abc">
+        <br>
+        <h2> 좋아하는 메뉴를 선택하세요. </h2>
+        <form>
+            <input type="checkbox" name="favor" value="라면">라면
+            <input type="checkbox" name="favor" value="짜장면">짜장면
+            <input type="checkbox" name="favor" value="짬뽕">짬뽕
+            <input type="checkbox" name="favor" value="쫄면">쫄면
+        </form>
+
+        <h2> 사이즈를 선택하세요. </h2>
+        <form>
+            <input type="radio" name="size" value="S" checked>S사이즈
+            <input type="radio" name="size" value="M">M사이즈
+            <input type="radio" name="size" value="L">L사이즈
+            <!-- <input type="button" name="btn" value="확인" class="btn btn-primary"> -->
+            <button type="button" class="btn btn-primary">확인</button>
+            <button type="submit" class="btn btn-success">입력완료</button>
+            <button type="reset" class="btn btn-warning">다시입력</button>
+
+            <h2>자기소개를 하세요.</h2>
+            <textarea name="txt" rows="10" cols="15">자기소개를 하세요.</textarea>
+            <button type="submit" class="btn btn-success">입력완료</button>
+
+            <h2>가고싶은 도시는?</h2>
+            <select name="sel" multiple size="2">
+                <option value="서울" selected>서울</option>
+                <option value="부산">부산</option>
+                <option value="대전">대전</option>
+                <option value="제주">제주</option>
+            </select>
+            <button type="submit" class="btn btn-success">입력완료</button>
+
+            <h2>데이터리스트</h2>
+            <input type="text" list="city">
+            <datalist id="city">
+                <option value="usa">usa</option>
+                <option value="japan">japan</option>
+                <option value="korea">korea</option>
+            </datalist>
+
+
+            <h2>이메일을 입력하세요.</h2>
+            이메일 : <input type="email" name="user_email">
+            <button type="submit" class="btn btn-success">입력완료</button>
+
+            <h2>비밀번호를 확인해주세요.</h2>
+            <label for="pass">비밀번호</label>
+            <input type="password" id="pass" value="">
+            <input type="color" value="#ff0000" onchange="document.body.style.color=this.value">
+            <button type="submit" class="btn btn-success">입력완료</button>
+
+
+        </form>
+</body>
