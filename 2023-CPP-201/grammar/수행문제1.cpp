@@ -9,8 +9,12 @@ public:
 	}
 
 	IntArray(const IntArray& rhs)
-		: size_(rhs.size_), arr_(rhs.arr_)
 	{
+		arr_ = new int[rhs.size_];
+		size_ = rhs.size_;
+		for (int i = 0; i < rhs.size_; i++) {
+			arr_[i] = rhs.arr_[i];
+		}
 	}
 
 private:
