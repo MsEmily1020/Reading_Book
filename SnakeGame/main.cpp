@@ -89,6 +89,7 @@ int main() {
 
 		// update
 
+		// 뱀 이동
 		if (snake.dir_ == DIR_UP) {
 			snake.y_--;
 		}
@@ -104,6 +105,11 @@ int main() {
 		else if (snake.dir_ == DIR_RIGHT) {
 			snake.x_++;
 		}
+
+		if (snake.x_ < 0) snake.x_ = 0;
+		if (snake.x_ >= w) snake.x_ = w - 1;
+		if (snake.y_ < 0) snake.y_ = 0;
+		if (snake.y_ >= h) snake.y_ = h - 1;
 
 		snake.sprite_.setPosition(snake.x_ * block, snake.y_ * block);
 
