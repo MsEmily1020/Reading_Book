@@ -2,46 +2,28 @@ package com.example.recyclerview
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import android.widget.TextView
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
-class ListContact(val data: List<String>) : RecyclerView.Adapter<ListContact.ItemViewHolder>() {
-    class ItemViewHolder(val view: View) : RecyclerView.ViewHolder(view) {
+data class Contact(var name: String, var phone: String) {}
 
-    }
-
-    // viewHolder를 만듦
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
-        val view = LayoutInflater
-            .from(parent.context)
-            .inflate(viewType, parent, false)
-        return ItemViewHolder(view)
-    }
-
-    override fun onBindViewHolder(holder: ListContact.ItemViewHolder, position: Int) {
-        val view = holder.view
-        val listItemText = view.findViewById<TextView>(R.id.list_item_text)
-        val item = data[position]
-        listItemText.text = item
-    }
-
-    // 데이터 총갯수
-    override fun getItemCount(): Int {
-        return data.size
-    }
-
-    // 해당 목록 아이템에 해당하는 레이아웃 (사실 switch로 각각 맞는 레이아웃 return 시켜줘야함)
-    override fun getItemViewType(position: Int): Int {
-        return R.layout.list_item
-    }
-}
 class ContactActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.contact_activity)
 
+        val contacts = mutableListOf<Contact>()
+        for(i in 1..100) {
+            contacts.add(Contact("아무개 ${i}", "010-1234-0${i.toString().padStart(3, '0')}"))
+        }
+
+        val contactList = findViewById<RecyclerView>(R.id.contact_list)
+
+        // RecyclerView가 고정된 사이즈를 가진다고 알려주는 함수
+        // 내부적으로 Size를 측정하여 자신의 Size를 결정하고 이는 비용이 많이 드는 작업이다.
+
+        contactList.setHasFixedSize(true)
+        contactList.layoutManager = LinearLayoutManager(this)
+        contactList.adapter = ContactListAdapter(contacts)
     }
 }
