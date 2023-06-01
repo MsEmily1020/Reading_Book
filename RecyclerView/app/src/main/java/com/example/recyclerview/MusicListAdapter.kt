@@ -1,5 +1,6 @@
 package com.example.recyclerview
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -27,6 +28,15 @@ class MusicListAdapter(val data: List<Music>) : RecyclerView.Adapter<MusicListAd
         nameTextView.text = item.name
         genreTextView.text = item.genre
         imgImageView.setImageResource(item.img)
+
+        holder.view.setOnClickListener {
+            val context = holder.view.context
+            val intent = Intent(context, ContactMusicDetailActivity::class.java)
+            intent.putExtra("name", item.name)
+            intent.putExtra("genre", item.genre)
+            intent.putExtra("img", item.img)
+            context.startActivity(intent)
+        }
     }
 
     override fun getItemCount(): Int {
