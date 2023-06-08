@@ -18,6 +18,21 @@ public class BlogApiController {
     return ResponseEntity.status(HttpStatus.CREATED)
       .body(savedArticle);
   }
+  
+  // 전체 글을 조회한 뒤 반환하는 메서드
+  @GetMapping("/api/articles")
+  public ResponseEntity<List<ArticleResponse>> findAllArticles() {
+  
+    // findAll() : GET 요청이 오면 글 전체 조회 메서드
+    List<ArticleResponse> articles = blogService.findAll()
+      .stream()
+      .map(ArticleResponse::new)
+      .toList();
+     
+     // 클라이언트에 전송
+     return ResponseEntity.ok()
+            .body(articles);
+  }
 }
 ```
 
