@@ -36,3 +36,15 @@ public class ArticleResponse {
   }
 }
 ```
+
+## 🔍 블로그 글 수정 요청 받을 DTO
+
+```java
+@NoArgsConstructor
+@AllArgsContructor
+@Getter
+public class UpdateArticleRequest {
+  private String title;
+  private String content;
+}
+```
