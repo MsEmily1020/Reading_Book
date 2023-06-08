@@ -29,5 +29,16 @@ public class BlogService {
   public void delete(long id) {
     blogRepository.deleteById(id);
   }
+  
+  // 리포지터리를 사용해 글 수정하는 메서드
+  @Transactional // 트랜잭션 메서드
+  public Article update(long id, UpdateArticleRequest request) {
+    Article article = blogRepository.findById(id)
+      .orElseThrow(() -> new IllegalArgumentException("not found: " + id));
+      
+    article.update(request.getTitle(), request.getContent());
+    
+    return article;
+  }
 }
 ```
