@@ -19,3 +19,20 @@ public class AddArticleRequest {
   }
 }
 ```
+<br>
+
+## 🔍 GET 요청에서 응답을 위한 DTO
+
+```java
+@Getter
+public class ArticleResponse {
+  private final String title;     // 제목
+  private final String content;   // 내용
+  
+  // 엔티티 Article을 인수로 받음
+  public ArticleResponse(Article article) {
+    this.title = article.getTitle();
+    this.content = article.getContent();
+  }
+}
+```
