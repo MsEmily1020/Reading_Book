@@ -33,6 +33,16 @@ public class BlogApiController {
      return ResponseEntity.ok()
             .body(articles);
   }
+  
+  // GET 요청 시 블로그 글 조회하기 위해 매핑할 메서드
+  @GetMapping("/api/articles/{id}")
+  // URL 경로에서 값 추출
+  public ResponseEntity<ArticleResponse> findArticle(@PathVariable long id) {
+    Article article = blogService.findById(id);
+    
+    return ResponseEntity.ok()
+      .body(new ArticleResponse(article));
+  }
 }
 ```
 
