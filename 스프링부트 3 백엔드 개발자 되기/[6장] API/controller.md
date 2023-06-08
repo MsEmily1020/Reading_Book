@@ -44,13 +44,25 @@ public class BlogApiController {
       .body(new ArticleResponse(article));
   }
   
-  @Delete("/api/articles/{id}");
+  // 글 삭제
+  @DeleteMapping("/api/articles/{id}");
   public ResponseEntity<Void> deleteArticle(@PathVariable long id) {
     blogService.delete(id);
     
     return ResponseEntity.ok()
       .build();
   }
+  
+  // 글 수정
+  @PutMapping("/api/articles/{id}")
+  public ResponseEntity<Article> updateArticle(@PathVariable long id,
+        @RequestBody UpdateArticleRequest request) {      // PUT 요청 -> RequestBody 정보가 request로 넘어옴
+     // update()에 id와 request 넘겨줌
+     Article updatedArticle = blogService.update(id, request);
+     
+     // 응답 값은 body에 담아 전송
+     return ResponseEntity.ok()
+        .body(updatedArticle);
 }
 ```
 
