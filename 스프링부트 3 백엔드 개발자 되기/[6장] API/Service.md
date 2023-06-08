@@ -12,5 +12,11 @@ public class BlogService {
   public Article save(AddArticleRequest request) {
     return blogRepository.save(request.toEntity());
   }
+  
+  // article 테이블 데이터베이스에 저장되어 있는 글 모두 가져오는 메서드
+  // findAll() : JPA 지원 메서드
+  public List<Article> findAll() {
+    return blogRepository.findAll();
+  }
 }
 ```
