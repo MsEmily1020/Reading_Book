@@ -24,5 +24,10 @@ public class BlogService {
     return blogRepository.findById(id)
       .orElseThrow(() -> new IllegalArgumentException("not found: " + id)); // ID를 받아 엔티티 없을 경우 예외 발생시킴
   }
+  
+  // 해당 글의 ID 데이터베이스 데이터 삭제하는 메서드
+  public void delete(long id) {
+    blogRepository.deleteById(id);
+  }
 }
 ```
