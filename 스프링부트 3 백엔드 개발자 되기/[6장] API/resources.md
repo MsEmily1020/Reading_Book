@@ -2,19 +2,18 @@
 
 ```
 spring:
+  datasource:
+    url: jdbc:h2:mem:testdb
+  h2:
+    console:
+      enabled: true
   jpa:
     show-sql: true
     properties:
       hibernate:
         format_sql: true
+
     defer-datasource-initialization: true
-  
-  datasource:
-    url: jdbc:h2:mem:testdb
-    
-  h2:
-    console:
-      enabled: true
 ```
 
 ## 🔍 data.sql
