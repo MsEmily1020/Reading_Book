@@ -2,21 +2,19 @@
 
 ```java
 @NoArgsConstructor // 기본 생성자 추가
-@AllArgsConstructor // 모든 필드 값을 파라미터로 받는 생성자 추가
+@AllArgsConstructor // 모든 필드 값을 파라미터로 받는 생성자
 @Getter
 public class AddArticleRequest {
-  private String title;
-  private String content;
-  
-  // 생성자를 사용해 객체 생성
-  // DTO를 엔티티로 만들어주는 메서드
-  // 추후 블로그 글 추가할 때 저장할 엔티티로 변환하는 용도로 사용
-  public Article toEntity() {
-    return Article.builder()
-      .title(title)
-      .content(content)
-      .build();
-  }
+    private String title;
+    private String content;
+
+    public Article toEntity() {
+        // 빌더 패턴을 사용해 객체 생성
+        return Article.builder()
+                .title(title)
+                .content(content)
+                .build();
+    }
 }
 ```
 <br>
@@ -26,14 +24,14 @@ public class AddArticleRequest {
 ```java
 @Getter
 public class ArticleResponse {
-  private final String title;     // 제목
-  private final String content;   // 내용
-  
-  // 엔티티 Article을 인수로 받음
-  public ArticleResponse(Article article) {
-    this.title = article.getTitle();
-    this.content = article.getContent();
-  }
+    private final String title;     // 제목
+    private final String content;   // 내용
+
+    // 엔티티 Article을 인수로 받음
+    public ArticleResponse(Article article) {
+        this.title = article.getTitle();
+        this.content = article.getContent();
+    }
 }
 ```
 
@@ -41,10 +39,11 @@ public class ArticleResponse {
 
 ```java
 @NoArgsConstructor
-@AllArgsContructor
+@AllArgsConstructor
 @Getter
 public class UpdateArticleRequest {
-  private String title;
-  private String content;
+    private String title;
+    private String content;
 }
+
 ```
