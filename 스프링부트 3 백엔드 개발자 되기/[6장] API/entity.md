@@ -11,34 +11,34 @@
 package.domain에 Article.java파일 만들기
 
 ```java
+@NoArgsConstructor(access = AccessLevel.PROTECTED) // 기본 생성자 만듦 (접근제어자 : PROTECTED)
+@Getter // getter 자동 생성
 @Entity // 엔티티로 지정
-@Getter // getter 자동생성
-@NoArgsConstructor(access = AccessLevel.PROTECTED) // protected 제어자로 기본 생성자 만들기
 public class Article {
+    @Id // id 필드를 기본키로 지정
+    @GeneratedValue(strategy = GenerationType.IDENTITY) // 기본키가 자동으로 1씩 증가
+    @Column(name = "id", updatable = false) // 'id'라는 이름을 가진 컬럼과 매핑
+    private Long id;
 
-  @Id // id 필드를 기본키로 지정
-  @GeneratedValue(strategy = GenerationType.IDENTITY) // 기본키 자동으로 1씩 증가
-  @Column(name = "id", updateable = false)
-  private Long id;
-  
-  @Column(name = "title", nullable = false) // 'title'이라는 not null 컬럼과 매핑
-  private String title;
-  
-  @Column(name = "content", nullable = false)
-  private String content;
-  
-  @Builder // 빌더 패턴으로 객체 생성
-  public Article(String title, String content) {
-    this.title = title;
-    this.content = content;
-  }
-  
-  // 엔티티에 요청받은 내용으로 값을 수정하는 메서드
-  public void update(String title, String contnt) {
-    this.title = title;
-    this.content = content;
-  }
+    // null값이 들어갈 수 없다.
+    @Column(name = "title", nullable = false) // 'title'이라는 이름을 가진 컬럼과 매핑
+    private String title;
+
+    @Column(name = "content", nullable = false)
+    private String content;
+
+    @Builder  // 빌더 패턴을 사용해서 생성자 생성
+    public Article(String title, String content) {
+        this.title = title;
+        this.content = content;
+    }
+
+    public void update(String title, String content) {
+        this.title = title;
+        this.content = content;
+    }
 }
+
 ```
 
 <br> 
