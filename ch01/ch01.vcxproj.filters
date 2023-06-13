@@ -75,6 +75,9 @@
     <ClCompile Include="LeftRightBalancedTree.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="TreeTraversal1.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="RandomMazeCreateSearch.c">
