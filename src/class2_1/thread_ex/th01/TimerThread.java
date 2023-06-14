@@ -1,6 +1,5 @@
 package class2_1.thread_ex.th01;
 
-import javax.naming.InterruptedNamingException;
 import javax.swing.JLabel;
 
 public class TimerThread extends Thread {

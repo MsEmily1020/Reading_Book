@@ -2,7 +2,7 @@ package class2_1.thread_ex.th02;
 
 import javax.swing.JLabel;
 
-public class TimerRunnable extends Thread {
+public class TimerRunnable implements Runnable {
 	private JLabel timerLabel;
 	
 	public TimerRunnable(JLabel timerLabel) {
