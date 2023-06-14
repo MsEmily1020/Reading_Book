@@ -1,12 +1,11 @@
 package class2_1.thread_ex.th02;
 
-import javax.naming.InterruptedNamingException;
 import javax.swing.JLabel;
 
-public class TimerThread extends Thread {
+public class TimerRunnable extends Thread {
 	private JLabel timerLabel;
 	
-	public TimerThread(JLabel timerLabel) {
+	public TimerRunnable(JLabel timerLabel) {
 		this.timerLabel = timerLabel;
 	}
 	
