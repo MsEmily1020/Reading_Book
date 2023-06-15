@@ -46,11 +46,8 @@ private:
 };
 
 int main() {
-	Animal* animal = new Animal(COLOR_BLUE, 30);
-	animal->Roar(); // Animal 짖다
-	delete animal;
-
-	animal = new Rabbit(COLOR_RED, 3, 20);
+	// 소멸자에 vitual를 안하면 자식 소멸자가 호출되지 않아서 메모리 누수현상이 발생
+	Animal* animal = new Rabbit(COLOR_RED, 3, 20);
 	animal->Roar();	// 깡총깡총
 	delete animal;
 	return 0;
