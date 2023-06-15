@@ -13,10 +13,10 @@ public:
 	}
 
 	virtual ~Animal() { cout << "Animal 소멸자()" << endl; }
-	// 가상함수 : Java처럼 동적바인딩
-	virtual void Roar(void) { cout << "Animal 짖다" << endl; }
-	void Eat(void) { cout << "Animal 먹다" << endl; }
-	void Sleep(void) { cout << "Animal 자다" << endl; }
+	// 순수 가상함수 : JAVA처럼 동적바인딩 + 추상메서드처럼 함수 정의 x -> 상속받은 자식에서 정의
+	virtual void Roar(void) = 0;
+	virtual void Eat(void) = 0;
+	virtual void Sleep(void) = 0;
 
 private:
 	int color_;
@@ -41,11 +41,17 @@ public:
 		cout << "깡총깡총" << endl;
 	}
 
+	// 순수가상함수(추상메서드)는 자식 클래스에서 무조건 정의해야 함
+	void Eat(void) override {}
+	void Sleep(void) override {}
+
 private:
 	int ear_length_;
 };
 
 int main() {
+	// Animal클래스는 순수가상함수가 하나라도 존재하는 클래스 = 추상클래스임
+	// Animal* a = new Animal(COLOR_GREEN, 10); -> 추상클래스이므로 해당 객체 생성 x
 	Animal* animal = new Rabbit(COLOR_RED, 3, 20);
 	animal->Roar();	// 깡총깡총
 	delete animal;
