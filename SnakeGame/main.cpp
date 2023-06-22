@@ -58,6 +58,9 @@ int main() {
 		snake.body_[i].sprite_.setPosition(snake.body_[i].x_ * block, snake.body_[i].y_ * block);
 		snake.body_[i].sprite_.setSize(Vector2f(block, block));
 		snake.body_[i].sprite_.setFillColor(Color::Green);
+		// 뱀의 테두리
+		snake.body_[i].sprite_.setOutlineColor(Color::Color(0, 128, 0));
+		snake.body_[i].sprite_.setOutlineThickness(5);
 		
 	}
 	snake.body_[0].x_ = 3;
