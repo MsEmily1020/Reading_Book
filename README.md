@@ -6,5 +6,5 @@
   - Year `2023`
 
 ## 🛠 Development Environment
-  - language : `Kotlin`
+  - Language : `Kotlin`
   - Tool : `Android Studio`
