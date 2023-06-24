@@ -1,4 +1,4 @@
-## 💻 [JAVA] Project
+## 💻 Java Project
 
 - GUI
 
