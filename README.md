@@ -14,7 +14,7 @@ C++ 수업 자료 저장소입니다.
 
 ## 🗃 수업 내용
 
-### 📁 수업 자료
+### 📁 [수업 자료](https://github.com/MsEmily1020/CPP_Class/tree/main/2023-CPP-201/grammar)
 
 > 1. &nbsp; [CPP기본](https://github.com/MsEmily1020/CPP_Class/blob/main/2023-CPP-201/grammar/CPP%EA%B8%B0%EB%B3%B8.cpp)
 > 2. &nbsp; [참조풀기](https://github.com/MsEmily1020/CPP_Class/blob/main/2023-CPP-201/grammar/%EC%B0%B8%EC%A1%B0%ED%92%80%EA%B8%B0.cpp)
@@ -31,7 +31,7 @@ C++ 수업 자료 저장소입니다.
 
 <br>
 
-### 📁 Quiz
+### 📁 [Quiz](https://github.com/MsEmily1020/CPP_Class/tree/main/2023-CPP-201/grammar)
 
 > 1. &nbsp; [Problem1](https://github.com/MsEmily1020/CPP_Class/blob/main/2023-CPP-201/grammar/Problem1.cpp)
 > 2. &nbsp; [Problem2](https://github.com/MsEmily1020/CPP_Class/blob/main/2023-CPP-201/grammar/Problem2.cpp)
