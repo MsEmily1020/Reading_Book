@@ -14,7 +14,13 @@ PHP 수업 자료 저장소입니다.
 
 ## 🗃 수업 내용
 
-### 📁 Quiz
+### 📁 [form](https://github.com/MsEmily1020/PHP_Class/tree/main/form)
+- form 태그 예제
+
+### 📁 [php_test](https://github.com/MsEmily1020/PHP_Class/tree/main/php_test)
+- php 기초 예제
+
+### 📁 [Quiz](https://github.com/MsEmily1020/PHP_Class/tree/main/form/Problem)
 
 > 1. &nbsp; [Html](https://github.com/MsEmily1020/PHP_Class/blob/main/form/Problem/test1.html) , [PHP](https://github.com/MsEmily1020/PHP_Class/blob/main/form/Problem/test1.php)
 > 2. &nbsp; [Html](https://github.com/MsEmily1020/PHP_Class/blob/main/form/Problem/test2.html) , [PHP](https://github.com/MsEmily1020/PHP_Class/blob/main/form/Problem/test2.php)
