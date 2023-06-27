@@ -87,6 +87,9 @@
     <ClCompile Include="PrimMinSpannigTree.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="GraphArray.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="RandomMazeCreateSearch.c">
