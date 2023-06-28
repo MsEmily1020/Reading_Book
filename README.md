@@ -27,6 +27,8 @@ Manifest
 > [layout activity_main](https://github.com/MsEmily1020/Android_Class/blob/main/MyApplication/app/src/main/res/layout/activity_main.xml)
 
 <br>
+<hr>
+<br>
 
 ### 📁 [MyApplication2](https://github.com/MsEmily1020/Android_Class/tree/main/MyApplication2)
 - Android 기초 수업2
@@ -70,6 +72,8 @@ Manifest
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img width="400" src = https://kairo96.gitbooks.io/android/content/pic2/2-4-1-1.jpg> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img width="500" src = http://design.gabia.com/wordpress/wp-content/uploads/2019/03/0_WfRr_eojcMI8wouq-1024x470.png>
 
 <br>
+<hr>
+<br>
 
 ### 📁 [RecyclerView](https://github.com/MsEmily1020/Android_Class/tree/main/RecyclerView)
 - RecyclerView에 대한 수업
@@ -108,20 +112,122 @@ Manifest
       2) MainActivity
       3) MusicActivity   -> MusicListAdapter   -> ContactMusicDetailActivity 
   
-  
+
+<br>
+<hr>
 <br>
 
 ### 📁 [RetrofitStudy](https://github.com/MsEmily1020/Android_Class/tree/main/RetrofitStudy)
-- Retrofit에 대한 수업
+- API Retrofit에 대한 수업
 
+Manifest
+> [AndroidManifest](https://github.com/MsEmily1020/Android_Class/blob/main/RetrofitStudy/app/src/main/AndroidManifest.xml)
+
+Activity
+> [MainActivity](https://github.com/MsEmily1020/Android_Class/blob/main/RetrofitStudy/app/src/main/java/com/example/retrofitstudy/MainActivity.kt)<br>
+> [MainContact](https://github.com/MsEmily1020/Android_Class/blob/main/RetrofitStudy/app/src/main/java/com/example/retrofitstudy/MainContact.kt)<br>
+> [ProductDetailActivity](https://github.com/MsEmily1020/Android_Class/blob/main/RetrofitStudy/app/src/main/java/com/example/retrofitstudy/ProductDetailActivity.kt)<br>
+> [ProductService](https://github.com/MsEmily1020/Android_Class/blob/main/RetrofitStudy/app/src/main/java/com/example/retrofitstudy/ProductService.kt)<br>
+
+Layout
+> [acitvity_contact](https://github.com/MsEmily1020/Android_Class/blob/main/RetrofitStudy/app/src/main/res/layout/acitvity_contact.xml)<br>
+> [activity_main](https://github.com/MsEmily1020/Android_Class/blob/main/RetrofitStudy/app/src/main/res/layout/activity_main.xml)<br>
+> [activity_product_detail](https://github.com/MsEmily1020/Android_Class/blob/main/RetrofitStudy/app/src/main/res/layout/activity_product_detail.xml)<br>
+
+- 정리
+  
+```kotlin
+// 레트로핏 구현체
+val retrofit = Retrofit.Builder()
+            .baseUrl("API주소")
+            .addConverterFactory(GsonConverterFactory.create()) // Json데이터를 사용자가 정의한 Java 객채로 변환해주는 라이브러리
+            .build() //레트로핏 구현체 완성!
+
+// ----------------------------------------------------------------------------------------------------------------------------------------------------
+
+call.enqueue(object : Callback<ProductDTO> {
+            override fun onResponse(call: Call<ProductDTO>, response: Response<ProductDTO>) {
+            }
+
+            override fun onFailure(call: Call<ProductDTO>, t: Throwable) {
+            }
+}
+
+// ----------------------------------------------------------------------------------------------------------------------------------------------------
+
+@GET("/products/{id}")
+    fun getProduct(@Path("id") id: Int) : Call<Product>
+
+```
+
+<br>
+<hr>
 <br>
 
 ### 📁 [TodayQuote](https://github.com/MsEmily1020/Android_Class/tree/main/TodayQuote)
 - 오늘의 명언, 계산기 과제
 
+Manifest
+> [AndroidManifest](https://github.com/MsEmily1020/Android_Class/blob/main/TodayQuote/app/src/main/AndroidManifest.xml)
+
+[Activity](https://github.com/MsEmily1020/Android_Class/tree/main/TodayQuote/app/src/main/java/com/example/todayquote)
+> [CalcInputActivity](https://github.com/MsEmily1020/Android_Class/blob/main/TodayQuote/app/src/main/java/com/example/todayquote/CalcInputActivity.kt)<br>
+> [CalcResultAcitivity](https://github.com/MsEmily1020/Android_Class/blob/main/TodayQuote/app/src/main/java/com/example/todayquote/CalcResultAcitivity.kt)<br>
+> [MainActivity](https://github.com/MsEmily1020/Android_Class/blob/main/TodayQuote/app/src/main/java/com/example/todayquote/MainActivity.kt)<br>
+> [Quote](https://github.com/MsEmily1020/Android_Class/blob/main/TodayQuote/app/src/main/java/com/example/todayquote/Quote.kt)<br>
+> [QuoteListActivity](https://github.com/MsEmily1020/Android_Class/blob/main/TodayQuote/app/src/main/java/com/example/todayquote/QuoteListActivity.kt)<br>
+
+[Layout](https://github.com/MsEmily1020/Android_Class/tree/main/TodayQuote/app/src/main/res/layout)
+> [activity_main](https://github.com/MsEmily1020/Android_Class/blob/main/TodayQuote/app/src/main/res/layout/activity_main.xml)<br>
+> [calc_input_activity](https://github.com/MsEmily1020/Android_Class/blob/main/TodayQuote/app/src/main/res/layout/calc_input_activity.xml)<br>
+> [calc_result_acitivity](https://github.com/MsEmily1020/Android_Class/blob/main/TodayQuote/app/src/main/res/layout/calc_result_acitivity.xml)<br>
+> [quote_list_activity](https://github.com/MsEmily1020/Android_Class/blob/main/TodayQuote/app/src/main/res/layout/quote_list_activity.xml)<br>
+
+- 정리
+
+      Calc - 계산기, Quote - 명언
+  
+<br>
+<hr>
 <br>
 
 ### 📁 [KanyeRESTAPI](https://github.com/MsEmily1020/Android_Class/tree/main/KanyeRESTAPI)
 - API + RecyclerView
+- 앞서 만들었던 Quote에서 api 불러와 값 저장하고 보여주기
+
+Manifest
+> [AndroidManifest](https://github.com/MsEmily1020/Android_Class/blob/main/KanyeRESTAPI/app/src/main/AndroidManifest.xml)
+
+[Activity](https://github.com/MsEmily1020/Android_Class/tree/main/KanyeRESTAPI/app/src/main/java/com/example/kanyerestapi)
+> [MainActivity](https://github.com/MsEmily1020/Android_Class/blob/main/KanyeRESTAPI/app/src/main/java/com/example/kanyerestapi/MainActivity.kt)<br>
+> [QuoteService](https://github.com/MsEmily1020/Android_Class/blob/main/KanyeRESTAPI/app/src/main/java/com/example/kanyerestapi/QuoteService.kt)<br>
+
+[Layout](https://github.com/MsEmily1020/Android_Class/tree/main/KanyeRESTAPI/app/src/main/res/layout)
+> [activity_main](https://github.com/MsEmily1020/Android_Class/blob/main/KanyeRESTAPI/app/src/main/res/layout/activity_main.xml)
+
+<br>
+<hr>
+<br>
 
 ### 📁 [FragmentStudy](https://github.com/MsEmily1020/Android_Class/tree/main/FragmentStudy)
+- Fragment 수업 예제
+  
+Manifest
+> [AndroidManifest](https://github.com/MsEmily1020/Android_Class/blob/main/FragmentStudy/app/src/main/AndroidManifest.xml)
+
+[Activity](https://github.com/MsEmily1020/Android_Class/tree/main/FragmentStudy/app/src/main/java/com/example/fragmentstudy)
+> [AddFragment](https://github.com/MsEmily1020/Android_Class/blob/main/FragmentStudy/app/src/main/java/com/example/fragmentstudy/AddFragment.kt)<br>
+> [ArgumentsFragment](https://github.com/MsEmily1020/Android_Class/blob/main/FragmentStudy/app/src/main/java/com/example/fragmentstudy/ArgumentsFragment.kt)<br>
+> [CommunicationFragment](https://github.com/MsEmily1020/Android_Class/blob/main/FragmentStudy/app/src/main/java/com/example/fragmentstudy/CommunicationFragment.kt)<br>
+> [FirstFragment](https://github.com/MsEmily1020/Android_Class/blob/main/FragmentStudy/app/src/main/java/com/example/fragmentstudy/FirstFragment.kt)<br>
+> [MainActivity](https://github.com/MsEmily1020/Android_Class/blob/main/FragmentStudy/app/src/main/java/com/example/fragmentstudy/MainActivity.kt)<br>
+> [SecondFragment](https://github.com/MsEmily1020/Android_Class/blob/main/FragmentStudy/app/src/main/java/com/example/fragmentstudy/SecondFragment.kt)<br>
+
+[Layout](https://github.com/MsEmily1020/Android_Class/tree/main/FragmentStudy/app/src/main/res/layout)
+> [activity_main](https://github.com/MsEmily1020/Android_Class/blob/main/FragmentStudy/app/src/main/res/layout/activity_main.xml)<br>
+> [add_fragment](https://github.com/MsEmily1020/Android_Class/blob/main/FragmentStudy/app/src/main/res/layout/add_fragment.xml)<br>
+> [arguments_fragment](https://github.com/MsEmily1020/Android_Class/blob/main/FragmentStudy/app/src/main/res/layout/arguments_fragment.xml)<br>
+> [communication_fragment](https://github.com/MsEmily1020/Android_Class/blob/main/FragmentStudy/app/src/main/res/layout/communication_fragment.xml)<br>
+> [first_fragment](https://github.com/MsEmily1020/Android_Class/blob/main/FragmentStudy/app/src/main/res/layout/first_fragment.xml)<br>
+> [second_fragment](https://github.com/MsEmily1020/Android_Class/blob/main/FragmentStudy/app/src/main/res/layout/second_fragment.xml)<br>
+
