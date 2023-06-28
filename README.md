@@ -15,7 +15,9 @@
 ## 🗃 수업 내용
 
 ### 📁 [MyApplication](https://github.com/MsEmily1020/Android_Class/tree/main/MyApplication)
-- Android 기초 수업
+<details>
+ <summary>세부내용</summary>
+ - Android 기초 수업
 
 Manifest
 > [AndroidManifest](https://github.com/MsEmily1020/Android_Class/blob/main/MyApplication/app/src/main/AndroidManifest.xml)<br>
@@ -26,12 +28,12 @@ Manifest
 [Layout](https://github.com/MsEmily1020/Android_Class/tree/main/MyApplication/app/src/main/res/layout)
 > [layout activity_main](https://github.com/MsEmily1020/Android_Class/blob/main/MyApplication/app/src/main/res/layout/activity_main.xml)
 
-<br>
-<hr>
-<br>
+</details>
 
 ### 📁 [MyApplication2](https://github.com/MsEmily1020/Android_Class/tree/main/MyApplication2)
-- Android 기초 수업2
+<details>
+ <summary>세부내용</summary>
+ - Android 기초 수업2
 
 Manifest
 > [AndroidManifest](https://github.com/MsEmily1020/Android_Class/blob/main/MyApplication2/app/src/main/AndroidManifest.xml)
@@ -70,13 +72,12 @@ Manifest
       DeliveryActivity : 배달의 민족과 같은 배달 어플 화면 구성
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img width="400" src = https://kairo96.gitbooks.io/android/content/pic2/2-4-1-1.jpg> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img width="500" src = http://design.gabia.com/wordpress/wp-content/uploads/2019/03/0_WfRr_eojcMI8wouq-1024x470.png>
-
-<br>
-<hr>
-<br>
+</details>
 
 ### 📁 [RecyclerView](https://github.com/MsEmily1020/Android_Class/tree/main/RecyclerView)
-- RecyclerView에 대한 수업
+<details>
+ <summary>세부내용</summary>
+ - RecyclerView에 대한 수업
 
 Manifest
 > [AndroidManifest](https://github.com/MsEmily1020/Android_Class/blob/main/RecyclerView/app/src/main/AndroidManifest.xml)
@@ -113,12 +114,12 @@ Manifest
       3) MusicActivity   -> MusicListAdapter   -> ContactMusicDetailActivity 
   
 
-<br>
-<hr>
-<br>
+</details>
 
 ### 📁 [RetrofitStudy](https://github.com/MsEmily1020/Android_Class/tree/main/RetrofitStudy)
-- API Retrofit에 대한 수업
+<details>
+ <summary>세부내용</summary>
+ - API Retrofit에 대한 수업
 
 Manifest
 > [AndroidManifest](https://github.com/MsEmily1020/Android_Class/blob/main/RetrofitStudy/app/src/main/AndroidManifest.xml)
@@ -159,13 +160,12 @@ call.enqueue(object : Callback<ProductDTO> {
     fun getProduct(@Path("id") id: Int) : Call<Product>
 
 ```
-
-<br>
-<hr>
-<br>
+</details>
 
 ### 📁 [TodayQuote](https://github.com/MsEmily1020/Android_Class/tree/main/TodayQuote)
-- 오늘의 명언, 계산기 과제
+<details>
+ <summary>세부내용</summary>
+ - 오늘의 명언, 계산기 과제
 
 Manifest
 > [AndroidManifest](https://github.com/MsEmily1020/Android_Class/blob/main/TodayQuote/app/src/main/AndroidManifest.xml)
@@ -186,12 +186,11 @@ Manifest
 - 정리
 
       Calc - 계산기, Quote - 명언
-  
-<br>
-<hr>
-<br>
+</details>
 
 ### 📁 [KanyeRESTAPI](https://github.com/MsEmily1020/Android_Class/tree/main/KanyeRESTAPI)
+<details>
+ <summary>세부내용</summary>
 - API + RecyclerView
 - 앞서 만들었던 Quote에서 api 불러와 값 저장하고 보여주기
 
@@ -203,14 +202,13 @@ Manifest
 > [QuoteService](https://github.com/MsEmily1020/Android_Class/blob/main/KanyeRESTAPI/app/src/main/java/com/example/kanyerestapi/QuoteService.kt)<br>
 
 [Layout](https://github.com/MsEmily1020/Android_Class/tree/main/KanyeRESTAPI/app/src/main/res/layout)
-> [activity_main](https://github.com/MsEmily1020/Android_Class/blob/main/KanyeRESTAPI/app/src/main/res/layout/activity_main.xml)
-
-<br>
-<hr>
-<br>
+> [activity_main](https://github.com/MsEmily1020/Android_Class/blob/main/KanyeRESTAPI/app/src/main/res/layout/activity_main.xml) 
+</details>
 
 ### 📁 [FragmentStudy](https://github.com/MsEmily1020/Android_Class/tree/main/FragmentStudy)
-- Fragment 수업 예제
+<details>
+ <summary>세부내용</summary>
+ - Fragment 수업 예제
   
 Manifest
 > [AndroidManifest](https://github.com/MsEmily1020/Android_Class/blob/main/FragmentStudy/app/src/main/AndroidManifest.xml)
@@ -230,4 +228,6 @@ Manifest
 > [communication_fragment](https://github.com/MsEmily1020/Android_Class/blob/main/FragmentStudy/app/src/main/res/layout/communication_fragment.xml)<br>
 > [first_fragment](https://github.com/MsEmily1020/Android_Class/blob/main/FragmentStudy/app/src/main/res/layout/first_fragment.xml)<br>
 > [second_fragment](https://github.com/MsEmily1020/Android_Class/blob/main/FragmentStudy/app/src/main/res/layout/second_fragment.xml)<br>
+</details>
+
 
