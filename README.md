@@ -18,13 +18,13 @@
 - Android 기초 수업
 
 Manifest
-> [AndroidManifest.xml](https://github.com/MsEmily1020/Android_Class/blob/main/MyApplication/app/src/main/AndroidManifest.xml)<br>
+> [AndroidManifest](https://github.com/MsEmily1020/Android_Class/blob/main/MyApplication/app/src/main/AndroidManifest.xml)<br>
 
-Activity
+[Activity](https://github.com/MsEmily1020/Android_Class/tree/main/MyApplication/app/src/main/java/com/example/myapplication)
 > [MainActivity](https://github.com/MsEmily1020/Android_Class/blob/main/MyApplication/app/src/main/java/com/example/myapplication/MainActivity.kt)<br>
 
-Layout
-> [layout activity_main.xml](https://github.com/MsEmily1020/Android_Class/blob/main/MyApplication/app/src/main/res/layout/activity_main.xml)
+[Layout](https://github.com/MsEmily1020/Android_Class/tree/main/MyApplication/app/src/main/res/layout)
+> [layout activity_main](https://github.com/MsEmily1020/Android_Class/blob/main/MyApplication/app/src/main/res/layout/activity_main.xml)
 
 <br>
 
@@ -32,9 +32,9 @@ Layout
 - Android 기초 수업2
 
 Manifest
-> [AndroidManifest.xml](https://github.com/MsEmily1020/Android_Class/blob/main/MyApplication2/app/src/main/AndroidManifest.xml)
+> [AndroidManifest](https://github.com/MsEmily1020/Android_Class/blob/main/MyApplication2/app/src/main/AndroidManifest.xml)
 
-Activity
+[Activity](https://github.com/MsEmily1020/Android_Class/tree/main/MyApplication2/app/src/main/java/com/example/myapplication)
 
 > [MainActivity](https://github.com/MsEmily1020/Android_Class/blob/main/MyApplication2/app/src/main/java/com/example/myapplication/MainActivity.kt)<br>
 > [ViewGroupDemoActivity](https://github.com/MsEmily1020/Android_Class/blob/main/MyApplication2/app/src/main/java/com/example/myapplication/ViewGroupDemoActivity.kt)<br>
@@ -43,13 +43,13 @@ Activity
 > [DynamicViewStudyActivity](https://github.com/MsEmily1020/Android_Class/blob/main/MyApplication2/app/src/main/java/com/example/myapplication/DynamicViewStudyActivity.kt)<br>
 > [DeliveryActivity](https://github.com/MsEmily1020/Android_Class/blob/main/MyApplication2/app/src/main/java/com/example/myapplication/DeliveryActivity.kt)<br>
 
-Layout
-> [layout counter.xml](https://github.com/MsEmily1020/Android_Class/blob/main/MyApplication2/app/src/main/res/layout/counter.xml)<br>
-> [layout nested_viewgroup_demo.xml](https://github.com/MsEmily1020/Android_Class/blob/main/MyApplication2/app/src/main/res/layout/nested_viewgroup_demo.xml)<br>
-> [layout view_study2.xml](https://github.com/MsEmily1020/Android_Class/blob/main/MyApplication2/app/src/main/res/layout/view_study2.xml)<br>
-> [layout activity_lifecycle_demo.xml](https://github.com/MsEmily1020/Android_Class/blob/main/MyApplication2/app/src/main/res/layout/activity_lifecycle_demo.xml)<br>
-> [layout dynamic_view_study_activity.xml](https://github.com/MsEmily1020/Android_Class/blob/main/MyApplication2/app/src/main/res/layout/dynamic_view_study_activity.xml)<br>
-> [layout nation_of_delivery.xml](https://github.com/MsEmily1020/Android_Class/blob/main/MyApplication2/app/src/main/res/layout/nation_of_delivery.xml)<br>
+[Layout](https://github.com/MsEmily1020/Android_Class/tree/main/MyApplication2/app/src/main/res/layout)
+> [layout counter](https://github.com/MsEmily1020/Android_Class/blob/main/MyApplication2/app/src/main/res/layout/counter.xml)<br>
+> [layout nested_viewgroup_demo](https://github.com/MsEmily1020/Android_Class/blob/main/MyApplication2/app/src/main/res/layout/nested_viewgroup_demo.xml)<br>
+> [layout view_study2](https://github.com/MsEmily1020/Android_Class/blob/main/MyApplication2/app/src/main/res/layout/view_study2.xml)<br>
+> [layout activity_lifecycle_demo](https://github.com/MsEmily1020/Android_Class/blob/main/MyApplication2/app/src/main/res/layout/activity_lifecycle_demo.xml)<br>
+> [layout dynamic_view_study_activity](https://github.com/MsEmily1020/Android_Class/blob/main/MyApplication2/app/src/main/res/layout/dynamic_view_study_activity.xml)<br>
+> [layout nation_of_delivery](https://github.com/MsEmily1020/Android_Class/blob/main/MyApplication2/app/src/main/res/layout/nation_of_delivery.xml)<br>
 
 - 정리
 
@@ -66,29 +66,53 @@ Layout
       LifecycleDemoActivity : 생명주기 공부
       DynamicviewStudyActivity : dp, pixel 공부
       DeliveryActivity : 배달의 민족과 같은 배달 어플 화면 구성
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img width="400" src = https://kairo96.gitbooks.io/android/content/pic2/2-4-1-1.jpg> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;; <img width="500" src = http://design.gabia.com/wordpress/wp-content/uploads/2019/03/0_WfRr_eojcMI8wouq-1024x470.png>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img width="400" src = https://kairo96.gitbooks.io/android/content/pic2/2-4-1-1.jpg> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img width="500" src = http://design.gabia.com/wordpress/wp-content/uploads/2019/03/0_WfRr_eojcMI8wouq-1024x470.png>
 
 <br>
 
 ### 📁 [RecyclerView](https://github.com/MsEmily1020/Android_Class/tree/main/RecyclerView)
-- RecyclerView에 대한 설명
+- RecyclerView에 대한 수업
 
 Manifest
-> [AndroidManifest.xml](https://github.com/MsEmily1020/Android_Class/blob/main/RecyclerView/app/src/main/AndroidManifest.xml)
+> [AndroidManifest](https://github.com/MsEmily1020/Android_Class/blob/main/RecyclerView/app/src/main/AndroidManifest.xml)
 
-Activity
+[Activity](https://github.com/MsEmily1020/Android_Class/tree/main/RecyclerView/app/src/main/java/com/example/recyclerview)
 > [ContactActivity](https://github.com/MsEmily1020/Android_Class/blob/main/RecyclerView/app/src/main/java/com/example/recyclerview/ContactActivity.kt)<br>
 > [ContactListAdapter](https://github.com/MsEmily1020/Android_Class/blob/main/RecyclerView/app/src/main/java/com/example/recyclerview/ContactListAdapter.kt)<br>
-> [ContactMusicDetailActivity](https://github.com/MsEmily1020/Android_Class/blob/main/RecyclerView/app/src/main/java/com/example/recyclerview/ContactMusicDetailActivity.kt)<br>
 > [MainActivity](https://github.com/MsEmily1020/Android_Class/blob/main/RecyclerView/app/src/main/java/com/example/recyclerview/MainActivity.kt)<br>
 > [Music](https://github.com/MsEmily1020/Android_Class/blob/main/RecyclerView/app/src/main/java/com/example/recyclerview/Music.kt)<br>
 > [MusicActivity](https://github.com/MsEmily1020/Android_Class/blob/main/RecyclerView/app/src/main/java/com/example/recyclerview/MusicActivity.kt)<br>
 > [MusicListAdapter](https://github.com/MsEmily1020/Android_Class/blob/main/RecyclerView/app/src/main/java/com/example/recyclerview/MusicListAdapter.kt)<br>
+> [ContactMusicDetailActivity](https://github.com/MsEmily1020/Android_Class/blob/main/RecyclerView/app/src/main/java/com/example/recyclerview/ContactMusicDetailActivity.kt)<br>
 
+[Layout](https://github.com/MsEmily1020/Android_Class/tree/main/RecyclerView/app/src/main/res/layout)
+> [contact_activity](https://github.com/MsEmily1020/Android_Class/blob/main/RecyclerView/app/src/main/res/layout/contact_activity.xml)<br>
+> [contact_item](https://github.com/MsEmily1020/Android_Class/blob/main/RecyclerView/app/src/main/res/layout/contact_item.xml)<br>
+> [activity_main](https://github.com/MsEmily1020/Android_Class/blob/main/RecyclerView/app/src/main/res/layout/activity_main.xml)<br>
+> [list_item](https://github.com/MsEmily1020/Android_Class/blob/main/RecyclerView/app/src/main/res/layout/list_item.xml)<br>
+> [activity_music](https://github.com/MsEmily1020/Android_Class/blob/main/RecyclerView/app/src/main/res/layout/activity_music.xml)<br>
+> [music_item](https://github.com/MsEmily1020/Android_Class/blob/main/RecyclerView/app/src/main/res/layout/music_item.xml)<br>
+> [activity_contact_music_detail](https://github.com/MsEmily1020/Android_Class/blob/main/RecyclerView/app/src/main/res/layout/activity_contact_music_detail.xml)<br>
+
+- 정리
+
+      ContactActivity               <-->       layout.contact_activity
+      ContactListAdapter            <-->       layout.contact_item
+      MainActivity                  <-->       layout.activity_main, list_item
+      MusicActivity                 <-->       layout.activity_music
+      MusicListAdapter              <-->       layout.music_item
+      ContactMusicDetailActivity    <-->       layout.activity_contact_music_detail
+     
+      1) ContactActivity -> ContactListAdapter
+      2) MainActivity
+      3) MusicActivity   -> MusicListAdapter   -> ContactMusicDetailActivity 
+  
+  
 <br>
 
 ### 📁 [RetrofitStudy](https://github.com/MsEmily1020/Android_Class/tree/main/RetrofitStudy)
-- Retrofit에 대한 설명
+- Retrofit에 대한 수업
 
 <br>
 
@@ -99,3 +123,5 @@ Activity
 
 ### 📁 [KanyeRESTAPI](https://github.com/MsEmily1020/Android_Class/tree/main/KanyeRESTAPI)
 - API + RecyclerView
+
+### 📁 [FragmentStudy](https://github.com/MsEmily1020/Android_Class/tree/main/FragmentStudy)
