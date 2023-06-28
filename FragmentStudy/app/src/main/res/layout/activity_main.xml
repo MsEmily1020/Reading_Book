@@ -16,6 +16,13 @@
         android:layout_height="wrap_content">
 
         <Button
+            android:id="@+id/add"
+            android:text="add"
+            android:layout_weight="1"
+            android:layout_width="0px"
+            android:layout_height="wrap_content"/>
+
+        <Button
             android:id="@+id/first"
             android:text="first"
             android:layout_weight="1"
