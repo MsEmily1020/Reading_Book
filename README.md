@@ -72,3 +72,5 @@
 > 11. &nbsp; [대문자 찾기](https://github.com/MsEmily1020/JS_Class/blob/main/Quiz/Quiz-11(%EB%8C%80%EB%AC%B8%EC%9E%90%20%EC%B0%BE%EA%B8%B0).html)
 > 12. &nbsp; [대문자로 통일](https://github.com/MsEmily1020/JS_Class/blob/main/Quiz/Quiz-12(%EB%8C%80%EB%AC%B8%EC%9E%90%EB%A1%9C%20%ED%86%B5%EC%9D%BC).html)
 > 13. &nbsp; [대소문자변환](https://github.com/MsEmily1020/JS_Class/blob/main/Quiz/Quiz-13(%EB%8C%80%EC%86%8C%EB%AC%B8%EC%9E%90%EB%B3%80%ED%99%98).html)
+> 14. &nbsp; [가장 긴 문자열](https://github.com/MsEmily1020/JS_Class/blob/main/Quiz/Quiz-14(%EA%B0%80%EC%9E%A5%20%EA%B8%B4%20%EB%AC%B8%EC%9E%90%EC%97%B4).html)
+> 15. &nbsp; [가운데 문자 출력하기](https://github.com/MsEmily1020/JS_Class/blob/main/Quiz/Quiz-15(%EA%B0%80%EC%9A%B4%EB%8D%B0%20%EB%AC%B8%EC%9E%90%20%EC%B6%9C%EB%A0%A5%ED%95%98%EA%B8%B0).html)
