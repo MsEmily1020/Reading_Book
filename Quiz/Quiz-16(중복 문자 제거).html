@@ -1,0 +1,40 @@
+<html>
+
+<head>
+    <title>중복 문자 제거</title>
+</head>
+
+<body>
+    <script>
+        function solution(str) {
+            let answer = "";
+
+            for (let s of str) {
+                if (answer.indexOf(s) === -1) answer += s;
+            }
+
+            answer += '\n';
+
+            for (let i = 0; i < str.length; i++) {
+                if (i === str.indexOf(str[i])) {
+                    answer += str[i];
+                }
+            }
+
+            // 특정 문자의 갯수를 출력
+            answer = 0;
+            let pos = str.indexOf("k");
+            while (pos !== -1) {
+                answer++;
+                pos = str.indexOf("k", pos + 1);
+            } // while
+
+            return answer;
+        }
+
+        console.log(solution("ksekkset"));
+        console.log(solution("good"));
+    </script>
+</body>
+
+</html>
