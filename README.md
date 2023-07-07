@@ -1,10 +1,9 @@
-# 📕 1학년 After_School_Class
-  - 2022 1학년 방과후 Html, Css, JavaScript 수업
+# 📁 1학년 html, css, JS 방과후
+  - html, css, JS 수업 자료 저장소입니다.
 
 ## ⌚ Period
-  - 1학기 ~ 2학기
-  - Year `2022`
+  - 2022 1학기 ~ 2학기
 
 ## 🛠 Development Environment
-  - Language : `Html, Css, JavaScript`
+  - Language : `html, css, JavaScript`
   - Tool : `Visual Studio Code`
