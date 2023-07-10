@@ -41,7 +41,7 @@ public class WebSecurityConfig {
                 .and()
                 .logout()
                 .logoutSuccessUrl("/login")
-                .invalidateHttpSession()
+                .invalidateHttpSession(true)
                 .and()
                 .csrf().disable()
                 .build();
