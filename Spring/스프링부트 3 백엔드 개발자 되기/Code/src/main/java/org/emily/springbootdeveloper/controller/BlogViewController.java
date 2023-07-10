@@ -50,6 +50,6 @@ public class BlogViewController {
             model.addAttribute("article", new ArticleViewResponse(article));
         }
 
-        return "new Article";
+        return "newArticle";
     }
 }
