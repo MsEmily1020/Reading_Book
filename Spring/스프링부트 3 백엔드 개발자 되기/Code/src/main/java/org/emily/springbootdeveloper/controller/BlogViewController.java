@@ -1,5 +1,6 @@
 package org.emily.springbootdeveloper.controller;
 
+import lombok.RequiredArgsConstructor;
 import org.emily.springbootdeveloper.dto.ArticleListViewResponse;
 import org.emily.springbootdeveloper.service.BlogService;
 import org.springframework.stereotype.Controller;
@@ -9,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-@RestController
+@RequiredArgsConstructor
 @Controller
 public class BlogViewController {
     private final BlogService blogService;
