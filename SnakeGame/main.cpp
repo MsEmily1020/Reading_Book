@@ -35,8 +35,9 @@ public:
 
 class Snake {
 public:
-	Snake(int dir, int length, float thickness, float block) :
-		dir_(dir), length_(length), thickness_(thickness)
+	// score에 값을 주지 않으면 default로 0이 들어간다.
+	Snake(int dir, int length, float thickness, float block, int score = 0) :
+		dir_(dir), length_(length), thickness_(thickness), score_(score)
 	{
 		inner_ = block - thickness_;
 	}
@@ -118,21 +119,23 @@ public:
 
 	int GetDir(void) { return dir_; }
 	int GetLength(void) { return length_; }
+	int GetScore(void) { return score_;  }
 	float GetThickness(void) { return thickness_; }
 	float GetInner(void) { return inner_; }
 
 	void SetDir(int dir) { dir_ = dir; }
 	void SetLength(int length) { length_ = length; }
+	void SetScore(int score) { score_ = score; }
 	void SetThickness(float thickness) { thickness_ = thickness; }
 	void SetInner(float inner) { inner_ = inner; }
 
-	// 길이 1 증가
 	void IncLength(void) { length_++; }
-
+	void IncScore(int val) { score_ += val; }
 
 private:
 	int dir_;
 	int length_;
+	int score_;
 	float thickness_;			// 외피두께
 	float inner_;				// 내부두께
 	Object body_[BODY_MAX];
@@ -168,6 +171,8 @@ int main() {
 				window.close();
 		}
 
+		printf("score : %d\n", snake.GetScore());
+
 		if (Keyboard::isKeyPressed(Keyboard::Up))
 		{
 			snake.SetDir(DIR_UP);
@@ -195,6 +200,7 @@ int main() {
 			apple.x_ = rand() % w;
 			apple.y_ = rand() % h;
 			apple.sprite_.setPosition(apple.x_ * block, apple.y_ * block);
+			snake.IncScore(100);
 			if (snake.GetLength() < BODY_MAX)
 				snake.IncLength();
 		}
