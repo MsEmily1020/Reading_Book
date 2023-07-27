@@ -150,6 +150,9 @@ int main() {
 
 	srand(time(NULL));
 
+	sf::Clock clock; // SFML Clock 객체 생성
+	sf::Time elapsedTime; // 경과 시간을 저장할 SFML Time 객체
+
 	Font font;
 	if (!font.loadFromFile("C:\\windows\\Fonts\\arial.ttf")) 
 	{
@@ -185,7 +188,10 @@ int main() {
 				window.close();
 		}
 
-		sprintf(info_text, "score : %d\n", snake.GetScore());
+		elapsedTime = clock.getElapsedTime();
+		int seconds = elapsedTime.asSeconds();
+
+		sprintf(info_text, "score : %d time : %d\n", snake.GetScore(), seconds);
 		info.setString(info_text);
 
 		if (Keyboard::isKeyPressed(Keyboard::Up))
