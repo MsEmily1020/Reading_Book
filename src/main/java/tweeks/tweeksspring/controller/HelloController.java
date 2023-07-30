@@ -29,4 +29,24 @@ public class HelloController {
     public String helloString(@RequestParam("name") String name) {
         return "hello " + name;
     }
+
+    @GetMapping("hello-api")
+    @ResponseBody  // 객체를 반환할경우 JSON 으로 변환 (MappingJackson2HttpMessageConverter)
+    public Hello helloApi(@RequestParam("name") String name) {
+        Hello hello = new Hello();
+        hello.setName(name);
+        return hello; // 객체 반환
+    }
+
+    static class Hello {
+        private String name;
+
+        public String getName() {
+            return name;
+        }
+
+        public void setName(String name) {
+            this.name = name;
+        }
+    }
 }
