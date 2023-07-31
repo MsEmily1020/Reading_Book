@@ -10,7 +10,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Image.asset('assets/카카오이미지.png')
+      home: Center(
+          child: Container( width: 50, height: 50, color: Colors.blue,)
+      )
     );
   }
 }
