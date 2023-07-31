@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Icon(Icons.shop)
+      home: Image.asset('assets/카카오이미지.png')
     );
   }
 }
