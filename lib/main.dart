@@ -11,9 +11,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(),
-        body: Container(),
-        bottomNavigationBar: BottomAppBar(child: Text('dsdfs'),),
+        body: Row(
+          children: [
+            Icon(Icons.star),
+            Icon(Icons.star),
+            Icon(Icons.star),
+          ]
+        ),
       )
     );
   }
