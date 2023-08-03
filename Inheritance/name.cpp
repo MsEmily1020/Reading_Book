@@ -94,7 +94,7 @@ int main(void)
 		Event e;
 		while (window.pollEvent(e))
 		{
-			if (e.type == Event::Closed)
+			if (e.type == Event::Closed) 
 				window.close();
 		}
 
@@ -160,6 +160,11 @@ int main(void)
 		window.draw(player -> get_sprite());
 		window.display();
 	}
+
+	delete player;
+	delete enemy1;
+	delete enemy2;
+	delete enemy3;
 
 	return 0;
 }
