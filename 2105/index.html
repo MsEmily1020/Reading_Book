@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자판기</title>
+</head>
+
+<style>
+    * {
+        text-align: center;
+        margin: auto;
+        padding: auto;
+    }
+
+    .box1 {
+        width: 450px;
+        background-color: blue;
+        padding: 7px;
+        padding-top: 10px;
+        box-sizing: border-box;
+    }
+
+    .box2 {
+        background-color: rgb(191, 191, 191);
+        text-align: center;
+        line-height: 20px;
+    }
+
+
+    .text {
+        color: white;
+        padding-bottom: 10px;
+    }
+
+    .input {
+        text-align: left;
+        margin-top: 15px;
+    }
+
+    .radio {
+        margin-left: 10px;
+    }
+
+    .price {
+        display: inline;
+        margin-left: 20px;
+        margin-right: 10px;
+    }
+</style>
+
+<body>
+    <div class="box1">
+        <div class="text">자판기</div>
+        <div class="box2">
+            <form method="post" action="index.php">
+                <input type="radio" name="menu" value="밀크커피" class="radio">밀크커피
+                <input type="radio" name="menu" value="우유" class="radio">우유
+                <input type="radio" name="menu" value="코코아" class="radio">코코아
+                <input type="radio" name="menu" value="율무차" class="radio">율무차
+                <input type="radio" name="menu" value="생수" class="radio">생수
+
+                <br>
+
+                <div class="price">300원</div>
+                <div class="price">400원</div>
+                <div class="price">500원</div>
+                <div class="price">600원</div>
+                <div class="price">700원</div>
+
+                <br>
+
+                입금금액 <input type="text" name="input" class="input">
+
+                <button type="submit">입력완료</button>
+
+                <p>음료수나오는곳</p>
+
+                <input type="text" size="50px">
+
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
