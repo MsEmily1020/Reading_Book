@@ -5,7 +5,29 @@
 </head>
 
 <body>
-    <script></script>
+    <script src="/scripts/3-13(module).js"></script>
+    <script>
+        log("log로 메시지 출력");
+        error("error로 메시지 출력");
+    </script>
+
+    <script type="module">
+        import { log, error } from "/scripts/3-13(module).js";
+        log("log로 메시지 출력");
+        error("error로 메시지 출력");
+    </script>
+
+    <script type="module">
+        import { erorr } from "/scripts/3-13(module).js";
+        error("error로 메시지 출력");
+    </script>
+
+    <script type="module">
+        import { log, error, PI } from "/scripts/3-13(module).js";
+        log(PI);
+        log("log로 메시지 출력");
+        error("error로 메시지 출력");
+    </script>
 </body>
 
 </html>
