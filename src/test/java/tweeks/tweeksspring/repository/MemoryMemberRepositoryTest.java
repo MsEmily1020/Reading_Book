@@ -1,9 +1,10 @@
 package tweeks.tweeksspring.repository;
 
 
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import tweeks.tweeksspring.domain.Member;
+
+import static org.assertj.core.api.Assertions.*;
 
 class MemoryMemberRepositoryTest {
     MemberRepository repository = new MemoryMemberRepository();
@@ -16,6 +17,6 @@ class MemoryMemberRepositoryTest {
         repository.save(member);
 
         Member result = repository.findById(member.getId()).get();
-        Assertions.assertEquals(member, result);
+        assertThat(member).isEqualTo(result);
     }
 }
