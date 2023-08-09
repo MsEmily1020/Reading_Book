@@ -1,8 +1,10 @@
 package tweeks.tweeksspring.service;
 
 import org.assertj.core.api.Assertions;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 import tweeks.tweeksspring.domain.Member;
+import tweeks.tweeksspring.repository.MemoryMemberRepository;
 
 import static org.assertj.core.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.*;
@@ -10,6 +12,12 @@ import static org.junit.jupiter.api.Assertions.*;
 class MemberServiceTest {
 
     MemberService memberService = new MemberService();
+    MemoryMemberRepository memberRepository = new MemoryMemberRepository();
+
+    @AfterEach
+    public void afterEach() {
+        memberRepository.clearStore();
+    }
 
     @Test
     void 회원가입() {
