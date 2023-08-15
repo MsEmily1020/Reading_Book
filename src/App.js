@@ -5,10 +5,7 @@ function App() {
     return (
         <div>
             <Hello/>
-            <Hello/>
-            <Hello/>
-            <Hello/>
-            <Hello/>
+            <div>안녕히계세요</div>
         </div>
     )
 }
