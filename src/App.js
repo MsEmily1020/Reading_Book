@@ -13,11 +13,15 @@ function App() {
 
     return (
         <>
-            <Hello/>
+            {/* 주석은 화면에 보이지 않습니다 */}
+            /* 중괄호로 감싸지 않으면 화면에 보입니다 */
+            <Hello
+                // 열리는 태그 내부에서는 이렇게 주석을 작성 할 수 있습니다.
+            />
             <div style={style}>{name}</div>
             <div className="gray-box"></div>
         </>
-    )
+    );
 }
 
 export default App;
