@@ -1,4 +1,4 @@
-# 📁 Mini_Mento_React_Study
+# 📖 Mini_Mento_React_Study
 - 2023 미니멘토 : 벨로퍼트 & 모던리액트 스터디
 
 ## ⌚ Period
