@@ -1,3 +1,16 @@
+# 📁 Mini_Mento_React_Study
+- 2023 미니멘토 스터디 React 스터디 react.vlpt.us
+
+## ⌚ Period
+- 2023.08.15 ~
+
+## 🛠 Development Environment
+- Language : `Javascript`
+- Tool : `WebStrom`
+- Library : `React`
+
+<hr>
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
