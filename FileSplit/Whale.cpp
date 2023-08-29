@@ -1,7 +1,4 @@
-﻿#include <iostream>
-#include "Whale.h"
-
-using namespace std;
+﻿#include "All.h"
 
 void Whale::sing(void)
 {

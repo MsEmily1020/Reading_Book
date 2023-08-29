@@ -1,5 +1,5 @@
 ﻿#pragma once
-#include "Animal.h"
+#include "All.h"
 
 class Shark : public Animal {
 public:
