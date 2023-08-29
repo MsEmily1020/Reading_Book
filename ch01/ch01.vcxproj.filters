@@ -111,6 +111,9 @@
     <ClCompile Include="QuickSort_StackOverFlow.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="HeapSort.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="RandomMazeCreateSearch.c">
