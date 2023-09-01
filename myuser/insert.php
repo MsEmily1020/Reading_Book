@@ -17,4 +17,4 @@ mysqli_close($conn);
 
 ?>
 
-<meta http-equiv='refresh' content='0;url=list.php'>
+<meta http-equiv='refresh' content='0;url=index.php'>

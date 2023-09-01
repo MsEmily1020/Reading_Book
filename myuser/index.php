@@ -27,7 +27,11 @@
                 <td>$row[id]</td>
                 <td>$row[user_id]</td>
                 <td>$row[user_name]</td>
-                <td>수정\t\t\t삭제</td>
+                <td>
+                <a href='update_form.php?idx=$row[id]'>수정</a>
+                &nbsp;
+                <a href='delete_form.php?idx=$row[id]'>삭제</a>
+                </td>
             </tr>";
     }
     mysqli_close($con);
