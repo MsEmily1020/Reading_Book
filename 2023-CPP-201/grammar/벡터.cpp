@@ -1,15 +1,20 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <vector>
 
 using namespace std;
 
-int main(void) {
-
+int main(void)
+{
+	// ì „í†µì ì¸ ë°°ì—´ì€ í¬ê¸°ê°€ ê³ ì •ë˜ì–´ ìˆìœ¼ë‚˜,
+	// ë²¡í„°ëŠ” í¬ê¸°ê°€ ììœ ë¡­ê²Œ ë³€í•  ìˆ˜ ìˆëŠ” ë™ì ë°°ì—´ì´ë‹¤.
 	vector<int> arr;
-	arr.reserve(4); // º¤ÅÍÀÇ Å©±â¸¦ 4·Î ÁöÁ¤
-	arr[0] = 10, arr[1] = 20, arr[2] = 30, arr[3] = 40;
+	arr.reserve(4);		// ë²¡í„°ì˜ í¬ê¸°ë¥¼ 4ë¡œ í•œë‹¤
+	arr.push_back(10);
+	arr.push_back(20);
+	arr.push_back(30);
+	arr.push_back(40);
 
-	// 4°³°¡ ²Ë Âù °ø°£¿¡ µ¥ÀÌÅÍ ÇÏ³ª¸¦ ´õ Áı¾î³Ö¾îº¸±â
+	// 4ê°œê°€ ê½‰ ì°¬ ê³µê°„ì— ë°ì´í„° í•˜ë‚˜ë¥¼ ë” ì§‘ì–´ë„£ì–´ë³´ì
 	arr.push_back(50);
 
 	for (int i = 0; i < 5; i++)
