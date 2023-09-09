@@ -12,6 +12,7 @@
         <td>출판사</td>
         <td>장르</td>
         <td>성별</td>
+        <td>IP</td>
     </tr>
 
 <?php
@@ -34,6 +35,7 @@ for($i = 0; $i < $count; $i++) {
     <td>$re[4]</td>
     <td>$re[5]</td>
     <td>$re[7]</td>
+    <td>$_SERVER[REMOTE_ADDR]</td>
     </tr>";
 }
 
