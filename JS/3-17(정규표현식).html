@@ -64,6 +64,29 @@
         var patt9 = /10?/g;
         console.log(str11.match(patt9));
 
+        // https://www.w3schools.com
+
+        // 우편번호 검색
+        var patt10 = /\d{5}/;
+        var postalCode = "23452";   // true
+        postalCode = "P23452";      // false
+        console.log(patt10.test(postalCode));
+
+        var patt11 = /^\d{5}$/;     // ^ 다음 문자로 시작
+        postalCode = "P23452";
+        console.log(patt11.test(postalCode));
+
+        // 핸드폰 번호 유효성 체크
+        // 010-1234-5678
+        var patt12 = /^(010)-\d{4}-\d{4}$/;
+        var tel = "010-1234-5678";
+        console.log(patt12.test(tel));
+
+        // 이메일 주소 : gtgyujung@gmail.com
+        // \w : 문자, + : one or more
+        var patt13 = /^\w+([\.-]?\w+)*@\w+(\.\w{2,3})+$/;
+        console.log(patt13.test("gtgyujung@gmail.com"));
+
     </script>
 </body>
 
