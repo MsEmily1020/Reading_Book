@@ -126,7 +126,10 @@
     <ClCompile Include="RadixSort.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="Insertion.c">
+    <ClCompile Include="InsertionSort.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="InterpolationSearch.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
