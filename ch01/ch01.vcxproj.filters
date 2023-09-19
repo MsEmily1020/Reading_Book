@@ -132,6 +132,9 @@
     <ClCompile Include="InterpolationSearch.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="FibonacciSearch.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="RandomMazeCreateSearch.c">
