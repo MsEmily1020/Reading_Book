@@ -182,7 +182,8 @@ int main() {
 	sf::Time elapsedTime; // 경과 시간을 저장할 SFML Time 객체
 
 	Font font;
-	if (!font.loadFromFile("C:\\windows\\Fonts\\arial.ttf")) 
+	// 한글지원 폰트로 변경
+	if (!font.loadFromFile("C:\\windows\\Fonts\\H2GTRE.ttf")) 
 	{
 		printf("폰트 불러오기 실패\n");
 		return -1;
@@ -194,7 +195,8 @@ int main() {
 	text_info.setFillColor(Color::Magenta);
 	text_info.setPosition(0, 0);
 
-	char text_buf_info[100];
+	// 한글을 처리하기 위해 유니코드 타입으로 변환
+	wchar_t text_buf_info[100];
 
 	Text text_gameover;
 	text_gameover.setFont(font);
@@ -227,7 +229,7 @@ int main() {
 		elapsedTime = clock.getElapsedTime();
 		int seconds = elapsedTime.asSeconds();
 
-		sprintf(text_buf_info, "score : %d time : %d\n", snake.GetScore(), seconds);
+		swprintf(text_buf_info, L"점수 : %d time : %d\n", snake.GetScore(), seconds);
 		text_info.setString(text_buf_info);
 
 		if (Keyboard::isKeyPressed(Keyboard::Up))
