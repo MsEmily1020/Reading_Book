@@ -189,7 +189,7 @@ int main() {
 		return -1;
 	}
 
-	Text text_info;
+	Text text_info;	
 	text_info.setFont(font);
 	text_info.setCharacterSize(60);
 	text_info.setFillColor(Color::Magenta);
