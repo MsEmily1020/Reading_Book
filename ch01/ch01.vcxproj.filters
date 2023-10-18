@@ -135,10 +135,21 @@
     <ClCompile Include="FibonacciSearch.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="HashingDriver.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="DepthFirstSearch1.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="RandomMazeCreateSearch.c">
       <Filter>소스 파일</Filter>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="nameList.txt">
+      <Filter>소스 파일</Filter>
+    </Text>
   </ItemGroup>
 </Project>
