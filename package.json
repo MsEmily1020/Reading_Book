@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "app1": "nodemon app1.js",
     "app2": "nodemon app2.js",
-    "db": "nodemon db_test.js"
+    "db": "nodemon db_test.js",
+    "board" : "nodemon board.js"
   },
   "author": "",
   "license": "ISC",
