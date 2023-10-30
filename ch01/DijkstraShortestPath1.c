@@ -69,7 +69,7 @@ int main(void) {
 
 	for (i = 0; i < SIZE; i++) if (aV == V[i]) break;
 	printf("\n%c에서 %c까지 최단거리: %d\n", aV, bV, D[i]);
-	printf("최단경로: %c”, aV");
+	printf("최단경로: %c", aV);
 		while (V[i] != bV) {
 			i = P[i];
 			printf(" -> %c", V[i]);
