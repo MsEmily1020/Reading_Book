@@ -46,6 +46,25 @@ app.delete("/posts/:id", (req, res) => {
   });
 });
 
+app.patch("/posts/:id", (req, res) => {
+  const id = req.params.id;
+  pool.query("select * from post where id = ?", [id], (err, rows, fields) => {
+    if (rows.length == 0) res.status(404).json({ result: null });
+    else {
+      delete req.body.id;
+      const modified = Object.assign(rows[0], req.body); // Object.assign : 두번째 파라미터(변경할 값) -> 첫번째 파라미터(원본)으로 merge
+      pool.query(
+        "update post set title = ?, author = ?, content = ? where id = ?",
+        [modified.title, modified.author, modified.content, id],
+        (err, rows, fields) => {
+          if (err) res.status(400).json({ result: null });
+          else res.json({ result: "ok" });
+        }
+      );
+    }
+  });
+});
+
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
 });
