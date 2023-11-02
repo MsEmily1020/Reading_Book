@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.util.Log
 import com.example.hozuandroidstudy.api.APIService
 import com.example.hozuandroidstudy.api.AllPostResponse
+import com.example.hozuandroidstudy.api.PostResponse
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -23,7 +24,8 @@ class MainActivity : AppCompatActivity() {
             .build()
 
         apiService = retrofit.create(APIService::class.java)
-        getPosts()
+        // getPosts()
+        getPost(2)
     }
 
     fun getPosts() {
@@ -38,6 +40,25 @@ class MainActivity : AppCompatActivity() {
             }
 
             override fun onFailure(call: Call<AllPostResponse>, t: Throwable) {}
+        })
+    }
+
+    fun getPost(id: Int) {
+        val call = apiService.getPost(id)
+        call.enqueue(object: Callback<PostResponse> {
+            override fun onResponse(call: Call<PostResponse>, response: Response<PostResponse>) {
+                if(response.isSuccessful) {
+                    val data: PostResponse? = response.body()
+
+                    data?.let {
+                        Log.d("mytag", it.result.toString())
+                    }
+                } else {
+
+                }
+            }
+
+            override fun onFailure(call: Call<PostResponse>, t: Throwable) {}
         })
     }
 }
