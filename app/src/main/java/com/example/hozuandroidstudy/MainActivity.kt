@@ -96,4 +96,20 @@ class MainActivity : AppCompatActivity() {
 
         })
     }
+
+    fun modifyPost(id:Int, body: MutableMap<String, Any>){
+        val call = apiService.modifyPOST(id, body)
+        call.enqueue(object: Callback<StringResponse>{
+            override fun onResponse(call: Call<StringResponse>, response: Response<StringResponse>) {
+            val data: StringResponse? = response.body()
+            data?.let{
+                Log.d("mytag",it.result)
+            }
+        }
+
+            override fun onFailure(call: Call<StringResponse>, t: Throwable) {
+                Log.w("mytag","failed to call API: "+t.message)
+            }
+        })
+    }
 }
