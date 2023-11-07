@@ -4,7 +4,7 @@
 int b[R] = { 0, };
 int cnt = 0;
 
-void PrintRePer() {
+void PrintRePer() { 
 	int i;
 
 	cnt++;
