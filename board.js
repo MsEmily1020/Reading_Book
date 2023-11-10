@@ -18,38 +18,71 @@ app.post("/posts", (req, res) => {
     "insert into post(title, author, createdAt, content) values (?, ?, NOW(), ?)",
     [req.body.title, req.body.author, req.body.content],
     (err, rows, fields) => {
-      if (err) res.status(400).json({ result: err });
-      else res.json({ result: "ok" });
+      if (err) res.status(400).send(err);
+      else res.send("ok");
+    }
+  );
+});
+
+app.post("/api/user", (req, res) => {
+  pool.query(
+    "insert into user (email, password, name, roles, created_at) values (?, ?, ?, ?, NOW())",
+    [req.body.email, req.body.password, req.body.name, req.body.roles],
+    (err, rows, fields) => {
+      if (err) res.status(400).send(err);
+      else res.send("ok");
     }
   );
 });
 
 app.get("/posts", (req, res) => {
   pool.query("select * from post", (err, rows, fields) => {
-    res.json({ result: rows });
+    res.json(rows);
+  });
+});
+
+app.get("/api/user", (req, res) => {
+  pool.query("select * from user", (err, rows, fields) => {
+    res.json(rows);
   });
 });
 
 app.get("/posts/:id", (req, res) => {
   const id = req.params.id;
   pool.query("select * from post where id = ?", [id], (err, rows, fields) => {
-    if (rows.length == 0) res.status(404).send({ result: null });
-    else res.json({ result: rows[0] });
+    if (rows.length == 0) res.status(404).send("null");
+    else res.json(rows[0]);
+  });
+});
+
+app.get("/api/user/:id", (req, res) => {
+  const id = req.params.id;
+  pool.query("select * from user where id = ?", [id], (err, rows, fields) => {
+    if (rows.length == 0) res.status(404).send("null");
+    else res.json(rows[0]);
   });
 });
 
 app.delete("/posts/:id", (req, res) => {
   const id = req.params.id;
   pool.query("delete from post where id = ?", [id], (err, rows, fields) => {
-    if (rows.affectedRows === 0) res.status(404).json({ result: null });
-    else res.json({ result: "ok" });
+    if (rows.affectedRows === 0) res.status(404).send("null");
+    else res.json(ok);
+  });
+});
+
+app.delete("/api/user/:id", (req, res) => {
+  const id = req.params.id;
+  pool.query("delete from user where id = ?", [id], (err, rows, fields) => {
+    if (rows.affectedRows === 0) res.status(404).send("null");
+    else res.json(ok);
   });
 });
 
 app.patch("/posts/:id", (req, res) => {
   const id = req.params.id;
   pool.query("select * from post where id = ?", [id], (err, rows, fields) => {
-    if (rows.length == 0) res.status(404).json({ result: null });
+    if (rows.length == 0) res.status(404).send("null");
     else {
       delete req.body.id;
       const modified = Object.assign(rows[0], req.body); // Object.assign : 두번째 파라미터(변경할 값) -> 첫번째 파라미터(원본)으로 merge
@@ -57,8 +90,27 @@ app.patch("/posts/:id", (req, res) => {
         "update post set title = ?, author = ?, content = ? where id = ?",
         [modified.title, modified.author, modified.content, id],
         (err, rows, fields) => {
-          if (err) res.status(400).json({ result: null });
-          else res.json({ result: "ok" });
+          if (err) res.status(400).send("null");
+          else res.send("ok");
+        }
+      );
+    }
+  });
+});
+
+app.patch("/api/user/:id", (req, res) => {
+  const id = req.params.id;
+  pool.query("select * from user where id = ?", [id], (err, rows, fields) => {
+    if (rows.length == 0) res.status(404).send("null");
+    else {
+      delete req.body.id;
+      const modified = Object.assign(rows[0], req.body);
+      pool.query(
+        "update user set password = ?, name = ?, roles = ? where id = ?",
+        [modified.password, modified.name, modified.roles, id],
+        (err, rows, fields) => {
+          if (err) res.status(400).send("null");
+          else res.send("ok");
         }
       );
     }
