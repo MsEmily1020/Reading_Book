@@ -1,6 +1,9 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const mysql = require("mysql2");
+const bcrypt = require("bcrypt");
+
+const SALT_ROUNDS = 10;
 
 const app = express();
 app.use(bodyParser.json());
@@ -25,14 +28,16 @@ app.post("/posts", (req, res) => {
 });
 
 app.post("/api/user", (req, res) => {
-  pool.query(
-    "insert into user (email, password, name, roles, created_at) values (?, ?, ?, ?, NOW())",
-    [req.body.email, req.body.password, req.body.name, req.body.roles],
-    (err, rows, fields) => {
-      if (err) res.status(400).send(err);
-      else res.send("ok");
-    }
-  );
+  bcrypt.hash(req.body.password, SALT_ROUNDS, (err, hash) => {
+    pool.query(
+      "insert into user (email, password, name, roles, created_at) values (?, ?, ?, ?, NOW())",
+      [req.body.email, hash, req.body.name, req.body.roles],
+      (err, rows, fields) => {
+        if (err) res.status(400).send(err);
+        else res.send("ok");
+      }
+    );
+  });
 });
 
 app.get("/posts", (req, res) => {
