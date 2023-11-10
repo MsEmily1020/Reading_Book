@@ -7,9 +7,10 @@ import retrofit2.http.GET
 import retrofit2.http.PATCH
 import retrofit2.http.POST
 import retrofit2.http.Path
+import java.io.Serializable
 import java.util.Date
 
-data class Post(val id: Int, var title: String, var author: String, var createdAt: Date, var content: String)
+data class Post(val id: Int, var title: String, var author: String, var createdAt: Date, var content: String) : Serializable
 data class AllPostResponse(val result: List<Post>)
 data class PostResponse(val result: Post)
 data class PostCreateRequest(val title: String, val author: String, val content: String)

@@ -8,6 +8,8 @@ import com.example.hozuandroidstudy.api.AllPostResponse
 import com.example.hozuandroidstudy.api.PostCreateRequest
 import com.example.hozuandroidstudy.api.PostResponse
 import com.example.hozuandroidstudy.api.StringResponse
+import com.example.retrofit_study.Config
+import com.example.retrofit_study.Config.Companion.BASE_URL
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -21,13 +23,12 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val retrofit = Retrofit.Builder()
-            .baseUrl("http://10.0.2.2:3000")
+            .baseUrl(BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
             .build()
 
         apiService = retrofit.create(APIService::class.java)
-        // getPosts()
-        // getPost(2)
+
         val post = PostCreateRequest("title1", "author1", "content1")
         createPost(post)
         deletePost(2)
