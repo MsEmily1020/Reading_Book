@@ -58,7 +58,7 @@ const roleRequired = function (allowed) {
 app.post("/api/users", (req, res) => {
   bcrypt.hash(req.body.password, SALT_ROUNDS, function (err, hash) {
     pool.query(
-      "INSERT INTO user(email, password, name, roles) VALUES(?, ?, ?, ?)",
+      "INSERT INTO user(email, password, name, roles, created_at) VALUES(?, ?, ?, ?, NOW())",
       [req.body.email, hash, req.body.name, req.body.roles],
       function (err, rows, fields) {
         if (err) {

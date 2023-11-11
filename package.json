@@ -10,7 +10,8 @@
     "db": "nodemon db_test.js",
     "board": "nodemon board.js",
     "upload": "nodemon upload_test.js",
-    "bcrypt": "nodemon bcrypt_test.js"
+    "bcrypt": "nodemon bcrypt_test.js",
+    "user": "nodemon user.js"
   },
   "author": "",
   "license": "ISC",
