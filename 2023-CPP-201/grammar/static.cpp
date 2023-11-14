@@ -7,11 +7,15 @@ class Champ {
 public:
 	// 함수의 선언
 	Champ(const string& name);
+	// static 멤버함수에는 일반 멤버변수가 들어갈 수 없다.
+	// static 멤버함수는 객체 생성 없이도 호출되어야 하나
 	static int get_cnt() {
+		// non_static = 1; 이 변수는 무조건 객체가 생성되어야 함.
 		return cnt_;
 	}
 
 private:
+	int non_static;
 	static int cnt_;
 };
 
