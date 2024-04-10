@@ -7,7 +7,7 @@ function Write(able: boolean = true) {
 class Button1 {
   constructor(public el: HTMLButtonElement) {}
 
-  @Write(false)
+  @Write(false) // false -> 외부에서 제거할 수 없음.
   disable() {
     this.el.setAttribute("disabled", "disabled");
   }
