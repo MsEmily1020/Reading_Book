@@ -1,0 +1,678 @@
+[
+  {
+    "w_no": "1",
+    "w_word": "\uACAC\uC778\uC9C0\uC5ED"
+  },
+  {
+    "w_no": "2",
+    "w_word": "\uAC8C\uB974\uB9C8\uB284"
+  },
+  {
+    "w_no": "3",
+    "w_word": "\uACF5\uAE30\uB180\uC774"
+  },
+  {
+    "w_no": "4",
+    "w_word": "\uC81C\uAE30\uCC28\uAE30"
+  },
+  {
+    "w_no": "5",
+    "w_word": "\uAC15\uAC15\uC220\uB798"
+  },
+  {
+    "w_no": "6",
+    "w_word": "\uC220\uB798\uC7A1\uAE30"
+  },
+  {
+    "w_no": "7",
+    "w_word": "\uC5B4\uB9B0\uC774\uC9D1"
+  },
+  {
+    "w_no": "8",
+    "w_word": "\uCC28\uB7C9\uC6B4\uD589"
+  },
+  {
+    "w_no": "9",
+    "w_word": "\uC548\uC804\uC6B4\uC804"
+  },
+  {
+    "w_no": "10",
+    "w_word": "\uC548\uC804\uC81C\uC77C"
+  },
+  {
+    "w_no": "11",
+    "w_word": "\uD035\uC11C\uBE44\uC2A4"
+  },
+  {
+    "w_no": "12",
+    "w_word": "\uBC14\uB978\uC0DD\uD65C"
+  },
+  {
+    "w_no": "13",
+    "w_word": "\uAC8C\uC2B4\uCE20\uB808"
+  },
+  {
+    "w_no": "14",
+    "w_word": "\uACE0\uC2B4\uB3C4\uCE58"
+  },
+  {
+    "w_no": "15",
+    "w_word": "\uD5EC\uB9AC\uCF65\uD130"
+  },
+  {
+    "w_no": "16",
+    "w_word": "\uC624\uD1A0\uBC14\uC774"
+  },
+  {
+    "w_no": "17",
+    "w_word": "\uBC14\uC774\uC62C\uB9B0"
+  },
+  {
+    "w_no": "18",
+    "w_word": "\uCE74\uBA5C\uB808\uC628"
+  },
+  {
+    "w_no": "19",
+    "w_word": "\uC624\uD1A0\uBC14\uC774"
+  },
+  {
+    "w_no": "20",
+    "w_word": "\uD30C\uC778\uC560\uD50C"
+  },
+  {
+    "w_no": "21",
+    "w_word": "\uD504\uB85C\uADF8\uB7A8"
+  },
+  {
+    "w_no": "22",
+    "w_word": "\uBC14\uB85C\uAC00\uAE30"
+  },
+  {
+    "w_no": "23",
+    "w_word": "\uD0F1\uD06C\uB85C\uB9AC"
+  },
+  {
+    "w_no": "24",
+    "w_word": "\uC0AC\uC790\uC131\uC5B4"
+  },
+  {
+    "w_no": "25",
+    "w_word": "\uBE44\uBC00\uBC88\uD638"
+  },
+  {
+    "w_no": "26",
+    "w_word": "\uAC00\uC0C1\uACC4\uC88C"
+  },
+  {
+    "w_no": "27",
+    "w_word": "\uACC4\uC88C\uBC88\uD638"
+  },
+  {
+    "w_no": "28",
+    "w_word": "\uD648\uD398\uC774\uC9C0"
+  },
+  {
+    "w_no": "29",
+    "w_word": "\uB9CC\uC0AC\uD615\uD1B5"
+  },
+  {
+    "w_no": "30",
+    "w_word": "\uB808\uC774\uC544\uC6C3"
+  },
+  {
+    "w_no": "31",
+    "w_word": "\uC2E0\uBB38\uC0AC\uC124"
+  },
+  {
+    "w_no": "32",
+    "w_word": "\uC601\uC7AC\uAD50\uC721"
+  },
+  {
+    "w_no": "33",
+    "w_word": "\uC6B0\uB9AC\uC740\uD589"
+  },
+  {
+    "w_no": "34",
+    "w_word": "\uAD6D\uBBFC\uC740\uD589"
+  },
+  {
+    "w_no": "35",
+    "w_word": "\uAE30\uC5C5\uC740\uD589"
+  },
+  {
+    "w_no": "36",
+    "w_word": "\uC77C\uBCF8\uB1CC\uC5FC"
+  },
+  {
+    "w_no": "37",
+    "w_word": "\uD3D0\uB834\uAD6C\uADE0"
+  },
+  {
+    "w_no": "38",
+    "w_word": "\uC608\uBC29\uC8FC\uC0AC"
+  },
+  {
+    "w_no": "39",
+    "w_word": "\uC0DD\uB144\uC6D4\uC77C"
+  },
+  {
+    "w_no": "40",
+    "w_word": "\uD2B9\uBCC4\uD65C\uB3D9"
+  },
+  {
+    "w_no": "41",
+    "w_word": "\uACE0\uAC1D\uC13C\uD130"
+  },
+  {
+    "w_no": "42",
+    "w_word": "\uC0CC\uB4DC\uC704\uCE58"
+  },
+  {
+    "w_no": "43",
+    "w_word": "\uC720\uD1B5\uAE30\uD55C"
+  },
+  {
+    "w_no": "44",
+    "w_word": "\uC54C\uB808\uB974\uAE30"
+  },
+  {
+    "w_no": "45",
+    "w_word": "\uB2F4\uC784\uAD50\uC0AC"
+  },
+  {
+    "w_no": "46",
+    "w_word": "\uD604\uC7A5\uD559\uC2B5"
+  },
+  {
+    "w_no": "47",
+    "w_word": "\uBB49\uAC8C\uAD6C\uB984"
+  },
+  {
+    "w_no": "48",
+    "w_word": "\uD638\uB791\uB098\uBE44"
+  },
+  {
+    "w_no": "49",
+    "w_word": "\uC885\uC774\uC811\uAE30"
+  },
+  {
+    "w_no": "50",
+    "w_word": "\uD734\uB300\uC804\uD654"
+  },
+  {
+    "w_no": "51",
+    "w_word": "\uD504\uB9AC\uBBF8\uC5C4"
+  },
+  {
+    "w_no": "52",
+    "w_word": "\uD611\uB3D9\uC870\uD569"
+  },
+  {
+    "w_no": "53",
+    "w_word": "\uC8FC\uC758\uC0AC\uD56D"
+  },
+  {
+    "w_no": "54",
+    "w_word": "\uC0AC\uC6A9\uBC29\uBC95"
+  },
+  {
+    "w_no": "55",
+    "w_word": "\uC81C\uD488\uC124\uBA85"
+  },
+  {
+    "w_no": "56",
+    "w_word": "\uC9C1\uC0AC\uAD11\uC120"
+  },
+  {
+    "w_no": "57",
+    "w_word": "\uBD84\uB9AC\uC218\uAC70"
+  },
+  {
+    "w_no": "58",
+    "w_word": "\uD3FC\uD074\uB81D\uC9D5"
+  },
+  {
+    "w_no": "59",
+    "w_word": "\uC138\uC22B\uBE44\uB204"
+  },
+  {
+    "w_no": "60",
+    "w_word": "\uBE68\uB7AB\uBE44\uB204"
+  },
+  {
+    "w_no": "61",
+    "w_word": "\uCD1D\uAC01\uAE40\uCE58"
+  },
+  {
+    "w_no": "62",
+    "w_word": "\uBC30\uCD94\uAE40\uCE58"
+  },
+  {
+    "w_no": "63",
+    "w_word": "\uB450\uB8E8\uCE58\uAE30"
+  },
+  {
+    "w_no": "64",
+    "w_word": "\uBCBC\uB8E9\uC2DC\uC7A5"
+  },
+  {
+    "w_no": "65",
+    "w_word": "\uD574\uBC14\uB77C\uAE30"
+  },
+  {
+    "w_no": "66",
+    "w_word": "\uCF54\uC2A4\uBAA8\uC2A4"
+  },
+  {
+    "w_no": "67",
+    "w_word": "\uC218\uBA74\uC7A5\uC560"
+  },
+  {
+    "w_no": "68",
+    "w_word": "\uACE0\uC9C0\uD608\uC99D"
+  },
+  {
+    "w_no": "69",
+    "w_word": "\uD559\uC2B5\uD6A8\uACFC"
+  },
+  {
+    "w_no": "70",
+    "w_word": "\uBE44\uC120\uC2E4\uC138"
+  },
+  {
+    "w_no": "71",
+    "w_word": "\uAC00\uB09C"
+  },
+  {
+    "w_no": "72",
+    "w_word": "\uAC00\uB137"
+  },
+  {
+    "w_no": "73",
+    "w_word": "\uAC00\uB78C"
+  },
+  {
+    "w_no": "74",
+    "w_word": "\uAC00\uBB38"
+  },
+  {
+    "w_no": "75",
+    "w_word": "\uAC00\uBC29"
+  },
+  {
+    "w_no": "76",
+    "w_word": "\uAC00\uC2A4"
+  },
+  {
+    "w_no": "77",
+    "w_word": "\uAC00\uC2DD"
+  },
+  {
+    "w_no": "78",
+    "w_word": "\uAC00\uC628"
+  },
+  {
+    "w_no": "79",
+    "w_word": "\uAC00\uC744"
+  },
+  {
+    "w_no": "80",
+    "w_word": "\uAC00\uC774"
+  },
+  {
+    "w_no": "81",
+    "w_word": "\uAC00\uC871"
+  },
+  {
+    "w_no": "82",
+    "w_word": "\uAC01\uC131"
+  },
+  {
+    "w_no": "83",
+    "w_word": "\uAC04\uC9C0"
+  },
+  {
+    "w_no": "84",
+    "w_word": "\uAC08\uB9F7"
+  },
+  {
+    "w_no": "85",
+    "w_word": "\uAC08\uBB34"
+  },
+  {
+    "w_no": "86",
+    "w_word": "\uAC08\uC774"
+  },
+  {
+    "w_no": "87",
+    "w_word": "\uAC08\uC99D"
+  },
+  {
+    "w_no": "88",
+    "w_word": "\uAC10\uB3D9"
+  },
+  {
+    "w_no": "89",
+    "w_word": "\uAC10\uBBF8"
+  },
+  {
+    "w_no": "90",
+    "w_word": "\uAC10\uC0C1"
+  },
+  {
+    "w_no": "91",
+    "w_word": "\uAC10\uC18D"
+  },
+  {
+    "w_no": "92",
+    "w_word": "\uAC10\uC790"
+  },
+  {
+    "w_no": "93",
+    "w_word": "\uAC10\uC815"
+  },
+  {
+    "w_no": "94",
+    "w_word": "\uAC10\uD22C"
+  },
+  {
+    "w_no": "95",
+    "w_word": "\uAC11\uBE60"
+  },
+  {
+    "w_no": "96",
+    "w_word": "\uAC11\uC21C"
+  },
+  {
+    "w_no": "97",
+    "w_word": "\uAC11\uC637"
+  },
+  {
+    "w_no": "98",
+    "w_word": "\uAC15\uBAA9"
+  },
+  {
+    "w_no": "99",
+    "w_word": "\uAC15\uBCC0"
+  },
+  {
+    "w_no": "100",
+    "w_word": "\uAC15\uC0D8"
+  },
+  {
+    "w_no": "101",
+    "w_word": "\uAC15\uCCA0"
+  },
+  {
+    "w_no": "102",
+    "w_word": "\uAC15\uD574"
+  },
+  {
+    "w_no": "103",
+    "w_word": "\uAC1C\uAD6C"
+  },
+  {
+    "w_no": "104",
+    "w_word": "\uAC1C\uBBF8"
+  },
+  {
+    "w_no": "105",
+    "w_word": "\uAC1C\uBC1C"
+  },
+  {
+    "w_no": "106",
+    "w_word": "\uAC1C\uC778"
+  },
+  {
+    "w_no": "107",
+    "w_word": "\uAC1C\uD3F0"
+  },
+  {
+    "w_no": "108",
+    "w_word": "\uAC70\uBBC8"
+  },
+  {
+    "w_no": "109",
+    "w_word": "\uAC70\uC0C1"
+  },
+  {
+    "w_no": "110",
+    "w_word": "\uAC70\uC6B8"
+  },
+  {
+    "w_no": "111",
+    "w_word": "\uAC70\uC9C0"
+  },
+  {
+    "w_no": "112",
+    "w_word": "\uAC74\uAC15"
+  },
+  {
+    "w_no": "113",
+    "w_word": "\uAC74\uB2F4"
+  },
+  {
+    "w_no": "114",
+    "w_word": "\uAC74\uBE75"
+  },
+  {
+    "w_no": "115",
+    "w_word": "\uAC80\uAC1D"
+  },
+  {
+    "w_no": "116",
+    "w_word": "\uAC80\uB450"
+  },
+  {
+    "w_no": "117",
+    "w_word": "\uAC80\uB9C1"
+  },
+  {
+    "w_no": "118",
+    "w_word": "\uAC80\uC0AC"
+  },
+  {
+    "w_no": "119",
+    "w_word": "\uAC80\uC0C9"
+  },
+  {
+    "w_no": "120",
+    "w_word": "\uAC80\uC131"
+  },
+  {
+    "w_no": "121",
+    "w_word": "\uAC80\uD0B9"
+  },
+  {
+    "w_no": "122",
+    "w_word": "\uAC80\uD30C"
+  },
+  {
+    "w_no": "123",
+    "w_word": "\uAC80\uD321"
+  },
+  {
+    "w_no": "124",
+    "w_word": "\uAC8C\uC784"
+  },
+  {
+    "w_no": "125",
+    "w_word": "\uAC9C\uBE14"
+  },
+  {
+    "w_no": "126",
+    "w_word": "\uACA8\uB808"
+  },
+  {
+    "w_no": "127",
+    "w_word": "\uACA8\uC6B8"
+  },
+  {
+    "w_no": "128",
+    "w_word": "\uACA9\uB178"
+  },
+  {
+    "w_no": "129",
+    "w_word": "\uACA9\uB958"
+  },
+  {
+    "w_no": "130",
+    "w_word": "\uACA9\uBA78"
+  },
+  {
+    "w_no": "131",
+    "w_word": "\uAC00\uACF5\uC5C5"
+  },
+  {
+    "w_no": "132",
+    "w_word": "\uAC00\uB791\uBE44"
+  },
+  {
+    "w_no": "133",
+    "w_word": "\uAC00\uB798\uB5A1"
+  },
+  {
+    "w_no": "134",
+    "w_word": "\uAC00\uB85C\uB4F1"
+  },
+  {
+    "w_no": "135",
+    "w_word": "\uAC00\uB85C\uC218"
+  },
+  {
+    "w_no": "136",
+    "w_word": "\uAC00\uC194\uB9B0"
+  },
+  {
+    "w_no": "137",
+    "w_word": "\uAC00\uC6B0\uC2A4"
+  },
+  {
+    "w_no": "138",
+    "w_word": "\uAC00\uC774\uC544"
+  },
+  {
+    "w_no": "139",
+    "w_word": "\uAC00\uC815\uBD80"
+  },
+  {
+    "w_no": "140",
+    "w_word": "\uAC00\uD0C0\uCE74"
+  },
+  {
+    "w_no": "141",
+    "w_word": "\uAC01\uC124\uD0D5"
+  },
+  {
+    "w_no": "142",
+    "w_word": "\uAC04\uC811\uC801"
+  },
+  {
+    "w_no": "143",
+    "w_word": "\uAC04\uC9C0\uB0A8"
+  },
+  {
+    "w_no": "144",
+    "w_word": "\uAC08\uB9E4\uAE30"
+  },
+  {
+    "w_no": "145",
+    "w_word": "\uAC08\uBB34\uB9AC"
+  },
+  {
+    "w_no": "146",
+    "w_word": "\uAC10\uC790\uAE61"
+  },
+  {
+    "w_no": "147",
+    "w_word": "\uAC10\uC790\uD0D5"
+  },
+  {
+    "w_no": "148",
+    "w_word": "\uAC11\uB3CC\uC774"
+  },
+  {
+    "w_no": "149",
+    "w_word": "\uAC15\uC544\uC9C0"
+  },
+  {
+    "w_no": "150",
+    "w_word": "\uAC15\uC6D0\uB3C4"
+  },
+  {
+    "w_no": "151",
+    "w_word": "\uAC1C\uACF5\uC2DD"
+  },
+  {
+    "w_no": "152",
+    "w_word": "\uAC1C\uAD50\uC2DD"
+  },
+  {
+    "w_no": "153",
+    "w_word": "\uAC1C\uAD6C\uB9AC"
+  },
+  {
+    "w_no": "154",
+    "w_word": "\uAC1C\uAE30\uC2DD"
+  },
+  {
+    "w_no": "155",
+    "w_word": "\uAC1C\uB098\uB9AC"
+  },
+  {
+    "w_no": "156",
+    "w_word": "\uAC1C\uB9C9\uC2DD"
+  },
+  {
+    "w_no": "157",
+    "w_word": "\uAC1C\uC120\uBB38"
+  },
+  {
+    "w_no": "158",
+    "w_word": "\uAC1C\uC5C5\uC2DD"
+  },
+  {
+    "w_no": "159",
+    "w_word": "\uAC1C\uD1B5\uC2DD"
+  },
+  {
+    "w_no": "160",
+    "w_word": "\uAC1C\uD3ED\uB51C"
+  },
+  {
+    "w_no": "161",
+    "w_word": "\uAC1C\uD559\uC2DD"
+  },
+  {
+    "w_no": "162",
+    "w_word": "\uAC1C\uD56D\uC2DD"
+  },
+  {
+    "w_no": "163",
+    "w_word": "\uAC1C\uD68C\uC2DD"
+  },
+  {
+    "w_no": "164",
+    "w_word": "\uAC1D\uAD00\uC131"
+  },
+  {
+    "w_no": "165",
+    "w_word": "\uAC24\uB7ED\uC2DC"
+  },
+  {
+    "w_no": "166",
+    "w_word": "\uAC70\uBD81\uC774"
+  },
+  {
+    "w_no": "167",
+    "w_word": "\uAC70\uC9D3\uB9D0"
+  },
+  {
+    "w_no": "168",
+    "w_word": "\uAC80\uB531\uC9C0"
+  },
+  {
+    "w_no": "169",
+    "w_word": "\uAC80\uC740\uAE68"
+  }
+]

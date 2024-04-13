@@ -1,0 +1,101 @@
+UNO	id	pw	uname	height	weight	birth	email	phone
+1	user01	user01!	신주지	189	80	1955-12-29	asdf1234@gmail.com	
+2	user02	user02!	심영라	163	47	1982-09-28		010-6665-6550
+3	user03	user03!	오헬혜	150	49	2002-02-05	hdc65@naver.com	
+4	user04	user04!	육진예	160	57	1983-07-02	lhsd05352@daum.net	
+5	user05	user05!	지아다	140	38	1981-08-26	kdjfakl@gmail.com	
+6	user06	user06!	진빈은	180	57	2002-03-24		010-8591-2623
+7	user07	user07!	최진서	185	56	1981-07-21	pou84@naver.com	010-7083-1667
+8	user08	user08!	하솔윤	170	66	1955-08-07	asdf1234@hanmail.net	
+9	user09	user09!	한아윤	165	44	2006-10-29	nsfc159@gmail.com	010-4450-0229
+10	user10	user10!	한희혜	167	55	2006-08-18	bhgy369@daum.net	
+11	user11	user11!	홍진송	177	85	1963-07-08	xzfd3574@naver.com	
+12	user12	user12!	강림은	155	35	2013-12-30	zsec147@daum.net	
+13	user13	user13!	김애정	155	40	1961-09-19	hgxnm455@gmail.com	
+14	user14	user14!	김수연	153	54	1958-05-07	dkssud884@hanmail.net	010-4803-2708
+15	user15	user15!	김옥나	166	63	1957-12-29		010-7536-6978
+16	user16	user16!	김연소	188	90	2009-12-03		010-3427-2540
+17	user17	user17!	김희유	153	45	1991-11-13	dmlgb89@hanmail.net	010-8379-9801
+18	user18	user18!	남선채	50	12	2021-04-05	skatjssco59@hanmail.net	
+19	user19	user19!	문연현	100	33	2012-08-26		010-8869-4593
+20	user20	user20!	문비윤	155	34	1975-12-31	dbsql77@hanmail.net	
+21	user21	user21!	박희강	159	72	1957-05-11	rkdanf349@daum.net	
+22	user22	user22!	배혜정	65	15	2019-08-23	zlwmxh1478@naver.com	
+23	user23	user23!	백현유	125	30	1967-03-02	qwer567@naver.com	010-0928-6926
+24	user24	user24!	김정엉	154	47	1994-05-25	tmakdl456278@hanmail.net	
+25	user25	user25!	김미소	189	66	2000-03-09		010-2551-6593
+26	user26	user26!	김지언	175	78	2006-07-13		010-0954-4838
+27	user27	user27!	김우빈	144	59	2009-01-25	dpap44444@hanmail.net	010-9254-8581
+28	user28	user28!	전이람	30	13	2020-10-24		010-1224-2534
+29	user29	user29!	도지영	165	62	1986-01-12		010-1023-6321
+30	user30	user30!	도우리	140	61	1967-09-04	skdnm99@naver.com	010-3099-9573
+31	user31	user31!	남하준	130	35	2012-02-25		010-8465-21435
+32	user32	user32!	박서진	175	65	1979-08-06	xalnf456@naver.com	
+33	user33	user33!	이서아	186	90	1994-11-22	hakdn985@gmail.com	010-5242-5231
+34	user34	user34!	김하니	157	43	1966-10-03		
+35	user35	user35!	박가린	100	35	2015-10-07	xkjncak999@naver.com	010-2134-5469
+36	user36	user36!	김수빈	159	51	2002-07-09	weqndapo4646@gmail.com	
+37	user37	user37!	임민재	130	30	2017-08-18		010-9654-5763
+38	user38	user38!	정지훈	178	79	1974-11-10	zvcxio47856@naver.com	
+39	user39	user39!	배이준	65	14	2020-09-26	zsxdjiod4398@hanmail.net	
+40	user40	user40!	최예원	173	90	1978-06-06		010-9865-5319
+41	user41	user41!	문승희	158	44	2004-03-30	oiuj9w43@daum.net	
+42	user42	user42!	홍이현	120	64	2019-12-05	wedikol5634@gmail.com	010-1348-9934
+43	user43	user43!	조가연	165	68	2001-09-25		010-9934-2123
+44	user44	user44!	손서영	167	63	2007-12-20	sdkjwa543@gmail.com	010-6543-5476
+45	user45	user45!	서희경	100	34	2018-03-24		010-2414-9875
+46	user46	user46!	정지현	160	73	1986-03-04	janksd123@naver.com	
+47	user47	user47!	황재혁	190	65	1961-05-08	oikjvd420@naver.com	
+48	user48	user48!	한서준	149	45	1989-05-30		010-5636-7763
+49	user49	user49!	이서경	167	70	1994-07-27	aeczuj6374@gmail.com	
+50	user50	user50!	오성하	184	89	1985-06-18	zdakj156@hanmail.net	
+51	user51	user51!	주현지	97	30	2016-12-17		010-5439-1471
+52	user52	user52!	고소망	152	33	1992-10-12	fjdqwe33@naver.com	010-1143-4654
+53	user53	user53!	임도현	166	44	2010-12-30		010-8754-3219
+54	user54	user54!	강시원	170	66	1995-04-08	lj1afd9841@daum.net	
+55	user55	user55!	윤은지	153	72	1981-05-23	zxkjnq369@naver.com	
+56	user56	user56!	최도희	163	80	1995-11-27		010-4483-9348
+57	user57	user57!	한영서	142	56	1971-11-09		010-2474-0431
+58	user58	user58!	유윤서	186	66	1988-07-27		010-6572-8765
+59	user59	user59!	권혜윤	164	44	1979-04-05	zxcgj645@naver.com	
+60	user60	user60!	신혜지	86	31	2018-12-16		010-1418-6837
+61	user61	user61!	김채윤	150	43	1962-05-07	gdfjk357@naver.com	
+62	user62	user62!	박다인	180	71	1976-01-06		010-5468-0412
+63	user63	user63!	허하율	153	51	1995-07-24		010-2237-7850
+64	user64	user64!	나시온	89	23	2018-03-04	jhbae854@gmail.com	
+65	user65	user65!	이태윤	148	40	1972-10-28		010-0485-8004
+66	user66	user66!	박시현	177	59	2005-10-07		010-1029-1004
+67	user67	user67!	김재은	165	63	2004-12-18		010-7538-5432
+68	user68	user68!	도경수	178	50	1979-11-21		010-3257-7555
+69	user69	user69!	류대한	164	58	1994-03-15	bvtruy4214@hanmail.net	
+70	user70	user70!	박지성	165	40	1973-11-12	hgads87@naver.com	
+71	user71	user71!	정흥민	178	72	1997-08-29	iubgaek548@naver.com	
+72	user72	user72!	김예찬	139	33	1964-12-18	kzxn119@naver.com	
+73	user73	user73!	김다은	76	20	2019-01-16		010-5437-8845
+74	user74	user74!	김채린	155	40	1961-11-02	czczxx33@hanmail.net	
+75	user75	user75!	방민아	157	53	1993-05-05	zlkjdzzzz8210@naver.com	
+76	user76	user76!	배주하	155	67	1970-10-11		010-7324-6534
+77	user77	user77!	허이서	130	27	1957-07-17	mkaodi061@naver.com	010-5443-8488
+78	user78	user78!	임보민	149	39	1989-09-04		010-8732-0018
+79	user79	user79!	김도영	163	53	1972-05-16		010-7823-8206
+80	user80	user80!	노하랑	179	68	1962-10-09		010-7499-8575
+81	user81	user81!	정승호	193	78	2002-11-25	daeledc24@naver.com	
+82	user82	user82!	이정현	165	48	2002-07-19		010-3246-3357
+83	user83	user83!	현민정	140	37	1989-07-15	dlkcc555@naver.com	
+84	user84	user84!	부소이	183	85	1993-10-01	aeowjs07@naver.com	
+85	user85	user85!	김이서	164	52	1988-04-10		010-0483-6844
+86	user86	user86!	이민건	168	51	1997-11-10	dalk843@naver.com	
+87	user87	user87!	박가영	169	42	1970-01-07	xoflsi1122@hanmail.net	010-5843-4574
+88	user88	user88!	윤태린	170	59	2003-09-19	dhsdv777@naver.com	010-5424-3321
+89	user89	user89!	박온유	160	50	2004-12-22		010-2469-7452
+90	user90	user90!	김기범	156	34	1978-06-25	dowkn3524@naver.com	
+91	user91	user91!	노예지	147	40	2001-01-03		010-6543-4335
+92	user92	user92!	권채이	159	35	1959-09-08	cicidk561@gmail.com	
+93	user93	user93!	임현빈	154	61	1965-07-04	gusqls34@naver.com	
+94	user94	user94!	최태우	164	65	1961-05-08		010-8745-3348
+95	user95	user95!	구다율	140	46	1967-08-07		010-1432-4132
+96	user96	user96!	송현호	186	73	1989-11-11	gusgh27@daum.net	
+97	user97	user97!	정시우	157	45	2009-11-14		010-9389-4455
+98	user98	user98!	김정민	145	59	2008-01-05	wjdals08@naver.com	010-4856-8475
+99	user99	user99!	조한울	190	88	1980-10-09		010-8546-1345
+100	user100	user100!	최지혁	178	64	2004-08-13		010-5787-5421

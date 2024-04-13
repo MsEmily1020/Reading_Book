@@ -1,0 +1,33 @@
+package app;
+
+import java.awt.BorderLayout;
+
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+
+public class MainFrame extends CommonFrame {
+	
+	static int userNo = 0;
+	
+	public MainFrame() {
+		super(300, 450, "Main");
+		
+		setLayout(new BorderLayout());
+		
+		//Panel 기본 레이아웃 : FlowLayout
+		var a = new JPanel();
+		var b = new JPanel(new BorderLayout());
+		var c = new JPanel(null);
+		
+		a.add(new JLabel("아르바이트"));
+		
+		add(a, "North");
+		add(b);
+		add(c, "South");
+		
+	}
+	
+	public static void main(String[] args) {
+		new MainFrame().setVisible(true);
+	}
+}

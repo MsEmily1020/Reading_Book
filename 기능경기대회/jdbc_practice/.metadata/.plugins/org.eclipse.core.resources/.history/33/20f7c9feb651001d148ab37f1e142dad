@@ -1,0 +1,11 @@
+package app;
+
+public class MyPageFrame extends CommonFrame {
+	public MyPageFrame() {
+		super(600, 300, "Mypage");
+	}
+	
+	public static void main(String[] args) {
+		new MyPageFrame().setVisible(true);
+	}
+}

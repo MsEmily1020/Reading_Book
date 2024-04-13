@@ -1,0 +1,8 @@
+c_no	c_division	c_name
+1	A	상의
+2	B	하의
+3	C	신발
+4	D	스포츠
+5	E	방한
+6	F	아동
+7	G	액세서리

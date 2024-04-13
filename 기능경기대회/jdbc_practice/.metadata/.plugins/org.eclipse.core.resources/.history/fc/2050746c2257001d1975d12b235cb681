@@ -1,0 +1,68 @@
+package app;
+
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
+
+public class MyPageFrame extends CommonFrame {
+	static int userNo;
+	
+	public MyPageFrame() throws Exception {
+		super(600, 300, "Mypage");
+		
+		//editable : 수정 가능
+		//readonly : 편집 불가능
+		//reorder :  순서 바꾸기
+		//resize : 크기 변경
+
+		//mode : 테이블 데이터를 담당하는 2차원 배열
+		//new 이후 해당 개체에 블록을 만들면 익명 class 생성
+		var model = new DefaultTableModel("번호,기업명,모집정보,시급,모집정원,최종학력,성별,합격여부".split(","), 0) {
+			@Override //데이터 수정 ( table에서도 가능 )
+			public boolean isCellEditable(int row, int column) {
+				return false;
+			}
+		};
+		
+		var table = new JTable(model);
+
+		table.getTableHeader().setReorderingAllowed(false); //드래그 x
+		table.getTableHeader().setResizingAllowed(false); //크기 변화 x
+		
+		
+		int[] widthList = {40, 80, 250, 70, 40, 70, 40, 40};
+		for(int i = 0; i < widthList.length; i++) {
+			table.getColumnModel().getColumn(i).setPreferredWidth(widthList[i]);
+		}
+		//table.getColumn("합격여부").setPreferredWidth(40); //크기 조정 권장x
+		
+		add(setBounds(new JScrollPane(table), 16, 100, 550, 120));
+		
+		try(var rs = getResulSet("SELECT a_no, c_name, e_title, e_pay, e_people, e_graduate, e_gender, a_apply\r\n"
+				+ "FROM applicant a\r\n"
+				+ "INNER JOIN employment e ON a.e_no = e.e_no\r\n"
+				+ "INNER JOIN company c ON e.c_no = c.c_no\r\n"
+				+ "WHERE a.u_no = ?", userNo)) {
+			
+			int id = 0;
+			
+			while(rs.next()) {
+				model.addRow(new Object[] {
+						++id,
+						rs.getString(2),
+						rs.getString(3),
+						rs.getInt(4),
+						rs.getInt(5),
+						rs.getInt(6),
+						rs.getInt(7),
+						rs.getInt(8),
+				});
+			}
+		}
+	}
+	
+	public static void main(String[] args) throws Exception {
+		userNo = 1;
+		new MyPageFrame().setVisible(true);
+	}
+}

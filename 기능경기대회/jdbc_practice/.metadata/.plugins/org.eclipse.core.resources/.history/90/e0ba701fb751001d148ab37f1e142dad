@@ -1,0 +1,26 @@
+package app;
+
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
+
+public class MyPageFrame extends CommonFrame {
+	static int userNo;
+	
+	public MyPageFrame() {
+		super(600, 300, "Mypage");
+		
+		//mode : 테이블 데이터를 담당하는 2차원 배열
+		var model = new DefaultTableModel("번호,기업명,모집정보,시급,모집정원,최종학력,성별,합격여부".split(","), 0);
+		var table = new JTable();
+		var scrollPane = new JScrollPane(table);
+		
+		add(setBounds(table, 16, 100, 550, 120));
+		
+	}
+	
+	public static void main(String[] args) {
+		userNo = 1;
+		new MyPageFrame().setVisible(true);
+	}
+}

@@ -1,0 +1,152 @@
+package setting;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.sql.DriverManager;
+
+public class Setting {
+	public static void main(String[] args) throws Exception /*-> 컴퓨터가 해결 = 기본 빨간줄*/{
+		var con = DriverManager.getConnection(  
+				"jdbc:mysql://localhost/?allowLoadLocalInfile=true",
+				"root",
+				"1234");
+		var stmt = con.createStatement();
+
+		stmt.execute("SET GLOBAL local_infile = true;");
+
+		try {
+			//DROP DATABASE `DB 이름`
+			stmt.execute("DROP DATABASE `2022지방_2`");
+			System.out.println(";;2022지방_2 제거");
+		} catch(Exception e) {
+			System.out.println("2022지방_2 존재하지 않음");
+		}
+
+		//WorkBench DB를 만들어서 SQL 얻기
+		stmt.execute("CREATE SCHEMA `2022지방_2` DEFAULT CHARACTER SET utf8 ;");
+		//execute : DDL DCL(결과 반환x) vs executeQuery : DML(ResultSet : 결과o)
+		//SELECT INSERT UPDATE DELETE :  결과o(SELECT : 결과 테이블, INSERT : 몇건을 처리했는지 결과)
+		System.out.println("2022지방_2 DB 생성");
+
+		//ERD : Entity Relationship D
+		stmt.execute("CREATE TABLE `2022지방_2`.`user` ("
+				+ "u_no INT PRIMARY KEY AUTO_INCREMENT," //인덱스값 체크해 자동으로 올려주는 옵션 : AUTO_INCREMENT -> INT PRIMARY KEY 설정
+				+ "u_name VARCHAR(10),"
+				+ "u_id VARCHAR(10),"
+				+ "u_pw VARCHAR(15),"
+				+ "u_birth VARCHAR(15),"
+				+ "u_email VARCHAR(30),"
+				+ "u_gender INT,"
+				+ "u_graduate INT,"
+				+ "u_address VARCHAR(100),"
+				+ "u_img LONGBLOB"
+				+ ")");
+
+		System.out.println("user DB 생성");
+
+		stmt.execute("CREATE TABLE `2022지방_2`.`company` ("
+				+ "c_no INT PRIMARY KEY AUTO_INCREMENT,"
+				+ "c_name VARCHAR(10),"
+				+ "c_ceo VARCHAR(10),"
+				+ "c_address VARCHAR(100),"
+				+ "c_category VARCHAR(15),"
+				+ "c_employee INT,"
+				+ "c_img LONGBLOB,"
+				+ "c_search INT"
+				+ ")");
+
+		System.out.println("company DB 생성");
+
+		stmt.execute("CREATE TABLE `2022지방_2`.`employment` ("
+				+ "e_no INT PRIMARY KEY AUTO_INCREMENT,"
+				+ "c_no INT,"
+				+ "e_title VARCHAR(30),"
+				+ "e_pay INT,"
+				+ "e_people INT,"
+				+ "e_gender INT,"
+				+ "e_graduate INT,"
+				+ "CONSTRAINT FK_0_e_no FOREIGN KEY (c_no) REFERENCES company (c_no) ON DELETE CASCADE ON UPDATE CASCADE"
+				+ ")");
+
+		System.out.println("employment DB 생성");
+
+		stmt.execute("CREATE TABLE `2022지방_2`.`applicant` ("
+				+ "a_no INT PRIMARY KEY AUTO_INCREMENT,"
+				+ "e_no INT,"
+				+ "u_no INT,"
+				+ "a_apply INT,"
+				+ "CONSTRAINT FK_0_a_no FOREIGN KEY (e_no) REFERENCES employment (e_no) ON DELETE CASCADE ON UPDATE CASCADE,"
+				+ "CONSTRAINT FK_1_a_no FOREIGN KEY (u_no) REFERENCES user (u_no) ON DELETE CASCADE ON UPDATE CASCADE"
+				+ ")");
+
+		System.out.println("applicant DB 생성");
+
+		//txt 파일을 mysqp DB importing 집어넣기
+		//LOAD LOCAL INFILE 
+		stmt.execute("LOAD DATA "
+				+ "LOCAL INFILE 'datafiles/user.txt' "
+				+ "INTO TABLE `2022지방_2`.`user` "
+				+ "IGNORE 1 LINES");
+
+		stmt.execute("LOAD DATA "
+				+ "LOCAL INFILE 'datafiles/company.txt' "
+				+ "INTO TABLE `2022지방_2`.`company` "
+				+ "IGNORE 1 LINES");
+
+		stmt.execute("LOAD DATA "
+				+ "LOCAL INFILE 'datafiles/employment.txt' "
+				+ "INTO TABLE `2022지방_2`.`employment` "
+				+ "IGNORE 1 LINES");
+
+		stmt.execute("LOAD DATA "
+				+ "LOCAL INFILE 'datafiles/applicant.txt' "
+				+ "INTO TABLE `2022지방_2`.`applicant` "
+				+ "IGNORE 1 LINES");
+
+		stmt.execute("USE `2022지방_2`");
+
+		//Image 삽입 LONGBLOB FILE 파일 BINARY
+		//try-autoclose
+		//prepareStatement : SQL 템플릿 만들고, 실행 준비 상태로 만듦.
+		try (var pstmt = con.prepareStatement("UPDATE user SET u_img = ? WHERE u_no = ?")) {
+			for(int i = 1; i <= 20; i++) {
+				pstmt.setObject(1, new FileInputStream(new File("datafiles/회원사진/" + i + ".jpg")));
+				pstmt.setObject(2, i);
+				pstmt.execute();
+			}
+			//pstmt.close(); -> try() 으로 자동 close해줌
+		}
+		
+		try (var pstmt = con.prepareStatement("UPDATE company SET c_img = ? WHERE c_name = ?")) {
+			var fileList = new File("datafiles/기업").listFiles();
+			
+			for(var file : fileList) {
+				if(file.getName().endsWith("1.jpg")) {
+					pstmt.setObject(1, new FileInputStream(file));
+					pstmt.setObject(2, file.getName().substring(0, file.getName().length() -5));
+					pstmt.execute(); //sql 실행해줌...
+				}
+			}
+		}
+		
+		
+		//Exception : 자바 예외 정보 담는 Class/개체
+		//예측이 가능한 코드 : 모든 환경/상황(변수) 제어o vs 예측 불가능한 코드 : 예측 숫자 -> 문자 입력, 인터넷이 끊김
+
+		/* Exception이 발생할 때, 그 예외 처리를 할 수 있도록 하는 문법
+		try {
+			Scanner sc  = new Scanner(System.in);
+			String line = sc.nextLine();
+			int number = Integer.parseInt(line);
+
+			System.out.println(number);
+		//모든 예외 사항 : Exception e
+		} catch (Exception e){
+			System.out.println("잘못된 숫자 입력");
+		} finally {
+			에러가 나던 안 나던 *무조건 실행함* return해도 상관없음
+		} 
+
+		try에서 return 할 경우 이 문장은 실행x*/
+	}
+}

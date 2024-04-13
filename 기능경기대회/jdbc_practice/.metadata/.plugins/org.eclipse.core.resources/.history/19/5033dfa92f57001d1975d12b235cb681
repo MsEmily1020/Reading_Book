@@ -1,0 +1,61 @@
+package app;
+
+import java.awt.BorderLayout;
+import java.awt.Dimension;
+
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
+
+public class MainFrame extends CommonFrame {
+	
+	static int userNo = 0;
+	
+	public MainFrame() {
+		super(300, 450, "Main");
+		
+		setLayout(new BorderLayout());
+		
+		//Panel 기본 레이아웃 : FlowLayout
+		var a = new JPanel();
+		var b = new JPanel(new BorderLayout());
+		var c = new JPanel(null);
+		
+		a.add(new JLabel("아르바이트"));
+		
+		var b_north = new JPanel();
+		var b_center = new JPanel(null);
+		var tfSearch = new JTextField(12);
+		var btSearch = new JButton("검색");
+		
+		b_north.add(new JLabel("기업검색"));
+		b_north.add(tfSearch);
+		b_north.add(btSearch);
+
+		b_center.add(setBounds(new JLabel("인기기업"), 25, 0, 80, 24));
+		
+		var btList = "로그인,회원가입,닫기".split(",");
+		
+		for(int i = 0; i < btList.length; i++) {
+			var btn = new JButton(btList[i]);
+			b_center.add(setBounds(btn, 160, 30 + i * 36, 120, 32));
+		}
+		
+		b.add(b_north, "North");
+		b.add(b_center);
+		
+		c.add(setBounds(new JLabel("지역"), 25, 0, 40, 24));
+		c.setPreferredSize(new Dimension(0, 80));
+		
+		add(a, "North");
+		add(b);
+		add(c, "South");
+		
+	}
+	
+	public static void main(String[] args) {
+		new MainFrame().setVisible(true);
+	}
+}

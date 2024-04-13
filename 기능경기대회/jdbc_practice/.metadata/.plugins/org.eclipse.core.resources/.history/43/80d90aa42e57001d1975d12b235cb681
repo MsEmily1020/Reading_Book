@@ -1,0 +1,13 @@
+package app;
+
+public class MainFrame extends CommonFrame {
+	public MainFrame() {
+		super(300, 450, "Main");
+		
+		
+	}
+	
+	public static void main(String[] args) {
+		new MainFrame().setVisible(true);
+	}
+}

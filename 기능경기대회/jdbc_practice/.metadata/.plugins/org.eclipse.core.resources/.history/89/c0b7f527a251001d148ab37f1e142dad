@@ -1,0 +1,128 @@
+package app;
+
+import java.awt.Color;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.awt.image.BufferedImage;
+import java.io.IOException;
+
+import javax.imageio.ImageIO;
+import javax.swing.ButtonGroup;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JComboBox;
+import javax.swing.JFileChooser;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JRadioButton;
+import javax.swing.JTextField;
+import javax.swing.border.LineBorder;
+import javax.swing.border.TitledBorder;
+import javax.swing.filechooser.FileNameExtensionFilter;
+
+public class SignUpFrame extends CommonFrame {
+	public SignUpFrame() {
+		super(500, 500, "회원가입");
+		var panel = new JPanel(null);
+		panel.setBorder(new TitledBorder(new LineBorder(Color.black), "회원가입"));
+
+		add(this.setBounds(panel, 20, 20, 450, 400));
+
+		var labelList = "이름,아이디,비밀번호,생년월일,이메일,성별,최종학력,주소".split(",");
+		var tfList = new JTextField[6];
+		var cbList = new JComboBox[3];
+		var rdoList = new JRadioButton[2];
+
+		for(int i = 0; i < labelList.length; i++) {
+			panel.add(this.setBounds(new JLabel(labelList[i]), 10, 40 + 40 * i, 80, 20));
+
+			if(i <= 3) {
+				tfList[i] = new JTextField();
+
+				panel.add(this.setBounds(tfList[i], 80, 40 + 40 * i, 140, 24));
+			}
+
+			else if(i == 4) {
+				tfList[i] = new JTextField();
+				panel.add(this.setBounds(tfList[i], 80, 40 + 40 * i, 80, 24));
+				panel.add(this.setBounds(new JLabel("@"), 160, 40 + 40 * i, 80, 20));
+
+				cbList[0] = new JComboBox("naver.com,outlook.com,daum.com,gmail.com,nate.com,kebi.com,yahoo.com,korea.com,empal.com,hanmail.net".split(","));
+				panel.add(this.setBounds(cbList[0], 180, 40 + 40 * i, 120, 24));
+			}
+
+			else if(i == 5) {
+				rdoList[0] = new JRadioButton("남");
+				rdoList[1] = new JRadioButton("여");
+
+				var group = new ButtonGroup();
+
+				group.add(rdoList[0]);
+				group.add(rdoList[1]);
+
+				panel.add(this.setBounds(rdoList[0], 80, 40 + 40 * i, 44, 24));
+				panel.add(this.setBounds(rdoList[1], 120, 40 + 40 * i, 44, 24));
+			}
+
+			else if(i == 6) {
+				panel.add(this.setBounds(cbList[1] = new JComboBox(" ,대학교 졸업,고등학교 졸업,중학교 졸업".split(",")), 80, 40 + 40 * i, 120, 24));
+			}
+
+			else {
+				panel.add(this.setBounds(cbList[2] = new JComboBox(" ,서울,부산,대구,인천,광주,대전,울산,세종,경기,강원,충북,충남,전북,전남,경북,경남,제주".split(",")), 80, 40 + 40 * i, 70, 24));
+				panel.add(this.setBounds(tfList[5] = new JTextField(), 160, 40 + 40 * i, 140, 24));
+
+				tfList[5].setEditable(false);
+			}
+		}
+
+		var lbImg = new JLabel();
+
+		lbImg.setBorder(new LineBorder(Color.black));
+		
+		lbImg.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				if(e.getClickCount() != 2) return;
+				
+				//double click
+				var chooser = new JFileChooser();
+				chooser.setFileFilter(new FileNameExtensionFilter("JPG Images", "jpg"));
+				chooser.showOpenDialog(null);
+				
+				if(chooser.getSelectedFile() == null) return;
+				try {
+					var img = ImageIO.read(chooser.getSelectedFile());
+				} catch (Exception ex) {
+					ex.printStackTrace();
+				} //파일 읽기
+				
+			}
+		});
+		panel.add(setBounds(lbImg, 280, 30, 150, 150));
+
+		var btSubmit = new JButton("가입");
+
+		cbList[2].addActionListener(e ->{
+			tfList[5].setText("");
+			if(cbList[2].getSelectedIndex() == 0) {
+				tfList[5].setEditable(false); //빈칸 클릭
+				return; //현재 실행 함수 종료(else랑 같은 역할)
+			}
+
+			//주소를 클릭한 부분
+			tfList[5].setEditable(true);
+			tfList[5].grabFocus();
+		});
+
+		btSubmit.addActionListener(e -> {
+
+		});
+
+		add(setBounds(btSubmit, 380, 424, 80, 24));
+	}
+
+	public static void main(String[] args) {
+		new SignUpFrame().setVisible(true);
+	}
+}

@@ -1,0 +1,77 @@
+[
+  {
+    "c_no": "1",
+    "c_name": "google",
+    "p_no": "101"
+  },
+  {
+    "c_no": "2",
+    "c_name": "kakao",
+    "p_no": "102"
+  },
+  {
+    "c_no": "3",
+    "c_name": "nexon",
+    "p_no": "103"
+  },
+  {
+    "c_no": "4",
+    "c_name": "netmable",
+    "p_no": "104"
+  },
+  {
+    "c_no": "5",
+    "c_name": "KRAFTON",
+    "p_no": "105"
+  },
+  {
+    "c_no": "6",
+    "c_name": "NEOWIZ",
+    "p_no": "106"
+  },
+  {
+    "c_no": "7",
+    "c_name": "RIOT",
+    "p_no": "107"
+  },
+  {
+    "c_no": "8",
+    "c_name": "PEARLABYSS",
+    "p_no": "108"
+  },
+  {
+    "c_no": "9",
+    "c_name": "HOYOVERSE",
+    "p_no": "109"
+  },
+  {
+    "c_no": "10",
+    "c_name": "VALVE",
+    "p_no": "110"
+  },
+  {
+    "c_no": "11",
+    "c_name": "COM2S",
+    "p_no": "111"
+  },
+  {
+    "c_no": "12",
+    "c_name": "NC",
+    "p_no": "112"
+  },
+  {
+    "c_no": "13",
+    "c_name": "SUPERCELL",
+    "p_no": "113"
+  },
+  {
+    "c_no": "14",
+    "c_name": "\uBC18\uC9C0\uD558\uAC8C\uC784\uC988",
+    "p_no": "114"
+  },
+  {
+    "c_no": "15",
+    "c_name": "TEAM42",
+    "p_no": "115"
+  }
+]

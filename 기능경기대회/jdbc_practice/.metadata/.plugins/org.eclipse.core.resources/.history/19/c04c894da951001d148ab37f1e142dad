@@ -1,0 +1,30 @@
+package app;
+
+import javax.swing.JComponent;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+
+public class CommonFrame extends JFrame {
+	
+	public CommonFrame(int width, int height, String title) {
+		setSize(width, height);
+		setTitle(title);
+		setLocationRelativeTo(null);
+		setDefaultCloseOperation(2);
+		setLayout(null);
+	}
+	
+	JComponent setBounds(JComponent comp, int x, int y, int width, int height) {
+		comp.setBounds(x, y, width, height);
+		
+		return comp;
+	}
+	
+	static void errorMsg(String text) {
+		JOptionPane.showMessageDialog(null, text, "경고", JOptionPane.ERROR_MESSAGE);
+	}
+	
+	static void infoMsg(String text) {		
+		JOptionPane.showMessageDialog(null, text, "정보", JOptionPane.INFORMATION_MESSAGE);
+	}
+}
