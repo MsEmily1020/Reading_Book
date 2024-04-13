@@ -1,0 +1,48 @@
+<html>
+
+<head>
+    <title>Default Function Parameter</title>
+</head>
+
+<body>
+    <script>
+        function say1(message) {
+            console.log(message);
+        }
+
+        say1("Hello World");
+        say1();
+
+        function say2(message) {
+            if (message != undefined)
+                console.log(message);
+            else
+                console.log("매개변수가 없습니다.");
+        }
+
+        say2("Hello World!");
+        say2();
+
+        function plus1(a, b = 0) {
+            console.log(a + b);
+        }
+
+        plus1(1, 2);
+        plus1(1);
+
+        function plus2(a = 0, b = 0) {
+            console.log(a + b);
+        }
+
+        plus2();
+
+        function say3(message = "안녕하세요") {
+            console.log(message);
+        }
+
+        say3("Hello World3");
+        say3();
+    </script>
+</body>
+
+</html>

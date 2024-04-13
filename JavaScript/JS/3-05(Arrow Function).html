@@ -1,0 +1,41 @@
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <script>
+        function hello1() {
+            console.log("Hello World1");
+        }
+
+        hello1();
+
+        var hello2 = function () {
+            console.log("Hello World2");
+        }
+
+        hello2();
+
+        // arrow function
+        var hello3 = () => {
+            console.log("Hello World3");
+        }
+
+        var hello4 = () => "Hello World4";
+
+        var str = hello4();
+        console.log(str);
+
+        var hello5 = fullName => "Hello5" + " " + fullName;
+
+        console.log(hello5("홍길동"));
+
+        var hello6 = (fullName, lastName) => "Hello6" + " " + fullName + " " + lastName;
+
+        console.log(hello6("길동", "홍"));
+    </script>
+</body>
+
+</html>

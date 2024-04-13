@@ -1,0 +1,43 @@
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <script>
+        function solution(arr) {
+            let answer = arr;
+            let sum = 0;
+            // for문
+            for (let i of answer) {
+                sum += i;
+            }
+
+            // 내장함수
+            sum = answer.reduce(function (a, b) {
+                return a + b;
+            });
+
+            // 화살표함수
+            sum = answer.reduce((a, b) => a + b);
+
+            for (let i = 0; i < 8; i++) {
+                for (let j = 1; j < 9; j++) {
+                    if (sum - (arr[i] + arr[j]) === 100) {
+                        // i를 먼저 삭제하면, 뒷쪽 항목이 당겨지므로 다른값이 지워진다.
+                        arr.splice(j, 1);
+                        arr.splice(i, 1);
+                    }
+                }
+            }
+
+            return arr + " " + sum;
+        }
+
+        let arr = [20, 7, 23, 19, 10, 15, 25, 8, 13];
+        console.log(solution(arr));
+    </script>
+</body>
+
+</html>

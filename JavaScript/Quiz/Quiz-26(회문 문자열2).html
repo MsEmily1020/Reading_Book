@@ -1,0 +1,31 @@
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <script>
+        function solution(str) {
+            let answer = "YES";
+
+            str = str.toLowerCase().replace(/[^a-z]/g, '');
+
+            // 방법1 : 직접 비교 방법
+            let len = str.length;
+            for (let i = 0; i < Math.floor(len / 2); i++) {
+                if (str[i] !== str[len - i - 1]) return answer = "NO";
+            }
+
+            // 방법2 : reverse() 함수 사용
+            if (str !== str.split('').reverse().join('')) return answer = "NO"
+
+            return answer;
+        }
+
+        var str = "found77, Time^& study, Yduts; emit, 9Dnuof";
+        console.log(solution(str));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,96 @@
+<html>
+
+<head>
+    <title>조건문(if-else, switch)</title>
+</head>
+
+<body>
+    <script>
+        // if
+        var age = 13;
+        if (age > 18) {
+            console.log("당신은 성인입니다.");
+        }
+
+        // if - else
+        var age1 = 17;
+        if (age1 > 18) {
+            console.log(age1 + "살이므로 당신은 성인입니다.");
+        }
+        else {
+            console.log(age1 + "살이므로 당신은 성인이 아닙니다.");
+        }
+
+        if (age1 == "남") {
+            console.log("당신은 남자입니다.");
+        }
+        else {
+            console.log("당신은 여자입니다.");
+        }
+
+        // if - else if - else
+        var hour = 14;
+        if (hour < 10) {
+            console.log("Good Morning");
+        }
+        else if (hour < 17) {
+            console.log("Good Afternoon");
+        }
+        else if (hour < 21) {
+            console.log("Good Evening");
+        }
+        else {
+            console.log("Good night");
+        }
+
+        var age2 = 17;
+        var isAdult = false;
+
+        if (age2 > 18) {
+            isAdult = true;
+        }
+        else {
+            isAdult = false;
+        }
+
+        console.log("당신은 성인입니까? = " + isAdult);
+
+        // switch : 정수, break, default
+        var d = new Date();
+        var day = d.getDay();
+        console.log("day = " + day); // 월요일 : 1
+
+        var dayName = "";
+        switch (day) { // day : 정수
+            case 0:
+                dayName = "일요일";
+                break;
+            case 1:
+                dayName = "월요일";
+                break;
+            case 2:
+                dayName = "화요일";
+                break;
+            case 3:
+                dayName = "수요일";
+                break;
+            case 4:
+                dayName = "목요일";
+                break;
+            case 5:
+                dayName = "금요일";
+                break;
+            case 6:
+                dayName = "토요일";
+                break;
+            default:
+                break;
+        }
+
+        console.log("오늘의 요일 = " + dayName);
+
+        // switch문을 if문으로 변환
+    </script>
+</body>
+
+</html>

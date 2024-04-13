@@ -1,0 +1,27 @@
+<html>
+
+<head>
+    <title>최소값 구하기</title>
+</head>
+
+<body>
+    <script>
+        function solution1(arr) {
+            let min = Number.MAX_SAFE_INTEGER;
+            for (let i of arr) {
+                if (min > i) min = i;
+            }
+            return min;
+        }
+
+        function solution2(arr) {
+            return Math.min(...arr);
+        }
+
+        var arr = [5, 3, 7, 11, 2, 15, 17];
+        console.log("For of : " + solution1(arr));
+        console.log("Math.min ... : " + solution2(arr));
+    </script>
+</body>
+
+</html>

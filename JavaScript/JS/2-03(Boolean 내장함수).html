@@ -1,0 +1,49 @@
+<html>
+
+<head>
+    <title>Boolean 내장함수</title>
+</head>
+
+<body>
+    <script>
+        var x1 = true;
+        var y1 = new Boolean("true");
+        console.log(x1);
+        console.log(y1);
+
+        // 타입 다름
+        console.log(typeof (x1));   // boolean
+        console.log(typeof (y1));   // object
+
+        console.log(x1 == y1);      // true (데이터 타입에 상관없이 값만 비교)
+        console.log(x1 === y1);     // false (데이터 타입과 값 둘다 비교)
+
+        var x2 = "abc";
+        var y2 = new String("abc");
+
+        console.log(typeof (x2));   // string
+        console.log(typeof (y2));   // object
+
+        console.log(x2 == y2);      // true : 값만 비교
+        console.log(x2 === y2);     // false : 데이터 타입과 값 비교
+
+        console.log(Boolean(10 > 9));   // true (object 타입)
+        console.log(10 > 9);            // true (boolean 타입)
+
+        var x3 = 0;
+        console.log(x3);
+        console.log(Boolean(x3));       // false (boolean 타입)
+
+        var x4;
+        console.log(x4);                // undefined
+        console.log(Boolean(x4));       // false : 1만 true. 1이 아니면 다 false
+
+        x4 = "";
+        console.log(Boolean(x4));       // false : 1만 true. 1이 아니면 다 false
+
+        x4 = null;
+        console.log(Boolean(x4));       // false : 1만 true, 1이 아니면 다 false
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<html>
+
+<head>
+    <title>Strict Mode</title>
+</head>
+
+<body>
+    <script>
+        // strict mode : javascript 초기의 관용적인 문법을 허용하지 않고,
+        //               문법 규칙을 엄격하게 적용함.
+
+        // x = 3.14;
+        // console.log(x);
+
+        // "use strict"
+        // x = 3.14; // 에러 발생
+
+        "use strict"
+        function myFunction() {
+            y = 2; // 에러 발생
+            return y;
+        }
+
+        console.log(myFunction());
+    </script>
+</body>
+
+</html>

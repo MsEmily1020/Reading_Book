@@ -1,0 +1,64 @@
+<html>
+
+<head>
+    <title>Rest parameter</title>
+</head>
+
+<body>
+    <script>
+        function sum1(x1, x2) {
+            var y1 = x1 + x2;
+            console.log(y1);
+        }
+
+        console.log("sum1");
+        sum1(5, 7);
+
+        function sum2(x1, x2, x3) {
+            var y1 = x1 + x2 + x3;
+            console.log(y1);
+        }
+
+        console.log("sum2");
+        sum2(5, 7, 9);
+
+        function sum3(x1, x2, x3, x4) {
+            var y1 = x1 + x2 + x3 + x4;
+            console.log(y1);
+        }
+
+        console.log("sum3");
+        sum3(5, 7, 9, 11);
+
+        // rest parameter
+
+        // 매개변수 : 배열
+        function sum4(...args) {
+            var total = 0;
+            for (var x of args) {
+                total += x;
+            }
+            console.log(total);
+        }
+
+        console.log("sum4");
+        sum4(1);
+        sum4(1, 3);
+        sum4(1, 3, 5, 7, 9);
+
+        function sum5(...args) {
+            var total = 0;
+            args.forEach(function (x) {
+                total += x;
+            });
+            console.log(total);
+        }
+
+        console.log("sum5");
+        sum5(1);
+        sum5(1, 3);
+        sum5(1, 3, 5, 7, 9);
+    </script>
+</body>
+
+</html>

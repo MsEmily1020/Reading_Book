@@ -1,0 +1,33 @@
+<html>
+
+<head>
+    <title>대문자로 통일</title>
+</head>
+
+<body>
+    <script>
+        function solution(str) {
+            let answer = "";
+            for (let s of str) {
+                if (s === s.toLowerCase())
+                    answer += s.toUpperCase();
+                else
+                    answer += s;
+            }
+
+            answer += '\n';
+
+            for (let s of str) {
+                if ('a' <= s && s <= 'z') answer += s.toUpperCase();
+                else answer += s;
+            }
+
+            return answer;
+        }
+
+        let str = "ItisTimeToStudy";
+        console.log(solution(str));
+    </script>
+</body>
+
+</html>
