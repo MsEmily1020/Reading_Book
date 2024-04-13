@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS3 Selector Basic</title>
+
+        <style>
+            table, tr, th {  /* 'table > tr > th'는 자손(제목)만 바뀜, 후손(내용)은 제외 */
+                color : red;
+            }
+
+            h1:hover { color : red; } /*커서*/
+            h1:active { color : blue; } /*클릭*/
+
+            /* input 태그가 사용 가능할 때
+                background-color 속성에 white 키워드를 적용합니다. */
+            input:enabled { background-color: white; }
+
+            /* input 태그가 사용 불가능할 때
+                background-color 속성에 gray 키워드를 적용합니다. */
+                input:disabled { background-color: gray; }
+
+            /* input 태그에 포커스를 맞출 때
+                background-color 속성에 orange 키워드를 적용합니다. */
+                input:focus { background-color: orange; }
+        </style>
+    </head>
+
+    <body>
+        <h1>반응 선택자</h1>
+
+        <h2>사용 가능</h2>
+        <input focus->
+        <h2>사용 불가능</h2>
+        <input disabled = "disabled">
+        <br></br>
+        
+        <table border = "1">
+            <tr>
+                <th>이름</th>
+                <th>지역</th>
+            </tr>
+            <tr>
+                <td>김혜승</td>
+                <td>서울특별시 관악구 신림동</td>
+            </tr>
+        </table>
+    </body>
+</html>

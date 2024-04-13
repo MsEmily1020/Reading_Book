@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS3 Selecotr Basic</title>
+        <style>
+            .select { color : rgb(239, 151, 106); } /*동해물과 백두산이 글자 색, 사과 오렌지 색*/
+            .header { background-color : rgb(247, 255, 141);} /*동해물과 백두산이 배경 색*/
+            
+            input[type = "text"] { background : rgb(207, 255, 210); } /*네모칸 빨강*/
+            input[type = "password"] { background : rgb(237, 190, 143);} /*네모칸 파랑*/
+
+            #header > h1 { color: rgb(245, 221, 0); } /*Lorem ipsum 글자 색(Navigation은 받지 못함)*/
+            #section > h1 { color : rgb(83, 186, 188); } /*Lorem ipsum2 글자 색*/
+        </style>
+    </head>
+
+    <body>
+        <h1 class = "select header">동해물과 백두산이</h1>
+
+        <form>
+            <input type = "text">
+            <input type = "password">
+        </form>
+
+        <ul>
+            <li class = "select">사과</li>
+            <li>바나나</li>
+            <li class = "select">오렌지</li>
+            <li>감</li>
+        </ul>
+
+        <div id = "header">
+            <h1 class = "title">Lorem ipsum</h1>
+            <div id = "nav">
+                <h1>Navigation</h1>
+            </div>
+        </div>
+
+        <div id = "section">
+            <h1 class = "title">Lorem ipsum</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+    </body>
+</html>
