@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">HozuAndroidStudy</string>
+    <string name="title_activity_post_list">PostListActivity</string>
+</resources>
