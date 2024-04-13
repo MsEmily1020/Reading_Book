@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <title>Document</title>
+
+    <style>
+        div {
+            border-radius: 10px;
+            box-sizing: border-box;
+        }
+
+        .row:nth-of-type(1) {
+            color: gray;
+            background-color: rgb(181, 220, 255);
+        }
+
+        .col-lg-3:nth-of-type(1) {
+            color: blue;
+            background-color: rgb(255, 211, 211);
+        }
+
+        .col-lg-6:nth-of-type(2) {
+            background-color: rgb(255, 255, 185);
+        }
+
+        .col-lg-3:nth-of-type(3) {
+            color: white;
+            background-color: rgb(044, 120, 186);
+        }
+
+        @media only screen and (min-width: 992px) and (max-width: 1199px) {
+            .row:nth-of-type(2) {
+                display: flex;
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row text-center">
+            <h1>GOOD SOUP RESTAURANT</h1>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 col-lg-3 text-center">
+                <h3>파스타<br>피자<br>샐러드<br>음료</h3>
+            </div>
+
+            <div class="col-md-6 col-lg-6">
+                <h3>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore exercitationem doloribus
+                    aut
+                    distinctio autem? Velit natus odit tenetur mollitia numquam inventore, cum optio dolor
+                    obcaecati
+                    consequuntur perspiciatis, voluptatem ducimus itaque voluptate maxime autem placeat, id
+                    facilis.
+                    Hic
+                    minima sit, dicta doloribus nostrum, sint atque laudantium consequatur similique ex quos
+                    soluta
+                    illum exercitationem.<br><br>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore exercitationem doloribus
+                    aut
+                    distinctio autem? Velit natus odit tenetur mollitia numquam inventore, cum optio dolor
+                    obcaecati
+                    consequuntur perspiciatis, voluptatem ducimus itaque voluptate maxime autem placeat, id
+                    facilis.
+                    Hic
+                    minima sit, dicta doloribus nostrum, sint atque laudantium consequatur similique ex quos
+                    soluta
+                    illum exercitationem.</h3>
+            </div>
+
+            <div class="col-md-12 col-lg-3 text-center">
+                <h3>메인쉐프 멤버<br>김주영<br>한슬기<br>김주한<br>이한별</h3>
+            </div>
+        </div>
+
+        <hr>
+        <div class="row text-center">
+            <h3>good soup 레스토랑을 이용해 주셔서 감사합니다.</h3>
+        </div>
+    </div>
+</body>
+
+</html>
