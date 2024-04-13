@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <title>Document</title>
+    <style>
+        body {
+            background-color: rgb(234, 125, 143);
+            text-align: center;
+        }
+
+        h2 {
+            font-weight: bold;
+            margin: 30px;
+        }
+
+        table {
+            display: inline-block;
+            background-color: pink;
+            width: 900px;
+            height: 1000px;
+        }
+
+        td {
+            text-align: left;
+            padding: 40px;
+            padding-bottom: 10px;
+        }
+
+        .box {
+            height: 24px;
+        }
+
+        textarea {
+            resize: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>회원가입</h2>
+    <form method="post" action="signUp.php">
+        <table>
+            <tr>
+                <td>아이디</td>
+                <td>
+                    <input type="text" name="user_id" size="20">
+                    <button type="submit">중복확인</button>
+                </td>
+            </tr>
+
+            <tr>
+                <td>비밀번호</td>
+                <td>
+                    <input type="password" name="user_pass" size="20">
+                    *비밀번호를 다시 입력 해주세요.
+                </td>
+            </tr>
+
+            <tr>
+                <td>비밀번호 확인</td>
+                <td>
+                    <input type="password" name="user_pass_check" size="20">
+                </td>
+            </tr>
+
+            <tr>
+                <td>성명</td>
+                <td>
+                    <input type="text" name="user_name" size="20">
+                </td>
+            </tr>
+
+            <tr>
+                <td>성별</td>
+                <td>
+                    <input type="radio" name="user_gender" value="남자"> 남자
+                    <input type="radio" name="user_gender" value="여자"> 여자
+                </td>
+            </tr>
+
+            <tr>
+                <td>이메일</td>
+                <td>
+                    <input type="text" name="user_email1" size="20">@
+                    <input type="text" name="user_email2" size="20">
+                    <select class="box" name="domain_list">
+                        <option value="직접입력">직접입력</option>
+                        <option value="naver.com">naver.com</option>
+                        <option value="google.com">google.com</option>
+                        <option value="hanmail.net">hanmail.net</option>
+                        <option value="nate.com">nate.com</option>
+                        <option value="kakao.com">kakao.com</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>주소</td>
+                <td>
+                    <input type="text" name="user_address" size="20">
+                    <button type="submit">주소찾기</button>
+                </td>
+            </tr>
+
+            <tr>
+                <td>상세주소</td>
+                <td>
+                    <input type="text" name="user_address_detail" size="20">
+                </td>
+            </tr>
+
+            <tr>
+                <td>휴대폰</td>
+                <td>
+                    <input type="radio" name="telecom" value="SKT">SKT
+                    <input type="radio" name="telecom" value="KT">KT
+                    <input type="radio" name="telecom" value="LGU+">LGU+
+                    <br>
+                    <select class="box" name="phone_start">
+                        <option value="010">010</option>
+                    </select>
+                    <input type="text" name="phone_middle" size="5"> -
+                    <input type="text" name="phone_end" size="5">
+                </td>
+            </tr>
+
+            <tr>
+                <td>관심</td>
+                <td>
+                    <input type="checkbox" name="car" value="수입차">수입차
+                    <input type="checkbox" name="car" value="국산차">국산차
+                    <input type="checkbox" name="car" value="SUV">SUV
+                    <input type="checkbox" name="car" value="경차">경차
+                    <input type="checkbox" name="car" value="LPG">LPG
+                </td>
+            </tr>
+
+            <tr>
+                <td>자기소개</td>
+                <td>
+                    <textarea name="txt" rows="7" cols="60"></textarea>
+                </td>
+            </tr>
+        </table>
+
+        <br>
+
+        <br>
+        <button type="submit">가입하기</button>
+        <button type="submit">다시입력</button>
+    </form>
+</body>
+
+</html>
