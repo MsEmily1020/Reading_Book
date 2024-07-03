@@ -1,7 +1,7 @@
-# 💻 TIL_Reading_Book
+# TIL_Reading_Book
 하루 공부한 내용 정리하는 레파지토리
 
-## ✏ 공부한 내용
+## 공부한 내용
 | 제목 | 언어 | 비고 |
 | :-------: | :------: | :-----: |
 | [코딩애플님 - 쉽게알려주는 플러터 강의](https://github.com/MsEmily1020/TIL/tree/main/App/Flutter) / [코드](https://github.com/hyeseung12/TIL/tree/main/App/Flutter/%EC%BD%94%EB%94%A9%EC%95%A0%ED%94%8C-%EC%BD%94%EB%93%9C) | Dart Flutter Framework | https://www.youtube.com/watch?v=usE9IKaogDU&list=PLfLgtT94nNq1izG4R2WDN517iPX4WXH3C |
